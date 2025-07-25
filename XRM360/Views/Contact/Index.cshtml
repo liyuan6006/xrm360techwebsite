@@ -1,41 +1,98 @@
 ﻿@{
-    ViewData["Title"] = "Contact Us";
+    ViewData["Title"] = "Contact XRM360 Technologies";
 }
 
 <style>
     .contact-container {
-        max-width: 700px;
+        max-width: 750px;
         margin: 50px auto;
-        padding: 40px;
-        background: #f8f9fa;
+        padding: 50px 40px;
+        background: rgba(0, 0, 0, 0.65);
         border-radius: 16px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         text-align: center;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
     }
+
+        /* ✅ Nature background */
+        .contact-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/images/contactus/contacus_background.png') center / cover no-repeat;
+            opacity: 0.35;
+            z-index: 0;
+        }
 
         .contact-container h2 {
             font-size: 2rem;
             margin-bottom: 15px;
+            color: #00d1ff;
+            position: relative;
+            z-index: 1;
         }
 
         .contact-container p {
             font-size: 1.1rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
         }
 
-        .contact-container a.btn {
+        .contact-container .btn {
             font-size: 1.1rem;
             padding: 12px 24px;
             border-radius: 8px;
+            background: #00d1ff;
+            border: none;
+            color: #000;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+            transition: background 0.3s ease;
         }
+
+            .contact-container .btn:hover {
+                background: #00a8cc;
+                color: #fff;
+            }
+
+    /* ✅ Contact Info */
+    .contact-info {
+        list-style: none;
+        padding: 0;
+        margin: 25px 0 0;
+        position: relative;
+        z-index: 1;
+        font-size: 1.1rem;
+    }
+
+        .contact-info li {
+            margin: 10px 0;
+        }
+
+            .contact-info li strong {
+                color: #00d1ff;
+            }
 </style>
 
 <div class="contact-container">
-    <h2>Contact Us – Drop us a line!</h2>
-    <p>Have a question or just want to say hi? We’d love to hear from you.</p>
+    <h2>Contact XRM360 Technologies</h2>
+    <p>
+        Whether you're interested in our <strong>Software Solutions</strong>,
+        exploring <strong>XRM360 Health</strong> devices, or seeking guidance through
+        <strong>XRM360 Education</strong> – we’d love to connect with you!
+    </p>
 
-    <a href="mailto:yuan.li@xrm-360.com?subject=Website Inquiry&body=Hi Yuan, I’d like to..."
-       class="btn btn-primary">
-        📧 Email Us: yuan.li@xrm-360.com
-    </a>
+    <a href="mailto:yuan.li@xrm-360.com?subject=Inquiry from Website" class="btn">📧 Email Us</a>
+
+    <ul class="contact-info">
+        <li>📧 <strong>Email:</strong> yuan.li@xrm-360.com</li>
+        <li>📞 <strong>Phone:</strong> +1 (480) 555-1234</li>
+    </ul>
 </div>
