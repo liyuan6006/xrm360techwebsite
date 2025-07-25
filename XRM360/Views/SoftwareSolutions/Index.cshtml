@@ -1,0 +1,206 @@
+﻿@{
+    ViewData["Title"] = "XRM360 Software Solutions";
+}
+
+<style>
+    /* ✅ Carousel Banner */
+    .banner-carousel {
+        position: relative;
+        height: 320px;
+        overflow: hidden;
+    }
+
+        .banner-carousel .carousel-item img {
+            height: 320px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    .banner-caption {
+        font-size: 1.3rem;
+        font-weight: 500;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color: #00d1ff;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(1);
+    }
+
+    /* ✅ Content Section */
+    .solutions-section {
+        background: url('/images/tech/background.png') center center / cover no-repeat;
+        position: relative;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 50px 40px;
+        border-radius: 10px;
+        color: #fff;
+        overflow: hidden;
+    }
+
+        /* ✅ Dark Overlay */
+        .solutions-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+        .solutions-section h2 {
+            color: #00d1ff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .solutions-section ul {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            list-style: none;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+            /* ✅ List Items with Cyan Checkmarks */
+            .solutions-section ul li {
+                position: relative;
+                padding-left: 40px;
+                background: rgba(255, 255, 255, 0.1);
+                margin: 10px 0;
+                padding: 12px 18px 12px 40px;
+                border-left: 4px solid #00d1ff;
+                border-radius: 5px;
+                color: #f1f1f1;
+                transition: all 0.3s ease;
+            }
+
+                .solutions-section ul li::before {
+                    content: "✔";
+                    position: absolute;
+                    left: 12px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #00d1ff !important; /* ✅ Force cyan */
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    font-family: Arial, Helvetica, sans-serif; /* ✅ Prevent emoji font */
+                    text-shadow: 0 0 4px rgba(0, 209, 255, 0.6); /* ✅ Optional glow */
+                }
+
+                /* ✅ Hover effect using cyan */
+                .solutions-section ul li:hover {
+                    background: rgba(0, 209, 255, 0.15);
+                    transform: scale(1.02);
+                    box-shadow: 0 0 12px rgba(0, 209, 255, 0.5);
+                    border-left: 4px solid #00d1ff;
+                    cursor: pointer;
+                }
+
+                .solutions-section ul li strong {
+                    color: #00d1ff;
+                }
+
+    .btn-tech {
+        background: #00d1ff;
+        color: #000;
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        display: block;
+        width: 220px;
+        margin: 30px auto 0;
+        text-align: center;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        position: relative;
+        z-index: 1;
+    }
+
+        .btn-tech:hover {
+            background: #00a8cc;
+            color: #fff;
+        }
+</style>
+
+<!-- ✅ Carousel Banner -->
+<div id="softwareCarousel" class="carousel slide banner-carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/images/tech/slide1.png" alt="Custom Apps">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="banner-caption">💻 We build custom apps and websites to meet your business needs.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/images/tech/slide2.png" alt="Database Migration">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="banner-caption">🔄 Enterprise-level database migrations with expertise.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/images/tech/slide3.png" alt="Enterprise Solutions">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="banner-caption">🚀 Automating workflows with enterprise solutions.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/images/tech/slide4.png" alt="Skilled Developers">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="banner-caption">🛠️ Skilled developers across multiple technologies.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/images/tech/slide5.png" alt="Integration">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="banner-caption">🔗 Enterprise level integrations with APIs and platforms.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#softwareCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#softwareCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="4"></button>
+    </div>
+</div>
+
+<!-- ✅ Why Choose Us Section -->
+<div class="solutions-section">
+    <h2>Why Choose Us?</h2>
+    <ul>
+        <li><strong>20+ Years of Experience</strong> in software development and enterprise solutions.</li>
+        <li><strong>Enterprise Migration Expertise</strong> – SQL Server → PostgreSQL, .NET → .NET Core, Windows → Linux.</li>
+        <li><strong>Enterprise Level Integration</strong> – Integrate with Jira, Rally, SSO, Authentication, Authorization, Secret Vault, Redis, and more.</li>
+        <li><strong>Full-Stack Development</strong> – Angular, React, Bootstrap, ASP.NET Core, JAVA, API development, etc.</li>
+        <li><strong>Database Management</strong> – SQL Server, PostgreSQL, MySQL, Oracle, Firebase, etc.</li>
+        <li><strong>Database Development</strong> – Stored procedures, functions, views, triggers, and indexing, etc.</li>
+    </ul>
+    <a class="btn-tech" href="/Contact">⬅ Contact Us</a>
+</div>
