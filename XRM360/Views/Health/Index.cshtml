@@ -1,6 +1,111 @@
 ﻿@{
-    ViewData["Title"] = "XRM360 Health";
+    ViewData["Title"] = "XRM360 Health - Authorized Seller of ChoiceMMed";
 }
 
-<h1>XRM360 Health</h1>
-<p>We offer a range of health monitoring devices to help individuals and families stay informed about their well-being. More details and products coming soon.</p>
+<style>
+    .hero-background {
+        position: relative;
+        height: 280px;
+        background: url('/images/puse-oximter-banner2.png') center 40% / cover no-repeat;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .authorized-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 150px;
+        background: transparent;
+    }
+
+    .spec-table th {
+        background: #f8f9fa;
+    }
+</style>
+
+<div class="hero-background">
+    <div class="hero-overlay text-white text-center">
+        <img src="~/images/authorized-seller.png" alt="Authorized Seller" class="authorized-badge" />
+        <h1 class="display-4 fw-bold">XRM360 Health</h1>
+        <p class="lead">Authorized Seller of ChoiceMMed Pulse Oximeters on Amazon</p>
+    </div>
+</div>
+
+<!-- Product Feature Section -->
+<div class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+            <!-- ✅ Bootstrap Carousel for 3 Product Images -->
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/images/pulse-oximeter1.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed Pulse Oximeter 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/pulse-oximeter2.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed Pulse Oximeter 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/pulse-oximeter3.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed Pulse Oximeter 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="text-primary">ChoiceMMed MD300CN350R Fingertip Pulse Oximeter</h2>
+            <p>
+                We, <strong>XRM360 Technologies LLC</strong>, are an <strong>Authorized Reseller</strong> of ChoiceMMed products.
+                The MD300CN350R is a <strong>compact, reliable, and accurate</strong> device for checking
+                <strong>blood oxygen saturation (SpO₂)</strong>, <strong>pulse rate (PR)</strong>,
+                <strong>perfusion index (PI)</strong>, and <strong>respiratory rate (RR)</strong>.
+                Ideal for hospitals, clinics, and home care.
+            </p>
+            <ul>
+                <li>✅ <strong>SpO₂ Measurement:</strong> 70–100% with ±2% accuracy</li>
+                <li>✅ <strong>Pulse Rate:</strong> 30–250 bpm with ±2 bpm accuracy</li>
+                <li>✅ <strong>Respiratory Rate:</strong> 4–45 rpm with ±1 rpm accuracy</li>
+                <li>✅ <strong>Perfusion Index:</strong> 0.3%–20%</li>
+                <li>✅ <strong>OLED Display:</strong> Dual-color with 6 modes & adjustable brightness</li>
+                <li>✅ <strong>Battery:</strong> Low power consumption; 2 AAA batteries included</li>
+                <li>✅ <strong>Auto Power-Off:</strong> Extends battery life</li>
+            </ul>
+            <a href="https://www.amazon.com/dp/YOURPRODUCTID" target="_blank" class="btn btn-success mt-3">
+                ✅ Buy Now on Amazon
+            </a>
+        </div>
+    </div>
+
+    <!-- Technical Specifications -->
+    <div class="mt-5">
+        <h3 class="text-secondary">Technical Specifications</h3>
+        <table class="table table-bordered spec-table">
+            <tbody>
+                <tr><th>Measurement Range (SpO₂)</th><td>70% – 100%</td></tr>
+                <tr><th>Pulse Rate Range</th><td>30 bpm – 250 bpm</td></tr>
+                <tr><th>Perfusion Index</th><td>0.3% – 20%</td></tr>
+                <tr><th>Respiratory Rate</th><td>4 rpm – 45 rpm</td></tr>
+                <tr><th>Display</th><td>OLED, 6 display modes, adjustable brightness</td></tr>
+                <tr><th>Battery</th><td>2× AAA (40+ hours use)</td></tr>
+                <tr><th>Weight</th><td>50g (including batteries)</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
