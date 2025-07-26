@@ -2,12 +2,11 @@
 
 namespace XRM360website.Controllers
 {
-    public class EducationController : Controller
+    public class EducationController : BaseController
     {
-        [Route("Education/{lang=en}")]
-        public IActionResult Index(string lang)
+        public IActionResult Index()
         {
-            return lang?.ToLower() == "zh" ? View("Index.zh") : View("Index");
+            return LangView("Index");
         }
     }
 }

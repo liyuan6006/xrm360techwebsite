@@ -1,5 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+    ViewData["Title"] = "欢迎来到 XRM360 科技";
+}
+
+<!DOCTYPE html>
+<html lang="zh">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,8 +14,6 @@
 </head>
 
 <style>
-
-
     html, body {
         height: 100%;
         margin: 0;
@@ -23,41 +25,38 @@
             flex: 1;
         }
 </style>
- 
-
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="/">
+                <a class="navbar-brand d-flex align-items-center" href="/zh">
                     <img src="~/images/logo/xrm360-logo2.png" alt="XRM360 Logo" style="height: 40px;" class="me-2" />
                     <span>XRM360</span>
                 </a>
 
-                <!-- Mobile Toggle Button -->
+                <!-- 移动端菜单按钮 -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-
-                <!-- Menu Items -->
+                <!-- 菜单项 -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Health">Health</a>
+                            <a class="nav-link" href="/Health">健康</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Education">Education</a>
+                            <a class="nav-link" href="/Education">教育</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/SoftwareSolutions">Technologies</a>
+                            <a class="nav-link" href="/SoftwareSolutions">技术方案</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Contact">Contact Us</a>
+                            <a class="nav-link" href="/Contact">联系我们</a>
                         </li>
-                        <!-- ✅ Language Switcher -->
+                        <!-- 语言切换 -->
                         <ul class="navbar-nav language-switcher">
                             <li class="nav-item">
                                 <a class="nav-link" href="/Language/Switch/en?returnUrl=@Context.Request.Path">
@@ -70,13 +69,12 @@
                                 </a>
                             </li>
                         </ul>
-
                     </ul>
                 </div>
             </div>
         </nav>
-
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -85,17 +83,13 @@
 
     <footer class="border-top footer text-muted mt-auto py-3">
         <div class="container">
-            &copy; 2025 - XRM360 Technologies LLC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - XRM360 科技有限公司 - <a asp-area="" asp-controller="Home" asp-action="Privacy">隐私政策</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
- 
-
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-  
-
-
 </body>
 </html>

@@ -2,12 +2,11 @@
 
 namespace XRM360website.Controllers
 {
-    public class SoftwareSolutionsController : Controller
+    public class SoftwareSolutionsController : BaseController
     {
-        [Route("SoftwareSolutions/{lang=en}")]
-        public IActionResult Index(string lang)
+        public IActionResult Index()
         {
-            return lang?.ToLower() == "zh" ? View("Index.zh") : View("Index");
+            return LangView("Index");
         }
     }
 }

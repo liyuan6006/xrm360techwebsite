@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebApplication1.Models;
+using XRM360website.Controllers;
 
 namespace WebApplication1.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -15,10 +16,9 @@ namespace WebApplication1.Controllers
 
         [Route("")]
         [Route("Home")]
-        [Route("Home/{lang=en}")]
-        public IActionResult Index(string lang = "en")
+        public IActionResult Index()
         {
-            return lang?.ToLower() == "zh" ? View("Index.zh") : View("Index");
+            return LangView("Index");
         }
 
 
