@@ -3,30 +3,31 @@
 }
 
 <style>
-    body {
-        background-image: url('/images/background.png'); /* Replace with your image path */
+
+
+    .homepage-container {
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        color: #fff;
-    }
 
-    .homepage-container {
-        padding: 60px 20px;
+        background-image: url('images/contactus/contacus_background.png');
+        padding: 10% 5% 20% 5%; /* top, right, bottom, left */
     }
 
     .card {
-        background-color: rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.45); /* darker translucent background */
         border: none;
         border-radius: 12px;
-        color: white;
+        color: #ffffff;
+        backdrop-filter: blur(8px); /* adds blur behind card */
+        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease;
-        min-height: 220px; /* adjust to fit the tallest card */
+        min-height: 240px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-
 
         .card:hover {
             transform: scale(1.05);
