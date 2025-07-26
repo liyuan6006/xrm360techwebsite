@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = "XRM360 教育";
+}
+
+<style>
+    /* Banner */
+    .education-banner {
+        position: relative;
+        height: 280px;
+        background: url('/images/edu/banner.png') center center / cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        text-align: center;
+    }
+
+        .education-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .education-banner h1 {
+            position: relative;
+            font-size: 2.5rem;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+    /* Content */
+    .education-container {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 40px;
+        background: url('/images/edu/campus-bg.png') center center / cover no-repeat;
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        font-family: 'Segoe UI', sans-serif;
+        line-height: 1.6;
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+        .education-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .education-container > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .education-container h3 {
+            color: #00d1ff;
+            margin-top: 25px;
+        }
+
+        .education-container ul {
+            padding-left: 20px;
+        }
+
+            .education-container ul li {
+                margin-bottom: 8px;
+            }
+
+    /* Staff Section */
+    .staff-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .staff-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        padding: 20px;
+        width: 260px;
+        text-align: center;
+        color: #333;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .staff-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .staff-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .staff-card h5 {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .staff-card p {
+            font-size: 0.95rem;
+        }
+</style>
+
+<!-- Banner -->
+<div class="education-banner">
+    <h1>XRM360 教育 – 你的留学之旅从这里开始</h1>
+</div>
+
+<!-- Content -->
+<div class="education-container">
+    <p>
+        <strong>XRM360 教育</strong> 致力于帮助国际学生——特别是来自中国的学生——实现他们在美国留学的梦想。
+        我们为学生提供从申请准备到顺利抵达美国的全程指导与支持。
+    </p>
+
+    <h3>我们的服务包括：</h3>
+    <ul>
+        <li>📄 <strong>申请材料准备：</strong> 协助学生收集所有必要的文件和材料。</li>
+        <li>📝 <strong>申请流程指导：</strong> 带领学生逐步完成大学申请的每个环节。</li>
+        <li>✅ <strong>提交支持：</strong> 帮助学生审核并按时提交申请。</li>
+        <li>🎓 <strong>学校选择建议：</strong> 根据学生的目标和偏好推荐合适的大学。</li>
+        <li>✈️ <strong>到达前支持：</strong> 协助学生做好行前准备并安排抵达事宜。</li>
+        <li>🏠 <strong>安顿服务：</strong> 帮助学生适应美国生活，包括住宿、入学指导和顺利开始学习。</li>
+    </ul>
+
+    <p>选择 XRM360 教育，学生将获得全程支持，确保顺利过渡并开启成功的美国求学之旅。</p>
+
+    <h3>认识我们的教育专家</h3>
+    <div class="staff-section">
+        <div class="staff-card">
+            <img src="/images/edu/staff-magan.png" alt="Megan" />
+            <h5>Megan</h5>
+            <p>资深大学顾问，拥有多年帮助学生打造优秀申请并选择理想学校的经验。</p>
+        </div>
+
+        <div class="staff-card">
+            <img src="/images/edu/staff-ya.png" alt="Ya" />
+            <h5>Ya</h5>
+            <p>精通英语和中文，擅长指导中国学生了解美国教育体系及签证流程。</p>
+        </div>
+    </div>
+</div>

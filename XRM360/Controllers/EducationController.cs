@@ -4,9 +4,10 @@ namespace XRM360website.Controllers
 {
     public class EducationController : Controller
     {
-        public IActionResult Index()
+        [Route("Education/{lang=en}")]
+        public IActionResult Index(string lang)
         {
-            return View();
+            return lang?.ToLower() == "zh" ? View("Index.zh") : View("Index");
         }
     }
 }

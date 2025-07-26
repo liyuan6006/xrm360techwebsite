@@ -4,9 +4,10 @@ namespace XRM360website.Controllers
 {
     public class HealthController : Controller
     {
-        public IActionResult Index()
+        [Route("Health/{lang=en}")]
+        public IActionResult Index(string lang)
         {
-            return View();
+            return lang?.ToLower() == "zh" ? View("Index.zh") : View("Index");
         }
     }
 }

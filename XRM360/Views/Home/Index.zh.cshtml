@@ -1,27 +1,26 @@
 ﻿@{
-    ViewData["Title"] = "Welcome to XRM360 Technologies";
+    ViewData["Title"] = "欢迎来到 XRM360 科技";
 }
 
 <style>
-
     body {
         color: #fff;
     }
+
     .homepage-container {
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-
         background-image: url('/images/contactus/contacus_background.png');
         padding: 10% 5% 20% 5%; /* top, right, bottom, left */
     }
 
     .card {
-        background: rgba(0, 0, 0, 0.45); /* darker translucent background */
+        background: rgba(0, 0, 0, 0.45);
         border: none;
         border-radius: 12px;
         color: #ffffff;
-        backdrop-filter: blur(8px); /* adds blur behind card */
+        backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease;
@@ -47,35 +46,31 @@
 </style>
 
 <div class="text-center homepage-container">
-    <h1 class="display-4">Welcome to XRM360</h1>
-    <p class="lead">Empowering global health, education, and technology innovation.</p>
+    <h1 class="display-4">欢迎来到 XRM360</h1>
+    <p class="lead">致力于推动全球健康、教育和科技创新。</p>
 
     <div class="row mt-5">
         <div class="col-md-4">
             <div class="card p-4 shadow">
-                <h2>XRM360 Health</h2>
-                <p>Explore our advanced health devices designed to improve well-being, track vital signs, and provide accurate health monitoring for individuals and families.</p>
-
-                <a class="btn btn-primary" href="/Health">Learn More</a>
+                <h2>XRM360 健康</h2>
+                <p>探索我们先进的健康设备，旨在提升健康水平、监测生命体征，并为个人和家庭提供准确的健康监测。</p>
+                <a class="btn btn-primary" href="/Health/zh">了解更多</a>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="card p-4 shadow">
-                <h2>XRM360 Education</h2>
-                <p>Helping international students prepare, adapt, and succeed at U.S. universities by providing guidance, resources, and support throughout their academic journey.</p>
-
-                <a class="btn btn-success" href="/Education">Learn More</a>
+                <h2>XRM360 教育</h2>
+                <p>帮助国际学生，特别是中国学生，准备、适应并在美国大学取得成功，提供全程指导、资源和支持。</p>
+                <a class="btn btn-success" href="/Education/zh">了解更多</a>
             </div>
         </div>
 
-        <!-- ✅ New Section for Software Solutions -->
         <div class="col-md-4">
             <div class="card p-4 shadow">
-                <h2>XRM360 Technologies</h2>
-                <p>We build custom apps and websites, handle database migrations, and deliver enterprise solutions. Our technologies help boost your productivity.</p>
-
-                <a class="btn btn-info" href="/SoftwareSolutions">Learn More</a>
+                <h2>XRM360 科技</h2>
+                <p>我们开发定制应用程序和网站，处理数据库迁移，并提供企业级解决方案。我们的技术助力提升您的生产力。</p>
+                <a class="btn btn-info" href="/SoftwareSolutions/zh">了解更多</a>
             </div>
         </div>
     </div>

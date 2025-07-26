@@ -13,10 +13,14 @@ namespace WebApplication1.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        [Route("")]
+        [Route("Home")]
+        [Route("Home/{lang=en}")]
+        public IActionResult Index(string lang = "en")
         {
-            return View();
+            return lang?.ToLower() == "zh" ? View("Index.zh") : View("Index");
         }
+
 
         public IActionResult Privacy()
         {

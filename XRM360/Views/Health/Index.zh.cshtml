@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "XRM360 健康 - ChoiceMMed 授权经销商";
+}
+
+<style>
+    .hero-background {
+        position: relative;
+        height: 280px;
+        background: url('/images/puse-oximter-banner2.png') center 40% / cover no-repeat;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .authorized-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: auto;
+    }
+
+    .spec-table th {
+        background: #f8f9fa;
+    }
+</style>
+
+<div class="hero-background">
+    <div class="hero-overlay text-white text-center">
+        <img src="~/images/authorized-seller.png" alt="授权经销商" class="authorized-badge" />
+        <h1 class="display-4 fw-bold">XRM360 健康</h1>
+        <p class="lead">亚马逊 ChoiceMMed 指夹式血氧仪 授权经销商</p>
+    </div>
+</div>
+
+<!-- 产品特点 -->
+<div class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/images/pulse-oximeter1.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed 血氧仪 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/pulse-oximeter2.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed 血氧仪 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/pulse-oximeter3.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed 血氧仪 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="text-primary">ChoiceMMed MD300CN350R 指夹式血氧仪</h2>
+            <p>
+                我们 <strong>XRM360 Technologies LLC</strong> 是 <strong>ChoiceMMed 产品授权经销商</strong>。
+                MD300CN350R 是一款 <strong>小巧、可靠且精准</strong> 的设备，
+                可检测 <strong>血氧饱和度 (SpO₂)</strong>、<strong>脉搏率 (PR)</strong>、
+                <strong>灌注指数 (PI)</strong> 和 <strong>呼吸频率 (RR)</strong>。
+                适用于医院、诊所及家庭护理。
+            </p>
+            <ul>
+                <li>✅ <strong>血氧饱和度 (SpO₂)：</strong> 70–100%，精度 ±2%</li>
+                <li>✅ <strong>脉搏率 (PR)：</strong> 30–250 bpm，精度 ±2 bpm</li>
+                <li>✅ <strong>呼吸频率 (RR)：</strong> 4–45 rpm，精度 ±1 rpm</li>
+                <li>✅ <strong>灌注指数 (PI)：</strong> 0.3%–20%</li>
+                <li>✅ <strong>OLED 显示：</strong> 双彩色 6 种模式，可调亮度</li>
+                <li>✅ <strong>电池：</strong> 低功耗；附带 2 节 AAA 电池</li>
+                <li>✅ <strong>自动关机：</strong> 延长电池寿命</li>
+            </ul>
+            <a href="https://www.amazon.com/dp/YOURPRODUCTID" target="_blank" class="btn btn-success mt-3">
+                ✅ 立即前往亚马逊购买
+            </a>
+        </div>
+    </div>
+
+    <!-- 技术参数 -->
+    <div class="mt-5">
+        <h3 class="text-secondary">技术参数</h3>
+        <table class="table table-bordered spec-table">
+            <tbody>
+                <tr><th>血氧测量范围</th><td>70% – 100%</td></tr>
+                <tr><th>脉搏率范围</th><td>30 bpm – 250 bpm</td></tr>
+                <tr><th>灌注指数</th><td>0.3% – 20%</td></tr>
+                <tr><th>呼吸频率</th><td>4 rpm – 45 rpm</td></tr>
+                <tr><th>显示屏</th><td>OLED，6 种显示模式，可调亮度</td></tr>
+                <tr><th>电池</th><td>2× AAA（连续使用40小时以上）</td></tr>
+                <tr><th>重量</th><td>50g（含电池）</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
