@@ -1,5 +1,4 @@
 ﻿@{
-    Layout = ViewBag.Layout;
     ViewData["Title"] = "XRM360 软件解决方案";
 }
 
@@ -47,6 +46,7 @@
         overflow: hidden;
     }
 
+        /* ✅ Dark Overlay */
         .solutions-section::before {
             content: "";
             position: absolute;
@@ -77,6 +77,7 @@
             z-index: 1;
         }
 
+            /* ✅ List Items with Cyan Checkmarks */
             .solutions-section ul li {
                 position: relative;
                 padding-left: 40px;
@@ -95,12 +96,14 @@
                     left: 12px;
                     top: 50%;
                     transform: translateY(-50%);
-                    color: #00d1ff !important;
+                    color: #00d1ff !important; /* ✅ Force cyan */
                     font-weight: bold;
                     font-size: 1.3rem;
-                    text-shadow: 0 0 4px rgba(0, 209, 255, 0.6);
+                    font-family: Arial, Helvetica, sans-serif; /* ✅ Prevent emoji font */
+                    text-shadow: 0 0 4px rgba(0, 209, 255, 0.6); /* ✅ Optional glow */
                 }
 
+                /* ✅ Hover effect using cyan */
                 .solutions-section ul li:hover {
                     background: rgba(0, 209, 255, 0.15);
                     transform: scale(1.02);
@@ -133,43 +136,122 @@
             background: #00a8cc;
             color: #fff;
         }
+
+
+    @@media (max-width: 768px) {
+        .carousel-caption {
+            display: block !important; /* ensure it's visible */
+            bottom: 10px !important; /* adjust position */
+            background: rgba(0,0,0,0.6);
+            padding: 5px 8px;
+            border-radius: 3px;
+        }
+
+            .carousel-caption .banner-caption {
+                font-size: 0.9rem; /* override Bootstrap font size */
+            }
+    }
+
+    }
+
+
+    /* ✅ Successful Cases Section */
+    .cases-section {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 40px 20px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+        .cases-section h2 {
+            color: #00d1ff;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+    .cases-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .case-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .case-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .case-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+        }
+
+        .case-card h3 {
+            color: #00d1ff;
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
 </style>
 
-<!-- ✅ Carousel Banner -->
+<!-- ✅ 轮播横幅 -->
 <div id="softwareCarousel" class="carousel slide banner-carousel" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/images/tech/slide1.png" alt="定制应用程序">
+            <img src="/images/tech/buildapp.png" alt="定制应用">
             <div class="carousel-caption d-none d-md-block">
-                <p class="banner-caption">💻 我们为您的业务需求开发定制应用和网站。</p>
+                <p class="banner-caption">💻 为您的业务构建定制应用和网站。</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/slide2.png" alt="数据库迁移">
+            <img src="/images/tech/dbmigration.png" alt="数据库迁移">
             <div class="carousel-caption d-none d-md-block">
-                <p class="banner-caption">🔄 专业处理企业级数据库迁移。</p>
+                <p class="banner-caption">🔄 无缝的企业级数据库迁移。</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/slide3.png" alt="企业解决方案">
+            <img src="/images/tech/Automation.png" alt="企业解决方案">
             <div class="carousel-caption d-none d-md-block">
-                <p class="banner-caption">🚀 提供企业解决方案以实现工作流自动化并提升效率。</p>
+                <p class="banner-caption">🚀 通过自动化简化工作流程。</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/slide4.png" alt="开发团队">
+            <img src="/images/tech/cloud.png" alt="云工程">
             <div class="carousel-caption d-none d-md-block">
-                <p class="banner-caption">🛠️ 我们拥有跨多种技术的专业开发人员。</p>
+                <p class="banner-caption">☁️ 可扩展且安全的云解决方案。</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/slide5.png" alt="系统集成">
+            <img src="/images/tech/skilldeveloper.png" alt="专业开发人员">
             <div class="carousel-caption d-none d-md-block">
-                <p class="banner-caption">🔗 企业级 API 和平台集成服务。</p>
+                <p class="banner-caption">🛠️ 跨多种技术的专业开发团队。</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/images/tech/integration.png" alt="系统集成">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="banner-caption">🔗 高级 API 和平台集成。</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/images/tech/dataanalytics.png" alt="数据分析">
+            <div class="carousel-caption d-none d-md-block">
+                <p class="banner-caption">📊 数据分析与可视化仪表板。</p>
             </div>
         </div>
     </div>
 
+    <!-- 控制按钮 -->
     <button class="carousel-control-prev" type="button" data-bs-target="#softwareCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
     </button>
@@ -177,25 +259,117 @@
         <span class="carousel-control-next-icon"></span>
     </button>
 
+    <!-- 指示器 -->
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="2"></button>
         <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="3"></button>
         <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="5"></button>
+        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="6"></button>
     </div>
 </div>
 
-<!-- ✅ Why Choose Us Section -->
+<!-- ✅ 为什么选择我们 -->
 <div class="solutions-section">
     <h2>为什么选择我们？</h2>
     <ul>
-        <li><strong>20年以上经验</strong> —— 软件开发和企业解决方案专家。</li>
-        <li><strong>企业迁移专家</strong> —— 支持 SQL Server → PostgreSQL、.NET → .NET Core、Windows → Linux。</li>
-        <li><strong>企业级集成</strong> —— 支持 Jira、Rally、SSO、认证、授权、Secret Vault、Redis 等平台集成。</li>
-        <li><strong>全栈开发</strong> —— Angular、React、Bootstrap、ASP.NET Core、JAVA、API 开发等。</li>
-        <li><strong>数据库管理</strong> —— SQL Server、PostgreSQL、MySQL、Oracle、Firebase 等。</li>
-        <li><strong>数据库开发</strong> —— 存储过程、函数、视图、触发器及索引优化。</li>
+        <li><strong>20+ 年专业经验</strong> —— 软件开发与企业解决方案专家。</li>
+        <li><strong>迁移专家</strong> —— 无缝迁移 SQL Server、PostgreSQL、.NET Core、Linux 等。</li>
+        <li><strong>企业集成</strong> —— 支持 Jira、Rally、SSO、Vault、Redis 等。</li>
+        <li><strong>全栈开发</strong> —— 前端、后端、API 和数据库解决方案。</li>
+        <li><strong>数据库解决方案</strong> —— 设计、开发和管理 SQL Server、PostgreSQL、MySQL、Oracle、Firebase 等。</li>
     </ul>
-    <a class="btn-tech" href="/Contact/zh">⬅ 联系我们</a>
+    <a class="btn-tech" href="/Contact">⬅ 联系我们</a>
 </div>
+
+<!-- ✅ 成功案例 -->
+<section class="cases-section">
+    <h2>成功案例</h2>
+    <div class="cases-grid">
+        <div class="case-card">
+            <img src="/images/tech/case-dbmigration.png" alt="数据库迁移">
+            <h3>数据库迁移</h3>
+            <p>将金融平台从 SQL Server 无缝迁移至 PostgreSQL，实现零数据丢失。</p>
+            <div class="case-details">
+                <ul>
+                    <li>分析 SQL Server 2018 架构与依赖。</li>
+                    <li>制定详细的迁移计划。</li>
+                    <li>迁移表、视图、函数和存储过程。</li>
+                    <li>验证数据完整性确保无损失。</li>
+                    <li>应用索引和性能优化。</li>
+                    <li>平滑切换并最小化停机时间。</li>
+                </ul>
+            </div>
+            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">查看更多</button>
+        </div>
+
+        <div class="case-card">
+            <img src="/images/tech/case-buildapp.png" alt="慈善验证应用">
+            <h3>慈善验证应用</h3>
+            <p>开发跨平台应用，帮助教会高效验证慈善和非营利组织。</p>
+            <div class="case-details">
+                <ul>
+                    <li>自适应设计，支持 PC 与移动端。</li>
+                    <li>集成安全数据库，实时验证组织状态。</li>
+                    <li>实现认证和授权保护敏感数据。</li>
+                    <li>对接政府与第三方 API。</li>
+                    <li>支持离线模式并同步现场数据。</li>
+                    <li>提供报表和分析功能。</li>
+                    <li>优化用户体验，实现快速验证。</li>
+                </ul>
+            </div>
+            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">查看更多</button>
+        </div>
+
+        <div class="case-card">
+            <img src="/images/tech/dotnet_migration.png" alt=".NET Core 迁移">
+            <h3>.NET → .NET Core 迁移</h3>
+            <p>将企业应用从 .NET Framework 升级至 .NET Core，实现跨平台支持。</p>
+            <div class="case-details">
+                <ul>
+                    <li>使用 .NET Portability Analyzer 与 Upgrade Assistant 评估兼容性。</li>
+                    <li>重构 Windows 特定依赖以支持 Linux。</li>
+                    <li>更新项目为 SDK 风格并迁移 NuGet 包。</li>
+                    <li>替换不支持的 API 并使用兼容包。</li>
+                    <li>在 Windows 与 Linux 上全面测试。</li>
+                    <li>优化依赖注入、日志与配置管道。</li>
+                </ul>
+            </div>
+            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">查看更多</button>
+        </div>
+
+        <div class="case-card">
+            <img src="/images/tech/cicd_kubernetes2.png" alt="CI/CD Kubernetes">
+            <h3>CI/CD → Kubernetes</h3>
+            <p>重构 CI/CD 流水线至 Kubernetes，实现更高扩展性与快速部署。</p>
+            <div class="case-details">
+                <ul>
+                    <li>分析旧 CI/CD 流程并识别瓶颈。</li>
+                    <li>重构流水线支持容器化构建与部署。</li>
+                    <li>采用 Jenkins 与 Helm 实现云原生部署。</li>
+                    <li>创建可复用 Helm Charts。</li>
+                    <li>集成密钥管理、镜像扫描与安全检查。</li>
+                    <li>实施 GitOps 进行版本控制部署。</li>
+                    <li>支持滚动更新与零停机。</li>
+                    <li>利用 Prometheus 与 Grafana 监控。</li>
+                </ul>
+            </div>
+            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">查看更多</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleCaseDetails(button) {
+        const details = button.previousElementSibling;
+        if (details.style.display === "none" || details.style.display === "") {
+            details.style.display = "block";
+            button.textContent = "收起";
+        } else {
+            details.style.display = "none";
+            button.textContent = "查看更多";
+        }
+    }
+</script>
