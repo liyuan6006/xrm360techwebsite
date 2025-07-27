@@ -27,20 +27,32 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        width: 50px;
-        height: auto;
+        width: 150px;
+        background: transparent;
     }
 
     .spec-table th {
         background: #f8f9fa;
+    }
+
+    .authorized-badge {
+        width: 50px;
+        height: auto;
+    }
+
+    #productCarousel2 .carousel-item img {
+        height: 350px;
+        object-fit: contain;
+        background: #fff;
     }
 </style>
 
 <div class="hero-background">
     <div class="hero-overlay text-white text-center">
         <img src="~/images/authorized-seller.png" alt="授权经销商" class="authorized-badge" />
+
         <h1 class="display-4 fw-bold">XRM360 健康</h1>
-        <p class="lead">亚马逊 ChoiceMMed 指夹式血氧仪 授权经销商</p>
+        <p class="lead">ChoiceMMed 指夹式血氧仪 亚马逊授权经销商</p>
     </div>
 </div>
 
@@ -51,13 +63,13 @@
             <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="~/images/pulse-oximeter1.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed 血氧仪 1">
+                        <img src="~/images/pulse-oximeter1.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed 指夹式血氧仪 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="~/images/pulse-oximeter2.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed 血氧仪 2">
+                        <img src="~/images/pulse-oximeter2.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed 指夹式血氧仪 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="~/images/pulse-oximeter3.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed 血氧仪 3">
+                        <img src="~/images/pulse-oximeter3.jpg" class="d-block w-100 rounded shadow" alt="ChoiceMMed 指夹式血氧仪 3">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
@@ -72,38 +84,100 @@
         <div class="col-md-6">
             <h2 class="text-primary">ChoiceMMed MD300CN350R 指夹式血氧仪</h2>
             <p>
-                我们 <strong>XRM360 Technologies LLC</strong> 是 <strong>ChoiceMMed 产品授权经销商</strong>。
-                MD300CN350R 是一款 <strong>小巧、可靠且精准</strong> 的设备，
-                可检测 <strong>血氧饱和度 (SpO₂)</strong>、<strong>脉搏率 (PR)</strong>、
+                我们 <strong>XRM360 Technologies LLC</strong> 是 <strong>ChoiceMMed 授权经销商</strong>。
+                MD300CN350R 是一款 <strong>小巧、可靠且精准</strong> 的设备，用于检测
+                <strong>血氧饱和度 (SpO₂)</strong>、<strong>脉率 (PR)</strong>、
                 <strong>灌注指数 (PI)</strong> 和 <strong>呼吸频率 (RR)</strong>。
                 适用于医院、诊所及家庭护理。
             </p>
             <ul>
-                <li>✅ <strong>血氧饱和度 (SpO₂)：</strong> 70–100%，精度 ±2%</li>
-                <li>✅ <strong>脉搏率 (PR)：</strong> 30–250 bpm，精度 ±2 bpm</li>
-                <li>✅ <strong>呼吸频率 (RR)：</strong> 4–45 rpm，精度 ±1 rpm</li>
-                <li>✅ <strong>灌注指数 (PI)：</strong> 0.3%–20%</li>
-                <li>✅ <strong>OLED 显示：</strong> 双彩色 6 种模式，可调亮度</li>
-                <li>✅ <strong>电池：</strong> 低功耗；附带 2 节 AAA 电池</li>
+                <li>✅ <strong>SpO₂ 测量范围：</strong> 70–100%，精度 ±2%</li>
+                <li>✅ <strong>脉率：</strong> 30–250 bpm，精度 ±2 bpm</li>
+                <li>✅ <strong>呼吸频率：</strong> 4–45 rpm，精度 ±1 rpm</li>
+                <li>✅ <strong>灌注指数：</strong> 0.3%–20%</li>
+                <li>✅ <strong>OLED 显示：</strong> 双彩色，6 种模式，可调亮度</li>
+                <li>✅ <strong>电池：</strong> 低功耗设计；含 2 节 AAA 电池</li>
                 <li>✅ <strong>自动关机：</strong> 延长电池寿命</li>
             </ul>
             <a href="https://www.amazon.com/dp/YOURPRODUCTID" target="_blank" class="btn btn-success mt-3">
-                ✅ 立即前往亚马逊购买
+                ✅ 立即在亚马逊购买
             </a>
         </div>
     </div>
 
-    <!-- 技术参数 -->
     <div class="mt-5">
         <h3 class="text-secondary">技术参数</h3>
         <table class="table table-bordered spec-table">
             <tbody>
-                <tr><th>血氧测量范围</th><td>70% – 100%</td></tr>
-                <tr><th>脉搏率范围</th><td>30 bpm – 250 bpm</td></tr>
+                <tr><th>血氧饱和度 (SpO₂) 测量范围</th><td>70% – 100%</td></tr>
+                <tr><th>脉率范围</th><td>30 bpm – 250 bpm</td></tr>
                 <tr><th>灌注指数</th><td>0.3% – 20%</td></tr>
                 <tr><th>呼吸频率</th><td>4 rpm – 45 rpm</td></tr>
-                <tr><th>显示屏</th><td>OLED，6 种显示模式，可调亮度</td></tr>
-                <tr><th>电池</th><td>2× AAA（连续使用40小时以上）</td></tr>
+                <tr><th>显示</th><td>OLED，6 种显示模式，可调亮度</td></tr>
+                <tr><th>电池</th><td>2× AAA（续航40+小时）</td></tr>
+                <tr><th>重量</th><td>50g（含电池）</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- MD300CN33A 产品 -->
+<div class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 order-md-2 text-center">
+            <div id="productCarousel2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/images/health/M330A-1.png" class="d-block w-100 rounded shadow" alt="ChoiceMMed MD300CN33A 血氧仪">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/health/M330A-2.png" class="d-block w-100 rounded shadow" alt="ChoiceMMed MD300CN33A 侧视图">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/health/M330A-3.png" class="d-block w-100 rounded shadow" alt="ChoiceMMed MD300CN33A 使用中">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-md-6 order-md-1">
+            <h2 class="text-primary">ChoiceMMed MD300CN33A 指夹式血氧仪</h2>
+            <p>
+                <strong>MD300CN33A</strong> 是 <strong>ChoiceMMed</strong> 另一款高端型号，
+                专为 <strong>家庭健康监测、运动及临床使用</strong> 设计。
+                提供 <strong>快速且精准</strong> 的血氧饱和度 (SpO₂) 和脉率测量，
+                采用 <strong>明亮的 OLED 显示</strong>，并具备节能设计。
+            </p>
+            <ul>
+                <li>✅ <strong>SpO₂ 测量范围：</strong> 35%–100%，精度 ±2%</li>
+                <li>✅ <strong>脉率：</strong> 25–250 bpm，精度 ±2 bpm</li>
+                <li>✅ <strong>灌注指数：</strong> 0.2%–20%</li>
+                <li>✅ <strong>OLED 显示：</strong> 双彩色，可调亮度</li>
+                <li>✅ <strong>轻便设计：</strong> 仅 50g，适合随身携带</li>
+                <li>✅ <strong>自动关机：</strong> 节省电池</li>
+                <li>✅ <strong>一键操作，简单方便</strong></li>
+            </ul>
+            <a href="https://www.amazon.com/dp/YOURPRODUCTID33A" target="_blank" class="btn btn-warning mt-3">
+                🛒 购买 MD300CN33A
+            </a>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <h3 class="text-secondary">MD300CN33A 技术参数</h3>
+        <table class="table table-bordered spec-table">
+            <tbody>
+                <tr><th>血氧饱和度 (SpO₂) 测量范围</th><td>35% – 100%</td></tr>
+                <tr><th>脉率范围</th><td>25 bpm – 250 bpm</td></tr>
+                <tr><th>灌注指数</th><td>0.2% – 20%</td></tr>
+                <tr><th>显示</th><td>双彩色 OLED，6 档亮度调节</td></tr>
+                <tr><th>电池</th><td>2× AAA（低功耗）</td></tr>
                 <tr><th>重量</th><td>50g（含电池）</td></tr>
             </tbody>
         </table>
