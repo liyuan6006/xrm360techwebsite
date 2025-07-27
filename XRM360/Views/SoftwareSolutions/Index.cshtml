@@ -202,6 +202,9 @@
             font-size: 1.2rem;
         }
 
+    .case-details {
+        display: none; /* ✅ Hide case details by default */
+    }
 </style>
 
 <!-- ✅ Carousel Banner -->
@@ -381,8 +384,8 @@
 
 <script>
     function toggleCaseDetails(button) {
-        const details = button.previousElementSibling;
-        if (details.style.display === "none") {
+        const details = button.closest('.case-card').querySelector('.case-details');
+        if (details.style.display === "" || details.style.display === "none") {
             details.style.display = "block";
             button.textContent = "Read Less";
         } else {

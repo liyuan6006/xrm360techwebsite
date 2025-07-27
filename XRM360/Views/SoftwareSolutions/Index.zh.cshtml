@@ -203,6 +203,9 @@
             font-size: 1.2rem;
         }
 
+    .case-details {
+        display: none; /* ✅ Hide case details by default */
+    }
 </style>
 
 <!-- ✅ 轮播横幅 -->
@@ -364,8 +367,8 @@
 
 <script>
     function toggleCaseDetails(button) {
-        const details = button.previousElementSibling;
-        if (details.style.display === "none" || details.style.display === "") {
+        const details = button.closest('.case-card').querySelector('.case-details');
+        if (details.style.display === "" || details.style.display === "none") {
             details.style.display = "block";
             button.textContent = "收起";
         } else {
