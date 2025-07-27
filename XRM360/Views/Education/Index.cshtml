@@ -4,7 +4,7 @@
 
 <style>
     /* ================================
-       Banner Section 
+       Banner Section
     =================================*/
     .education-banner {
         position: relative;
@@ -59,101 +59,58 @@
         background: rgba(0, 0, 0, 0.6);
         z-index: 0;
     }
-    .education-container > * {
-        position: relative;
-        z-index: 1;
-    }
-    .education-container h3 {
-        color: #00d1ff;
-        margin-top: 25px;
-    }
-    .education-container ul {
-        padding-left: 20px;
-    }
-    .education-container ul li {
-        margin-bottom: 8px;
-    }
+    .education-container > * { position: relative; z-index: 1; }
+    .education-container h3 { color: #00d1ff; margin-top: 25px; }
+    .education-container ul { padding-left: 20px; }
+    .education-container ul li { margin-bottom: 8px; }
 
     /* ================================
-       Staff Section (layout wrapper)
+       Staff Section
     =================================*/
     .staff-section {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between; /* ensures two cards spread evenly */
-        gap: 20px; /* spacing between cards */
+        justify-content: space-between;
+        gap: 20px;
         margin-top: 40px;
     }
 
-    /* ================================
-       Staff Card
-    =================================*/
     .staff-card {
+        flex: 1 1 48%;
         display: flex;
-        align-items: flex-start;
+        flex-direction: column;
         background: rgba(255, 255, 255, 0.95);
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        width: 48%; /* ✅ Two cards per row */
         color: #333;
     }
     .staff-card:hover {
         transform: scale(1.03);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        background: rgba(255, 255, 255, 1);
+        background: #fff;
     }
 
-    /* Left side: Image + Name */
-    .staff-left {
-        flex: 0 0 120px;
-        text-align: center;
-        margin-right: 15px;
-    }
-    .staff-card img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: 0 auto 8px;
-        display: block;
-    }
-    .staff-card h5 {
-        font-weight: bold;
-        margin: 0;
-        font-size: 1rem;
-    }
+    .staff-header { display: flex; align-items: flex-start; }
+    .staff-left { flex: 0 0 120px; text-align: center; margin-right: 15px; }
+    .staff-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 8px; }
+    .staff-card h5 { font-weight: bold; margin: 0; font-size: 1rem; }
+    .staff-right { flex: 1; font-size: 0.95rem; line-height: 1.5; }
 
-    /* Right side: Blurb + Full Bio */
-    .staff-right {
-        flex: 1;
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
+    .blurb { font-weight: 600; font-size: 1rem; color: #222; margin-bottom: 5px; }
 
-    /* ================================
-       Bio Text (Blurb + Expandable Content)
-    =================================*/
-    .blurb {
-        font-weight: 600;
-        font-size: 1rem;
-        color: #222;
-        margin-bottom: 5px;
-    }
+    /* Full bio spans the entire width */
     .full-text {
         display: none;
+        margin-top: 10px;
         color: #444;
-        margin-top: 5px;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
         font-family: 'Segoe UI', sans-serif;
     }
-    .bio.expanded .full-text {
-        display: block;
-    }
+    .staff-card.expanded .full-text { display: block; }
 
-    /* ================================
-       Read More Button
-    =================================*/
     .read-more {
         background: #00d1ff;
         color: white;
@@ -166,54 +123,24 @@
         margin-top: 8px;
         transition: background 0.3s ease;
     }
-    .read-more:hover {
-        background: #009ac7;
-    }
+    .read-more:hover { background: #009ac7; }
 
-    /* ================================
-       Responsive Behavior (Mobile)
-    =================================*/
     @@media(max-width: 768px) {
-        .staff-card {
-            width: 100%; /* ✅ Full width on small screens */
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .staff-left {
-            margin: 0 0 10px;
-        }
-
-        .staff-right {
-            text-align: left;
-        }
+        .staff-card { width: 100%; }
+        .staff-header { flex-direction: column; text-align: center; }
+        .staff-left { margin-bottom: 10px; }
+    }
 </style>
 
-<!-- Banner -->
 <div class="education-banner">
     <h1>XRM360 Education – Your Journey Starts Here</h1>
 </div>
 
-<!-- Content -->
 <div class="education-container">
-    <p>
-        <strong>XRM360 Education</strong> is dedicated to helping international students—especially those from China—achieve their dream of studying in the United States.
-        We support students at every step, from the moment they start preparing their applications until they successfully begin their journey in the U.S.
-    </p>
-    <p>
-        <strong>XRM360 Education</strong> goes beyond standard application services.
-        What sets us apart is our ongoing support even after students arrive in the United States.
-        We understand that <em>college is a huge jump in independence</em>—especially for those transitioning from traditional high schools in China.
-    </p>
-    <p>
-        <strong>We don’t stop at admissions.</strong> From the moment you start applying to the moment you graduate,
-        XRM360 Education is by your side—making sure your transition is smooth and your experience is unforgettable.
-    </p>
-    <p>
-        With us, you will make the most of your 4 years of undergrad by receiving quality consultations,
-        roadmaps to guide you through these years, opportunities to speak with professionals in various industries,
-        mentorship programs, and regular access to industry insights.
-    </p>
+    <p><strong>XRM360 Education</strong> is dedicated to helping international students—especially those from China—achieve their dream of studying in the United States. We support students at every step, from the moment they start preparing their applications until they successfully begin their journey in the U.S.</p>
+    <p><strong>XRM360 Education</strong> goes beyond standard application services. What sets us apart is our ongoing support even after students arrive in the United States. We understand that <em>college is a huge jump in independence</em>—especially for those transitioning from traditional high schools in China.</p>
+    <p><strong>We don’t stop at admissions.</strong> From the moment you start applying to the moment you graduate, XRM360 Education is by your side—making sure your transition is smooth and your experience is unforgettable.</p>
+    <p>With us, you will make the most of your 4 years of undergrad by receiving quality consultations, roadmaps to guide you through these years, opportunities to speak with professionals in various industries, mentorship programs, and regular access to industry insights.</p>
 
     <h3>Our Services Include:</h3>
     <ul>
@@ -225,65 +152,56 @@
         <li>🏠 <strong>Settling In:</strong> Helping students adapt to life in the U.S., including housing, orientation, and getting started with confidence.</li>
     </ul>
 
-    <p>With XRM360 Education, students receive guidance from start to finish—ensuring a smooth transition and a successful academic journey in the United States.</p>
-
     <h3>Meet Our Education Experts</h3>
     <div class="staff-section">
-        <!-- Megan Card -->
+        <!-- ✅ Megan -->
         <div class="staff-card">
-            <div class="staff-left">
-                <img src="/images/edu/staff-magan.png" alt="Megan" />
-                <h5>Megan</h5>
+            <div class="staff-header">
+                <div class="staff-left"><img src="/images/edu/staff-magan.png" alt="Megan" /><h5>Megan</h5></div>
+                <div class="staff-right"><p class="blurb">International education professional with over 15 years in education and a strong background in helping students succeed in the U.S. and abroad.</p><button class="read-more">Read More</button></div>
             </div>
-            <div class="staff-right bio">
-                <p class="blurb">
-                    International student advisor with over 15 years in education and a strong background in helping students succeed in the U.S. and abroad.
-                </p>
-                <p class="full-text">
-                    Megan, originally from Council Bluffs, Iowa, and currently residing in Mesa, Arizona, has been dedicated to the field of education since 2006.
-                    She spent over eight years teaching English in Beijing, China, where she worked closely with local English teachers and gained a deep understanding of the Chinese education system.
-                    Upon returning to the United States, Megan focused on supporting the international community through English language instruction and guiding students to excel in language assessments.
-                    She has also served as Manager of International Student Retention at a large U.S. university, further enhancing her expertise in student success strategies.
-                    Megan holds a Bachelor’s degree in Political Science and International Studies, a Master’s degree in Teaching English to Speakers of Other Languages, and a Master of Science in Program Evaluation and Data Analytics.
-                </p>
-                <button class="read-more">Read More</button>
-            </div>
+            <p class="full-text">
+                Megan, originally from Council Bluffs, Iowa, and currently residing in Mesa, Arizona.
+            </p>
+            <p class="full-text">
+                She has been dedicated to the field of education since 2006. She spent over eight years teaching English in Beijing, China, where she worked closely with local English teachers and gained a deep understanding of the Chinese education system, including experience with renowned schools such as <strong>China Renmin University Affiliated High School</strong> and <strong>Beijing No. 80 High School</strong>. Upon returning to the United States, Megan focused on supporting the international community through English language instruction and guiding students to excel in language assessments. She also served as Manager of International Student Retention at a large U.S. university.
+            </p>
+            <p class="full-text">
+                Megan holds a Bachelor’s degree in Political Science and International Studies, a Master’s degree in Teaching English to Speakers of Other Languages, and a Master of Science in Program Evaluation and Data Analytics.
+            </p>
         </div>
 
-        <!-- Ya Card -->
+        <!-- ✅ Ya -->
         <div class="staff-card">
-            <div class="staff-left">
-                <img src="/images/edu/staff-ya.png" alt="Ya" />
-                <h5>Ya</h5>
+            <div class="staff-header">
+                <div class="staff-left"><img src="/images/edu/staff-ya.png" alt="Ya" /><h5>Ya</h5></div>
+                <div class="staff-right"><p class="blurb">Bilingual education specialist with extensive experience guiding Chinese students through academic and cultural transitions in the U.S.</p><button class="read-more">Read More</button></div>
             </div>
-            <div class="staff-right bio">
-                <p class="blurb">
-                    Bilingual education specialist with extensive experience guiding Chinese students through academic and cultural transitions in the U.S.
-                </p>
-                <p class="full-text">
-                   Ya, originally from Chengdu, China, and currently residing in Chandler, Arizona, brings over a decade of expertise in supporting international students.
-She spent six years at the University of Electronic Science and Technology of China, where she served as an academic advisor, international student services coordinator, and study abroad program coordinator.
-After moving to the United States, Ya continued her work in higher education as an Academic Advisor and later as Manager of International Engineering Student Experience at a large U.S. university.
-She holds a Bachelor’s degree in Administrative Management, a Master’s degree in Law, and a Master of Science in Educational Leadership and Policy Analysis.
-                </p>
-                <button class="read-more">Read More</button>
-            </div>
+            <p class="full-text">
+                Ya, originally from Chengdu, China, and currently residing in Chandler, Arizona.
+            </p>
+            <p class="full-text">
+                She brings over a decade of expertise in supporting international students. She spent six years at the University of Electronic Science and Technology of China, where she served as an academic advisor, international student services coordinator, and study abroad program coordinator. After moving to the United States, Ya continued her work in higher education as an Academic Advisor and later as Manager of International Engineering Student Experience at a large U.S. university.
+            </p>
+            <p class="full-text">
+                Ya holds a Bachelor’s degree in Administrative Management, a Master’s degree in Law, and a Master of Science in Educational Leadership and Policy Analysis.
+            </p>
+
         </div>
     </div>
 
     <blockquote style="font-style: italic; color: #00d1ff; border-left: 4px solid #00d1ff; padding-left: 10px; margin: 20px 0;">
-        “College is a huge jump in independence. Especially for those transitioning from a traditional high school in China.
-        Add on the cultural shock factors, and it’s a lot for students to handle. We’re here to make that transition smoother.”
+        “College is a huge jump in independence. Especially for those transitioning from a traditional high school in China. Add on the cultural shock factors, and it’s a lot for students to handle. We’re here to make that transition smoother.”
         <br><strong>– Megan, XRM360 Advisor</strong>
     </blockquote>
 </div>
 
 <script>
-    document.querySelectorAll('.read-more').forEach(button => {
-        button.addEventListener('click', () => {
-            const bio = button.parentElement;
-            bio.classList.toggle('expanded');
-            button.textContent = bio.classList.contains('expanded') ? "Read Less" : "Read More";
-        });
+document.querySelectorAll('.read-more').forEach(button => {
+    button.addEventListener('click', () => {
+        const card = button.closest('.staff-card');
+        card.classList.toggle('expanded');
+        button.textContent = card.classList.contains('expanded') ? "Read Less" : "Read More";
     });
+});
 </script>
