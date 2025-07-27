@@ -1,10 +1,11 @@
 ﻿@{
-    Layout = ViewBag.Layout;
     ViewData["Title"] = "XRM360 教育";
 }
 
 <style>
-    /* Banner */
+    /* ================================
+       Banner Section 
+    =================================*/
     .education-banner {
         position: relative;
         height: 280px;
@@ -16,25 +17,25 @@
         font-family: 'Segoe UI', sans-serif;
         text-align: center;
     }
+    .education-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    .education-banner h1 {
+        position: relative;
+        font-size: 2.5rem;
+        font-weight: bold;
+        z-index: 1;
+    }
 
-        .education-banner::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        .education-banner h1 {
-            position: relative;
-            font-size: 2.5rem;
-            font-weight: bold;
-            z-index: 1;
-        }
-
-    /* Content */
+    /* ================================
+       Content Container
+    =================================*/
     .education-container {
         max-width: 1000px;
         margin: 40px auto;
@@ -48,121 +49,174 @@
         color: #fff;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
+    .education-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+    }
+    .education-container > * {
+        position: relative;
+        z-index: 1;
+    }
+    .education-container h3 {
+        color: #00d1ff;
+        margin-top: 25px;
+    }
+    .education-container ul {
+        padding-left: 20px;
+    }
+    .education-container ul li {
+        margin-bottom: 8px;
+    }
 
-        .education-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 0;
-        }
-
-        .education-container > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .education-container h3 {
-            color: #00d1ff;
-            margin-top: 25px;
-        }
-
-        .education-container ul {
-            padding-left: 20px;
-        }
-
-            .education-container ul li {
-                margin-bottom: 8px;
-            }
-
-    /* Staff Section */
+    /* ================================
+       Staff Section (layout wrapper)
+    =================================*/
     .staff-section {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
+        justify-content: space-between;
+        gap: 20px;
         margin-top: 40px;
     }
 
+    /* ================================
+       Staff Card
+    =================================*/
     .staff-card {
+        display: flex;
+        align-items: flex-start;
         background: rgba(255, 255, 255, 0.95);
         border-radius: 10px;
         padding: 20px;
-        width: 260px;
-        text-align: center;
-        color: #333;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 48%;
+        color: #333;
+    }
+    .staff-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 1);
     }
 
-        .staff-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: rgba(255, 255, 255, 1);
-        }
+    .staff-left {
+        flex: 0 0 120px;
+        text-align: center;
+        margin-right: 15px;
+    }
+    .staff-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 8px;
+        display: block;
+    }
+    .staff-card h5 {
+        font-weight: bold;
+        margin: 0;
+        font-size: 1rem;
+    }
 
-        .staff-card img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
+    .staff-right {
+        flex: 1;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
 
-        .staff-card h5 {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+    .blurb {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #222;
+        margin-bottom: 5px;
+    }
+    .full-text {
+        display: none;
+        color: #444;
+        margin-top: 5px;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .bio.expanded .full-text {
+        display: block;
+    }
 
-        .staff-card p {
-            font-size: 0.95rem;
+    .read-more {
+        background: #00d1ff;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: background 0.3s ease;
+    }
+    .read-more:hover {
+        background: #009ac7;
+    }
+
+    @@media(max-width: 768px) {
+        .staff-card {
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
         }
+        .staff-left {
+            margin: 0 0 10px;
+        }
+        .staff-right {
+            text-align: left;
+        }
+    }
 </style>
 
 <!-- Banner -->
 <div class="education-banner">
-    <h1>XRM360 教育 – 你的留学之旅从这里开始</h1>
+    <h1>XRM360 教育 – 您的留学之旅从这里开始</h1>
 </div>
 
 <!-- Content -->
 <div class="education-container">
     <p>
-        <strong>XRM360 教育</strong> 致力于帮助国际学生，特别是来自中国的学生，实现他们赴美留学的梦想。
-        我们在每一步都提供支持，从准备申请到成功开启美国的学习生活。
+        <strong>XRM360 教育</strong> 致力于帮助国际学生——尤其是来自中国的学生——实现他们赴美留学的梦想。
+        我们为学生提供全程支持，从申请准备到顺利开启美国学习生活。
     </p>
     <p>
-        <strong>XRM360 教育</strong> 不仅仅提供标准的申请服务。
-        我们的独特之处在于，即使学生抵达美国后，我们仍持续为他们提供支持。
-        我们深知，<em>大学意味着独立性的巨大飞跃</em> —— 尤其是对于那些从中国传统高中转型的学生而言。
+        <strong>XRM360 教育</strong> 不仅仅是申请服务。
+        我们的特色在于，即使学生抵达美国后，我们仍持续提供支持。
+        我们深知，<em>大学意味着独立性的巨大飞跃</em>，特别是对于那些从中国传统高中直接过渡的学生。
     </p>
     <p>
-        <strong>我们的服务不仅止于录取。</strong> 从你开始申请的那一刻直到毕业，
-        XRM360 教育始终伴你左右——确保你的过渡顺利、经历难忘。
+        <strong>我们的服务不仅限于录取。</strong> 从你开始申请到毕业，
+        XRM360 教育将始终陪伴左右，确保你的过渡顺利、体验难忘。
     </p>
     <p>
-        在我们的帮助下，你将充分利用大学四年的时光，
-        获得高质量的咨询服务、指导你度过这些年的路线图、
-        与各行业专业人士交流的机会、导师计划，以及定期获取行业洞察的机会。
+        通过我们的服务，你将在四年本科学习中充分成长，获得高质量咨询、
+        个人成长路线图、与行业专业人士交流的机会、导师指导以及定期行业洞察。
     </p>
 
     <h3>我们的服务包括：</h3>
     <ul>
-        <li>📄 <strong>申请准备：</strong> 协助学生收集所有必要的文件和材料。</li>
-        <li>📝 <strong>流程指导：</strong> 逐步引导学生完成大学申请的每一步。</li>
-        <li>✅ <strong>提交支持：</strong> 帮助学生准确、及时地审核并提交申请。</li>
-        <li>🎓 <strong>院校选择：</strong> 根据学生的目标和偏好提供选校建议。</li>
-        <li>✈️ <strong>行前协助：</strong> 为学生提供出发前的准备和抵达安排支持。</li>
-        <li>🏠 <strong>生活适应：</strong> 帮助学生适应美国生活，包括住宿、入学指导及自信开启大学生活。</li>
+        <li>📄 <strong>申请准备：</strong> 协助学生准备所有必要材料。</li>
+        <li>📝 <strong>流程指导：</strong> 全程指导大学申请步骤。</li>
+        <li>✅ <strong>提交支持：</strong> 帮助学生准确、及时提交申请。</li>
+        <li>🎓 <strong>院校选择：</strong> 根据目标和偏好提供择校建议。</li>
+        <li>✈️ <strong>行前支持：</strong> 提供行前准备与到达安排。</li>
+        <li>🏠 <strong>适应指导：</strong> 帮助学生快速适应美国生活，包括住宿、迎新和自信开启新生活。</li>
     </ul>
 
-    <p><strong>选择 XRM360 教育</strong>，你将从头到尾获得指导——确保顺利过渡，成就成功的留学之旅。</p>
+    <p>在 XRM360 教育的帮助下，学生从始至终都能获得指导，确保顺利过渡并在美国学业成功。</p>
 
     <h3>认识我们的教育专家</h3>
     <div class="staff-section">
-        <!-- Megan Card -->
+        <!-- Megan -->
         <div class="staff-card">
             <div class="staff-left">
                 <img src="/images/edu/staff-magan.png" alt="Megan" />
@@ -170,19 +224,18 @@
             </div>
             <div class="staff-right bio">
                 <p class="blurb">
-                    拥有 15 年以上教育经验的国际学生顾问，擅长帮助学生在美国及海外取得成功。
+                    拥有15年以上教育经验的国际学生顾问，擅长帮助学生在美国及海外取得成功。
                 </p>
                 <p class="full-text">
-                    Megan 来自美国爱荷华州康瑟尔布拉夫斯，自 2006 年以来一直从事教育工作，
-                    曾在中国北京教授英语超过 8 年，深入了解中国教育体系。
-                    她在帮助国际学生学业和文化适应方面经验丰富。
-                    Megan 拥有政治学与国际研究学士学位、对外英语教学硕士学位，以及项目评估与数据分析硕士学位。
+                    Megan 来自爱荷华州 Council Bluffs，自2006年以来一直从事教育工作，其中包括在中国北京教授英语超过8年。
+                    她在帮助国际学生在学术和文化方面成功方面拥有丰富经验。
+                    她拥有政治科学和国际研究学士学位、对外英语教学硕士学位，以及项目评估和数据分析硕士学位。
                 </p>
                 <button class="read-more">阅读更多</button>
             </div>
         </div>
 
-        <!-- Ya Card -->
+        <!-- Ya -->
         <div class="staff-card">
             <div class="staff-left">
                 <img src="/images/edu/staff-ya.png" alt="Ya" />
@@ -190,13 +243,13 @@
             </div>
             <div class="staff-right bio">
                 <p class="blurb">
-                    双语教育专家，拥有丰富经验指导中国学生顺利完成在美的学术与文化过渡。
+                    双语教育专家，拥有丰富经验，指导中国学生顺利完成在美国的学术与文化过渡。
                 </p>
                 <p class="full-text">
-                    Ya 来自中国成都，拥有十多年支持国际学生的专业经验。
-                    她曾在中国电子科技大学担任学术顾问和国际学生服务协调员，
-                    之后在一所大型美国大学担任国际工程学生体验经理。
-                    Ya 拥有行政管理学学士学位、法律硕士学位以及教育领导与政策分析硕士学位。
+                    Ya 来自中国成都，拥有十年以上国际学生支持经验。
+                    她曾在电子科技大学担任学术顾问和国际学生服务协调员，
+                    后来在美国一所大型大学担任国际工程学生体验经理。
+                    她拥有行政管理学士学位、法律硕士学位以及教育领导与政策分析硕士学位。
                 </p>
                 <button class="read-more">阅读更多</button>
             </div>
@@ -204,8 +257,8 @@
     </div>
 
     <blockquote style="font-style: italic; color: #00d1ff; border-left: 4px solid #00d1ff; padding-left: 10px; margin: 20px 0;">
-        “大学意味着独立性的巨大飞跃。尤其是对于那些从中国传统高中转型的学生而言。
-        再加上文化冲击，这对学生来说是巨大的挑战。我们在这里帮助你让这一过渡变得更顺利。”
+        “大学是独立性的巨大飞跃，尤其是对于那些从中国传统高中直接过渡的学生。
+        再加上文化冲击，这对学生来说是一项巨大的挑战。我们在这里帮助你顺利完成过渡。”
         <br><strong>– Megan, XRM360 顾问</strong>
     </blockquote>
 </div>

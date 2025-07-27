@@ -9,14 +9,12 @@
         height: 320px;
         overflow: hidden;
     }
-
-        .banner-carousel .carousel-item img {
-            height: 320px;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
+    .banner-carousel .carousel-item img {
+        height: 320px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
     .banner-caption {
         font-size: 1.3rem;
         font-weight: 500;
@@ -24,11 +22,9 @@
         padding: 10px;
         border-radius: 5px;
     }
-
     .carousel-indicators [data-bs-target] {
         background-color: #00d1ff;
     }
-
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         filter: invert(1);
@@ -45,77 +41,63 @@
         color: #fff;
         overflow: hidden;
     }
-
-        /* ✅ Dark Overlay */
-        .solutions-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            z-index: 0;
-            border-radius: 10px;
-        }
-
-        .solutions-section h2 {
-            color: #00d1ff;
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: bold;
-            position: relative;
-            z-index: 1;
-        }
-
-        .solutions-section ul {
-            font-size: 1.15rem;
-            line-height: 1.6;
-            list-style: none;
-            padding: 0;
-            position: relative;
-            z-index: 1;
-        }
-
-            /* ✅ List Items with Cyan Checkmarks */
-            .solutions-section ul li {
-                position: relative;
-                padding-left: 40px;
-                background: rgba(255, 255, 255, 0.1);
-                margin: 10px 0;
-                padding: 12px 18px 12px 40px;
-                border-left: 4px solid #00d1ff;
-                border-radius: 5px;
-                color: #f1f1f1;
-                transition: all 0.3s ease;
-            }
-
-                .solutions-section ul li::before {
-                    content: "✔";
-                    position: absolute;
-                    left: 12px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: #00d1ff !important; /* ✅ Force cyan */
-                    font-weight: bold;
-                    font-size: 1.3rem;
-                    font-family: Arial, Helvetica, sans-serif; /* ✅ Prevent emoji font */
-                    text-shadow: 0 0 4px rgba(0, 209, 255, 0.6); /* ✅ Optional glow */
-                }
-
-                /* ✅ Hover effect using cyan */
-                .solutions-section ul li:hover {
-                    background: rgba(0, 209, 255, 0.15);
-                    transform: scale(1.02);
-                    box-shadow: 0 0 12px rgba(0, 209, 255, 0.5);
-                    border-left: 4px solid #00d1ff;
-                    cursor: pointer;
-                }
-
-                .solutions-section ul li strong {
-                    color: #00d1ff;
-                }
-
+    .solutions-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 0;
+        border-radius: 10px;
+    }
+    .solutions-section h2 {
+        color: #00d1ff;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+    }
+    .solutions-section ul {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        list-style: none;
+        padding: 0;
+        position: relative;
+        z-index: 1;
+    }
+    .solutions-section ul li {
+        position: relative;
+        padding: 12px 18px 12px 40px;
+        background: rgba(255, 255, 255, 0.1);
+        margin: 10px 0;
+        border-left: 4px solid #00d1ff;
+        border-radius: 5px;
+        color: #f1f1f1;
+        transition: all 0.3s ease;
+    }
+    .solutions-section ul li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #00d1ff;
+        font-weight: bold;
+        font-size: 1.3rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .solutions-section ul li:hover {
+        background: rgba(0, 209, 255, 0.15);
+        transform: scale(1.02);
+        box-shadow: 0 0 12px rgba(0, 209, 255, 0.5);
+        cursor: pointer;
+    }
+    .solutions-section ul li strong {
+        color: #00d1ff;
+    }
     .btn-tech {
         background: #00d1ff;
         color: #000;
@@ -131,29 +113,24 @@
         position: relative;
         z-index: 1;
     }
+    .btn-tech:hover {
+        background: #00a8cc;
+        color: #fff;
+    }
 
-        .btn-tech:hover {
-            background: #00a8cc;
-            color: #fff;
-        }
-
-
+    /* ✅ Mobile Responsive */
     @@media (max-width: 768px) {
         .carousel-caption {
-            display: block !important; /* ensure it's visible */
-            bottom: 10px !important; /* adjust position */
-            background: rgba(0,0,0,0.6);
+            display: block !important;
+            bottom: 10px !important;
+            background: rgba(0, 0, 0, 0.6);
             padding: 5px 8px;
             border-radius: 3px;
         }
-
-            .carousel-caption .banner-caption {
-                font-size: 0.9rem; /* override Bootstrap font size */
-            }
+        .carousel-caption .banner-caption {
+            font-size: 0.9rem;
+        }
     }
-
-    }
-
 
     /* ✅ Successful Cases Section */
     .cases-section {
@@ -165,47 +142,45 @@
         border-radius: 10px;
         text-align: center;
     }
-
-        .cases-section h2 {
-            color: #00d1ff;
-            margin-bottom: 25px;
-            font-weight: bold;
-        }
-
+    .cases-section h2 {
+        color: #00d1ff;
+        margin-bottom: 25px;
+        font-weight: bold;
+    }
     .cases-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
     }
-
     .case-card {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
         padding: 15px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-        .case-card img {
-            width: 100%;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .case-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
-        }
-
-        .case-card h3 {
-            color: #00d1ff;
-            margin: 10px 0;
-            font-size: 1.2rem;
-        }
-
+    .case-card img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .case-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+    }
+    .case-card h3 {
+        color: #00d1ff;
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
     .case-details {
-        display: none; /* ✅ Hide case details by default */
+        display: none;
+        text-align: left; /* ✅ Forces bullets to align to the left */
+        padding-left: 20px; /* ✅ Adds proper indentation */
+        margin: 0; /* ✅ Optional: remove extra margin */
+        list-style-position: outside; /* ✅ Ensures bullets are outside text block */
     }
 </style>
+
 
 <!-- ✅ Carousel Banner -->
 <div id="softwareCarousel" class="carousel slide banner-carousel" data-bs-ride="carousel">

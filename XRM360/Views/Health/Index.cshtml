@@ -3,6 +3,9 @@
 }
 
 <style>
+    /* ================================
+           Hero Section
+        =================================*/
     .hero-background {
         position: relative;
         height: 280px;
@@ -22,27 +25,31 @@
         align-items: center;
     }
 
+    /* ================================
+           Authorized Seller Badge
+        =================================*/
     .authorized-badge {
         position: absolute;
         top: 20px;
         right: 20px;
-        width: 150px;
-        background: transparent;
+        width: 50px; /* ✅ final size */
+        height: auto; /* ✅ maintain ratio */
     }
 
+    /* ================================
+           Specification Table
+        =================================*/
     .spec-table th {
         background: #f8f9fa;
     }
 
-    .authorized-badge {
-        width: 50px; /* adjust size */
-        height: auto; /* maintain ratio */
-    }
-
+    /* ================================
+           Product Carousel (Second)
+        =================================*/
     #productCarousel2 .carousel-item img {
-        height: 350px; /* Adjust as needed */
-        object-fit: contain; /* Keeps aspect ratio without cropping */
-        background: #fff; /* White background for better appearance */
+        height: 350px;
+        object-fit: contain;
+        background: #fff;
     }
 </style>
 

@@ -47,7 +47,6 @@
         overflow: hidden;
     }
 
-        /* ✅ Dark Overlay */
         .solutions-section::before {
             content: "";
             position: absolute;
@@ -78,13 +77,11 @@
             z-index: 1;
         }
 
-            /* ✅ List Items with Cyan Checkmarks */
             .solutions-section ul li {
                 position: relative;
-                padding-left: 40px;
+                padding: 12px 18px 12px 40px;
                 background: rgba(255, 255, 255, 0.1);
                 margin: 10px 0;
-                padding: 12px 18px 12px 40px;
                 border-left: 4px solid #00d1ff;
                 border-radius: 5px;
                 color: #f1f1f1;
@@ -97,19 +94,16 @@
                     left: 12px;
                     top: 50%;
                     transform: translateY(-50%);
-                    color: #00d1ff !important; /* ✅ Force cyan */
+                    color: #00d1ff;
                     font-weight: bold;
                     font-size: 1.3rem;
-                    font-family: Arial, Helvetica, sans-serif; /* ✅ Prevent emoji font */
-                    text-shadow: 0 0 4px rgba(0, 209, 255, 0.6); /* ✅ Optional glow */
+                    font-family: Arial, Helvetica, sans-serif;
                 }
 
-                /* ✅ Hover effect using cyan */
                 .solutions-section ul li:hover {
                     background: rgba(0, 209, 255, 0.15);
                     transform: scale(1.02);
                     box-shadow: 0 0 12px rgba(0, 209, 255, 0.5);
-                    border-left: 4px solid #00d1ff;
                     cursor: pointer;
                 }
 
@@ -138,23 +132,20 @@
             color: #fff;
         }
 
-
+    /* ✅ Mobile Responsive */
     @@media (max-width: 768px) {
         .carousel-caption {
-            display: block !important; /* ensure it's visible */
-            bottom: 10px !important; /* adjust position */
-            background: rgba(0,0,0,0.6);
+            display: block !important;
+            bottom: 10px !important;
+            background: rgba(0, 0, 0, 0.6);
             padding: 5px 8px;
             border-radius: 3px;
         }
 
             .carousel-caption .banner-caption {
-                font-size: 0.9rem; /* override Bootstrap font size */
+                font-size: 0.9rem;
             }
     }
-
-    }
-
 
     /* ✅ Successful Cases Section */
     .cases-section {
@@ -204,7 +195,11 @@
         }
 
     .case-details {
-        display: none; /* ✅ Hide case details by default */
+        display: none;
+        text-align: left; /* ✅ Forces bullets to align to the left */
+        padding-left: 20px; /* ✅ Adds proper indentation */
+        margin: 0; /* ✅ Optional: remove extra margin */
+        list-style-position: outside; /* ✅ Ensures bullets are outside text block */
     }
 </style>
 
