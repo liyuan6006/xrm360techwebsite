@@ -15,7 +15,6 @@
             height: 320px;
             width: 100%;
             object-fit: cover;
-            object-position: center;
         }
 
     .banner-caption {
@@ -35,82 +34,7 @@
         filter: invert(1);
     }
 
-    /* ✅ Content Section */
-    .solutions-section {
-        background: url('/images/tech/background.png') center center / cover no-repeat;
-        position: relative;
-        max-width: 1200px;
-        margin: 40px auto;
-        padding: 50px 40px;
-        border-radius: 10px;
-        color: #fff;
-        overflow: hidden;
-    }
-
-        .solutions-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            z-index: 0;
-            border-radius: 10px;
-        }
-
-        .solutions-section h2 {
-            color: #00d1ff;
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: bold;
-            position: relative;
-            z-index: 1;
-        }
-
-        .solutions-section ul {
-            font-size: 1.15rem;
-            line-height: 1.6;
-            list-style: none;
-            padding: 0;
-            position: relative;
-            z-index: 1;
-        }
-
-            .solutions-section ul li {
-                position: relative;
-                padding: 12px 18px 12px 40px;
-                background: rgba(255, 255, 255, 0.1);
-                margin: 10px 0;
-                border-left: 4px solid #00d1ff;
-                border-radius: 5px;
-                color: #f1f1f1;
-                transition: all 0.3s ease;
-            }
-
-                .solutions-section ul li::before {
-                    content: "✔";
-                    position: absolute;
-                    left: 12px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    color: #00d1ff;
-                    font-weight: bold;
-                    font-size: 1.3rem;
-                    font-family: Arial, Helvetica, sans-serif;
-                }
-
-                .solutions-section ul li:hover {
-                    background: rgba(0, 209, 255, 0.15);
-                    transform: scale(1.02);
-                    box-shadow: 0 0 12px rgba(0, 209, 255, 0.5);
-                    cursor: pointer;
-                }
-
-                .solutions-section ul li strong {
-                    color: #00d1ff;
-                }
-
+    /* ✅ Reusable Button */
     .btn-tech {
         background: #00d1ff;
         color: #000;
@@ -123,8 +47,6 @@
         text-align: center;
         text-decoration: none;
         transition: background 0.3s ease;
-        position: relative;
-        z-index: 1;
     }
 
         .btn-tech:hover {
@@ -161,7 +83,6 @@
         .cases-section h2 {
             color: #00d1ff;
             margin-bottom: 25px;
-            font-weight: bold;
         }
 
     .cases-grid {
@@ -196,36 +117,151 @@
 
     .case-details {
         display: none;
-        text-align: left; /* ✅ Forces bullets to align to the left */
-        padding-left: 20px; /* ✅ Adds proper indentation */
-        margin: 0; /* ✅ Optional: remove extra margin */
-        list-style-position: outside; /* ✅ Ensures bullets are outside text block */
+        text-align: left;
+        padding-left: 20px;
+        list-style-position: outside;
+    }
+
+    /* ✅ Custom Website Build Section */
+    .custom-website-section {
+        background: rgba(0, 0, 0, 0.8);
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        position: relative;
+    }
+
+
+        .custom-website-section h2 {
+            color: #00d1ff;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .custom-website-section ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+            .custom-website-section ul li {
+                padding: 10px 15px 10px 40px;
+                background: rgba(255,255,255,0.08);
+                margin: 8px 0;
+                border-left: 4px solid #00d1ff;
+                border-radius: 5px;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+
+    /* ✅ Expandable Button */
+    .expand-btn {
+        background: #00d1ff;
+        color: #000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto 10px;
+        transition: background 0.3s;
+    }
+
+        .expand-btn:hover {
+            background: #00a8cc;
+            color: #fff;
+        }
+
+    /* ✅ Expandable Content */
+    .expand-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.6s ease, opacity 0.3s ease;
+    }
+
+        .expand-content.open {
+            max-height: 5000px; /* large enough to cover any content */
+            opacity: 1;
+        }
+
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto; /* ✅ enables horizontal scroll on small screens */
+        -webkit-overflow-scrolling: touch; /* ✅ smooth scrolling on iOS */
+    }
+
+        .table-responsive table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 400px; /* ✅ prevent table from collapsing too much */
+        }
+
+    /* ✅ Comparison Table */
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px;
+            text-align: center;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+
+        .comparison-table th {
+            background: #00d1ff;
+            color: #000;
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(0, 209, 255, 0.1);
+            transform: scale(1.01);
+        }
+
+            .comparison-table tr:hover td {
+                color: #00d1ff;
+            }
+
+    /* ✅ Hover Effects */
+    .custom-website-section ul li:hover {
+        background: rgba(0, 209, 255, 0.15);
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(0, 209, 255, 0.4);
+        cursor: pointer;
     }
 </style>
 
-<!-- ✅ 轮播横幅 -->
+<!-- ✅ 轮播图 -->
 <div id="softwareCarousel" class="carousel slide banner-carousel" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/images/tech/buildapp.png" alt="定制应用">
+            <img src="/images/tech/buildapp.png" alt="自定义应用">
             <div class="carousel-caption d-none d-md-block">
-                <p class="banner-caption">💻 为您的业务构建定制应用和网站。</p>
+                <p class="banner-caption">💻 为您的业务量身定制应用和网站。</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="/images/tech/dbmigration.png" alt="数据库迁移">
             <div class="carousel-caption d-none d-md-block">
-                <p class="banner-caption">🔄 无缝的企业级数据库迁移。</p>
+                <p class="banner-caption">🔄 无缝企业数据库迁移。</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="/images/tech/Automation.png" alt="企业解决方案">
             <div class="carousel-caption d-none d-md-block">
-                <p class="banner-caption">🚀 通过自动化简化工作流程。</p>
+                <p class="banner-caption">🚀 自动化工作流程，提高效率。</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/cloud.png" alt="云工程">
+            <img src="/images/tech/cloud2.png" alt="云工程">
             <div class="carousel-caption d-none d-md-block">
                 <p class="banner-caption">☁️ 可扩展且安全的云解决方案。</p>
             </div>
@@ -233,142 +269,227 @@
         <div class="carousel-item">
             <img src="/images/tech/skilldeveloper.png" alt="专业开发人员">
             <div class="carousel-caption d-none d-md-block">
-                <p class="banner-caption">🛠️ 跨多种技术的专业开发团队。</p>
+                <p class="banner-caption">🛠️ 跨技术领域的专家开发团队。</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/integration.png" alt="系统集成">
+            <img src="/images/tech/integration2.png" alt="系统集成">
             <div class="carousel-caption d-none d-md-block">
                 <p class="banner-caption">🔗 高级 API 和平台集成。</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/dataanalytics.png" alt="数据分析">
+            <img src="/images/tech/dataanalytics2.png" alt="数据分析">
             <div class="carousel-caption d-none d-md-block">
                 <p class="banner-caption">📊 数据分析与可视化仪表板。</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- 控制按钮 -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#softwareCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#softwareCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
+<!-- ✅ 自定义网站开发 -->
+<section class="custom-website-section">
+    <h2>🌐 想要一个完全自定义、无月费的网站吗？</h2>
+    <button class="expand-btn" onclick="toggleCustomSection()">➕ 了解更多</button>
+    <div class="expand-content" id="customContent">
+        <ul>
+            <li><strong>手工打造网站</strong> – 页面逐一开发，让您完全掌控最终设计（无固定模板、无月费）。</li>
+            <li><strong>域名与托管设置</strong> – 我们为您注册域名、配置托管，并将网站发布到您的品牌名下。</li>
+            <li><strong>静态与动态网站</strong> – 无论是简单展示型还是具有复杂逻辑的动态应用，我们都能实现。</li>
+            <li><strong>完全自定义</strong> – 不同于DIY建站工具，我们根据您的想法精准开发。</li>
+        </ul>
 
-    <!-- 指示器 -->
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="3"></button>
-        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="4"></button>
-        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="5"></button>
-        <button type="button" data-bs-target="#softwareCarousel" data-bs-slide-to="6"></button>
+        <h3 style="color:#00d1ff;margin-top:20px;">💙 为什么客户喜欢我们？</h3>
+        <div class="table-responsive">
+            <table class="comparison-table">
+                <tr><th>功能</th><th>DIY 建站（Wix, Squarespace）</th><th>xrm360</th></tr>
+                <tr><td>成本</td><td>$10–$30+/月（持续付费）</td><td>一次性费用，完全所有权</td></tr>
+                <tr><td>自定义</td><td>模板有限</td><td>完全手写代码，无限制设计</td></tr>
+                <tr><td>灵活性</td><td>平台受限</td><td>您掌控每一个细节</td></tr>
+                <tr><td>支持</td><td>通用支持</td><td>个性化咨询</td></tr>
+            </table>
+        </div>
+
+        <h3 style="color:#00d1ff;margin-top:25px;">🛠 我们的网站开发流程</h3>
+        <ul>
+            <li><strong>需求分析与规划：</strong> 通过咨询了解您的目标。</li>
+            <li><strong>设计原型：</strong> 提供初始布局，直到您满意为止。</li>
+            <li><strong>开发阶段：</strong> 手写代码开发静态或动态网站，完全响应式且优化良好。</li>
+            <li><strong>上线发布：</strong> 我们处理域名、托管、SSL、邮箱配置等所有技术工作。</li>
+            <li><strong>修改与测试：</strong> 根据反馈反复优化，直到完全符合您的期望。</li>
+        </ul>
     </div>
-</div>
+</section>
 
-<!-- ✅ 为什么选择我们 -->
-<div class="solutions-section">
-    <h2>为什么选择我们？</h2>
-    <ul>
-        <li><strong>20+ 年专业经验</strong> —— 软件开发与企业解决方案专家。</li>
-        <li><strong>迁移专家</strong> —— 无缝迁移 SQL Server、PostgreSQL、.NET Core、Linux 等。</li>
-        <li><strong>企业集成</strong> —— 支持 Jira、Rally、SSO、Vault、Redis 等。</li>
-        <li><strong>全栈开发</strong> —— 前端、后端、API 和数据库解决方案。</li>
-        <li><strong>数据库解决方案</strong> —— 设计、开发和管理 SQL Server、PostgreSQL、MySQL、Oracle、Firebase 等。</li>
-    </ul>
-    <a class="btn-tech" href="/Contact">⬅ 联系我们</a>
-</div>
+<!-- ✅ 自定义应用开发 -->
+<section class="custom-website-section">
+    <h2>🚀 定制应用开发 – 为您量身打造</h2>
+    <button class="expand-btn" onclick="toggleCustomAppSection()">➕ 了解更多</button>
+    <div class="expand-content" id="customAppContent">
+        <ul>
+            <li><strong>响应式应用</strong> – 无论网页浏览器还是移动端都完美运行。</li>
+            <li><strong>前沿技术</strong> – 采用最新框架与编程语言，确保性能优异。</li>
+            <li><strong>您选择技术栈</strong> – 您决定技术栈，我们为您实现。</li>
+            <li><strong>20+年经验</strong> – 结合行业经验提供建议，但最终决策权在您手中。</li>
+            <li><strong>复杂逻辑与自动化</strong> – 为您构建高效的业务逻辑应用。</li>
+            <li><strong>迭代开发</strong> – 多轮演示与反馈，直到您完全满意。</li>
+            <li><strong>托管与发布</strong> – 提供完整的托管和上线支持。</li>
+            <li><strong>全栈开发</strong> – 从前端到后端、数据库、API，全方位覆盖。</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ✅ 数据库迁移 -->
+<section class="custom-website-section">
+    <h2>🔄 无缝数据库迁移 – 数据零丢失</h2>
+    <button class="expand-btn" onclick="toggleDatabaseMigrationSection()">➕ 了解更多</button>
+    <div class="expand-content" id="databaseMigrationContent">
+        <ul>
+            <li><strong>为什么数据库重要</strong> – 没有数据库，应用无法高效存储和管理数据。</li>
+            <li><strong>丰富经验</strong> – 数十年数据库工作经验，深谙其运行机制。</li>
+            <li><strong>支持的数据库</strong> – SQL Server、Oracle、MySQL、PostgreSQL、云数据库等。</li>
+            <li><strong>数据始终重要</strong> – 技术更新，但数据永存，我们确保其完整性。</li>
+            <li><strong>无缝迁移</strong> – 从本地到云，从SQL到Postgres，零数据丢失。</li>
+            <li><strong>企业级迁移</strong> – 已成功迁移数百张表、视图、存储过程、函数及索引。</li>
+            <li><strong>应用无感知</strong> – 应用层运行无中断，如同未发生变化。</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ✅ 集成服务 -->
+<section class="custom-website-section">
+    <h2>🔗 企业级系统集成 – 让一切无缝连接</h2>
+    <button class="expand-btn" onclick="toggleIntegrationSection()">➕ 了解更多</button>
+    <div class="expand-content" id="integrationContent">
+        <ul>
+            <li><strong>集成的重要性</strong> – 现代应用少有孤立运行，集成提升效率与可扩展性。</li>
+            <li><strong>重用而非重建</strong> – 我们集成现有应用（认证、存储、分析等）而非重造轮子。</li>
+            <li><strong>企业级集成经验</strong> – 成功集成 Jira、Broadcom Rally、Vault、Redis、LDAP 等。</li>
+            <li><strong>API 专业知识</strong> – 精通 REST、SOAP、GraphQL 等 API。</li>
+            <li><strong>安全优先</strong> – 认证、授权及安全令牌管理均符合最佳实践。</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ✅ 数据可视化 -->
+<section class="custom-website-section">
+    <h2>📊 数据可视化 – 将原始数据转化为洞察力</h2>
+    <button class="expand-btn" onclick="toggleDataVisualizationSection()">➕ 了解更多</button>
+    <div class="expand-content" id="dataVisualizationContent">
+        <ul>
+            <li><strong>数据可视化的重要性</strong> – 只有被理解的数据才有价值。</li>
+            <li><strong>大数据专家</strong> – 清洗、整理并处理复杂数据集。</li>
+            <li><strong>高级工具</strong> – 使用 Python、Tableau、Power BI、Apache Superset 等工具定制仪表板。</li>
+            <li><strong>定制化洞察</strong> – 依据业务需求设计 KPI 可视化。</li>
+            <li><strong>数据清理与转换</strong> – 确保准确的分析基础。</li>
+            <li><strong>比较分析</strong> – 发现趋势、模式与关键指标。</li>
+            <li><strong>实时仪表板</strong> – 集成动态数据源，实时更新。</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ✅ 咨询服务 -->
+<section class="custom-website-section">
+    <h2>💡 专业咨询 – 无需编码也能获得最佳解决方案</h2>
+    <button class="expand-btn" onclick="toggleConsultingSection()">➕ 了解更多</button>
+    <div class="expand-content" id="consultingContent">
+        <ul>
+            <li><strong>无需编码？没问题！</strong> – 只需正确建议，有时就足够了。</li>
+            <li><strong>技术指导</strong> – 提供网站、工作流、数据库等解决方案建议。</li>
+            <li><strong>解决方案比较</strong> – 为您评估多种方案，呈现优缺点与成本。</li>
+            <li><strong>优化工作流</strong> – 消除低效流程，提高生产力。</li>
+            <li><strong>数据库设计与迁移</strong> – 制定最佳策略保障数据安全。</li>
+            <li><strong>自动化与扩展</strong> – 为您推荐节省时间、可扩展的自动化方案。</li>
+            <li><strong>供应商中立建议</strong> – 推荐最适合您的技术，而非特定厂商产品。</li>
+        </ul>
+    </div>
+</section>
 
 <!-- ✅ 成功案例 -->
+<!-- ✅ 成功案例部分 -->
 <section class="cases-section">
     <h2>成功案例</h2>
     <div class="cases-grid">
         <div class="case-card">
             <img src="/images/tech/case-dbmigration.png" alt="数据库迁移">
             <h3>数据库迁移</h3>
-            <p>将金融平台从 SQL Server 无缝迁移至 PostgreSQL，实现零数据丢失。</p>
+            <p>将一个金融平台从 SQL Server 迁移到 PostgreSQL，实现了零数据丢失的无缝过渡。</p>
             <div class="case-details">
                 <ul>
-                    <li>分析 SQL Server 2018 架构与依赖。</li>
-                    <li>制定详细的迁移计划。</li>
-                    <li>迁移表、视图、函数和存储过程。</li>
-                    <li>验证数据完整性确保无损失。</li>
-                    <li>应用索引和性能优化。</li>
-                    <li>平滑切换并最小化停机时间。</li>
+                    <li>分析了现有 SQL Server 2018 的架构和依赖关系。</li>
+                    <li>设计了详细的逐步迁移计划。</li>
+                    <li>迁移了表、视图、函数和存储过程。</li>
+                    <li>传输并验证了数据完整性，确保无任何数据丢失。</li>
+                    <li>迁移后应用索引和性能优化。</li>
+                    <li>执行平滑切换，最小化停机时间。</li>
                 </ul>
             </div>
-            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">查看更多</button>
+            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">阅读更多</button>
         </div>
 
         <div class="case-card">
             <img src="/images/tech/case-buildapp.png" alt="慈善验证应用">
-            <h3>慈善验证应用</h3>
-            <p>开发跨平台应用，帮助教会高效验证慈善和非营利组织。</p>
+            <h3>应用开发</h3>
+            <p>为教会开发跨平台应用，高效验证慈善和非营利组织身份。</p>
             <div class="case-details">
                 <ul>
-                    <li>自适应设计，支持 PC 与移动端。</li>
-                    <li>集成安全数据库，实时验证组织状态。</li>
-                    <li>实现认证和授权保护敏感数据。</li>
-                    <li>对接政府与第三方 API。</li>
-                    <li>支持离线模式并同步现场数据。</li>
-                    <li>提供报表和分析功能。</li>
-                    <li>优化用户体验，实现快速验证。</li>
+                    <li>设计了响应式应用，可在桌面（PC）和移动设备上无缝运行。</li>
+                    <li>集成安全数据库，实现组织状态的实时验证。</li>
+                    <li>实现身份认证和授权，保护敏感数据。</li>
+                    <li>通过 API 连接政府和第三方慈善注册机构。</li>
+                    <li>增加离线模式，支持现场工作人员的数据同步。</li>
+                    <li>提供分析和报告功能，为管理层提供监督支持。</li>
+                    <li>优化用户体验，实现快速查找、扫描文件和验证凭据。</li>
                 </ul>
             </div>
-            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">查看更多</button>
+            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">阅读更多</button>
         </div>
 
         <div class="case-card">
-            <img src="/images/tech/dotnet_migration.png" alt=".NET Core 迁移">
+            <img src="/images/tech/dotnet_migration.png" alt=".NET 迁移到 .NET Core">
             <h3>.NET → .NET Core 迁移</h3>
-            <p>将企业应用从 .NET Framework 升级至 .NET Core，实现跨平台支持。</p>
+            <p>将企业应用从 .NET Framework 升级到 .NET Core，实现跨平台支持。</p>
             <div class="case-details">
                 <ul>
-                    <li>使用 .NET Portability Analyzer 与 Upgrade Assistant 评估兼容性。</li>
-                    <li>重构 Windows 特定依赖以支持 Linux。</li>
-                    <li>更新项目为 SDK 风格并迁移 NuGet 包。</li>
-                    <li>替换不支持的 API 并使用兼容包。</li>
-                    <li>在 Windows 与 Linux 上全面测试。</li>
-                    <li>优化依赖注入、日志与配置管道。</li>
+                    <li>使用 .NET Portability Analyzer 和 Upgrade Assistant 评估兼容性并自动化迁移。</li>
+                    <li>识别 Windows 专有依赖项，重构代码以在 Linux 环境运行。</li>
+                    <li>将项目文件更新为 SDK 风格的 .NET 9 格式并迁移 NuGet 包。</li>
+                    <li>审查 API 并使用 Windows Compatibility Pack 替换不受支持的接口。</li>
+                    <li>在 Windows 和 Linux 上进行全面测试，重构平台特定逻辑。</li>
+                    <li>优化依赖注入、日志和配置管道，实现现代架构。</li>
                 </ul>
             </div>
-            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">查看更多</button>
+            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">阅读更多</button>
         </div>
 
         <div class="case-card">
-            <img src="/images/tech/cicd_kubernetes2.png" alt="CI/CD Kubernetes">
+            <img src="/images/tech/cicd_kubernetes2.png" alt="CI/CD 到 Kubernetes">
             <h3>CI/CD → Kubernetes</h3>
-            <p>重构 CI/CD 流水线至 Kubernetes，实现更高扩展性与快速部署。</p>
+            <p>重构 CI/CD 流水线以运行在 Kubernetes 上，提高了可扩展性、部署速度和可靠性。</p>
             <div class="case-details">
                 <ul>
-                    <li>分析旧 CI/CD 流程并识别瓶颈。</li>
-                    <li>重构流水线支持容器化构建与部署。</li>
-                    <li>采用 Jenkins 与 Helm 实现云原生部署。</li>
-                    <li>创建可复用 Helm Charts。</li>
-                    <li>集成密钥管理、镜像扫描与安全检查。</li>
-                    <li>实施 GitOps 进行版本控制部署。</li>
-                    <li>支持滚动更新与零停机。</li>
-                    <li>利用 Prometheus 与 Grafana 监控。</li>
+                    <li>分析现有 CI/CD 工作流，找出遗留部署流程中的瓶颈。</li>
+                    <li>重新设计流水线，利用容器化构建与部署。</li>
+                    <li>实现 Jenkins 和 Helm 以支持 Kubernetes 原生构建和部署编排。</li>
+                    <li>创建可重用的 Helm chart，实现一致的环境配置。</li>
+                    <li>集成秘密管理、镜像扫描和安全合规检查。</li>
+                    <li>采用 GitOps 实践，实现版本控制的部署。</li>
+                    <li>启用滚动更新，实现零停机部署。</li>
+                    <li>使用 Prometheus、Grafana 和 Kubernetes 日志改进监控和可观测性。</li>
                 </ul>
             </div>
-            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">查看更多</button>
+            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">阅读更多</button>
         </div>
     </div>
 </section>
 
+
 <script>
-    function toggleCaseDetails(button) {
-        const details = button.closest('.case-card').querySelector('.case-details');
-        if (details.style.display === "" || details.style.display === "none") {
-            details.style.display = "block";
-            button.textContent = "收起";
-        } else {
-            details.style.display = "none";
-            button.textContent = "查看更多";
-        }
-    }
+    function toggleCaseDetails(btn) { const d = btn.closest('.case-card').querySelector('.case-details'); d.style.display = (d.style.display === "" || d.style.display === "none") ? "block" : "none"; btn.textContent = (d.style.display === "block") ? "收起" : "阅读更多"; }
+    function toggleCustomSection() { const c = document.getElementById("customContent"), b = c.previousElementSibling; c.classList.toggle("open"); b.textContent = c.classList.contains("open") ? "➖ 收起" : "➕ 了解更多"; }
+    function toggleCustomAppSection() { const c = document.getElementById("customAppContent"), b = c.previousElementSibling; c.classList.toggle("open"); b.textContent = c.classList.contains("open") ? "➖ 收起" : "➕ 了解更多"; }
+    function toggleDatabaseMigrationSection() { const c = document.getElementById("databaseMigrationContent"), b = c.previousElementSibling; c.classList.toggle("open"); b.textContent = c.classList.contains("open") ? "➖ 收起" : "➕ 了解更多"; }
+    function toggleIntegrationSection() { const c = document.getElementById("integrationContent"), b = c.previousElementSibling; c.classList.toggle("open"); b.textContent = c.classList.contains("open") ? "➖ 收起" : "➕ 了解更多"; }
+    function toggleDataVisualizationSection() { const c = document.getElementById("dataVisualizationContent"), b = c.previousElementSibling; c.classList.toggle("open"); b.textContent = c.classList.contains("open") ? "➖ 收起" : "➕ 了解更多"; }
+    function toggleConsultingSection() { const c = document.getElementById("consultingContent"), b = c.previousElementSibling; c.classList.toggle("open"); b.textContent = c.classList.contains("open") ? "➖ 收起" : "➕ 了解更多"; }
 </script>

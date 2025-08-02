@@ -9,12 +9,13 @@
         height: 320px;
         overflow: hidden;
     }
-    .banner-carousel .carousel-item img {
-        height: 320px;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
+
+        .banner-carousel .carousel-item img {
+            height: 320px;
+            width: 100%;
+            object-fit: cover;
+        }
+
     .banner-caption {
         font-size: 1.3rem;
         font-weight: 500;
@@ -22,82 +23,17 @@
         padding: 10px;
         border-radius: 5px;
     }
+
     .carousel-indicators [data-bs-target] {
         background-color: #00d1ff;
     }
+
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         filter: invert(1);
     }
 
-    /* ✅ Content Section */
-    .solutions-section {
-        background: url('/images/tech/background.png') center center / cover no-repeat;
-        position: relative;
-        max-width: 1200px;
-        margin: 40px auto;
-        padding: 50px 40px;
-        border-radius: 10px;
-        color: #fff;
-        overflow: hidden;
-    }
-    .solutions-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.85);
-        z-index: 0;
-        border-radius: 10px;
-    }
-    .solutions-section h2 {
-        color: #00d1ff;
-        text-align: center;
-        margin-bottom: 20px;
-        font-weight: bold;
-        position: relative;
-        z-index: 1;
-    }
-    .solutions-section ul {
-        font-size: 1.15rem;
-        line-height: 1.6;
-        list-style: none;
-        padding: 0;
-        position: relative;
-        z-index: 1;
-    }
-    .solutions-section ul li {
-        position: relative;
-        padding: 12px 18px 12px 40px;
-        background: rgba(255, 255, 255, 0.1);
-        margin: 10px 0;
-        border-left: 4px solid #00d1ff;
-        border-radius: 5px;
-        color: #f1f1f1;
-        transition: all 0.3s ease;
-    }
-    .solutions-section ul li::before {
-        content: "✔";
-        position: absolute;
-        left: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #00d1ff;
-        font-weight: bold;
-        font-size: 1.3rem;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .solutions-section ul li:hover {
-        background: rgba(0, 209, 255, 0.15);
-        transform: scale(1.02);
-        box-shadow: 0 0 12px rgba(0, 209, 255, 0.5);
-        cursor: pointer;
-    }
-    .solutions-section ul li strong {
-        color: #00d1ff;
-    }
+    /* ✅ Reusable Button */
     .btn-tech {
         background: #00d1ff;
         color: #000;
@@ -110,13 +46,12 @@
         text-align: center;
         text-decoration: none;
         transition: background 0.3s ease;
-        position: relative;
-        z-index: 1;
     }
-    .btn-tech:hover {
-        background: #00a8cc;
-        color: #fff;
-    }
+
+        .btn-tech:hover {
+            background: #00a8cc;
+            color: #fff;
+        }
 
     /* ✅ Mobile Responsive */
     @@media (max-width: 768px) {
@@ -127,9 +62,10 @@
             padding: 5px 8px;
             border-radius: 3px;
         }
-        .carousel-caption .banner-caption {
-            font-size: 0.9rem;
-        }
+
+            .carousel-caption .banner-caption {
+                font-size: 0.9rem;
+            }
     }
 
     /* ✅ Successful Cases Section */
@@ -142,44 +78,167 @@
         border-radius: 10px;
         text-align: center;
     }
-    .cases-section h2 {
-        color: #00d1ff;
-        margin-bottom: 25px;
-        font-weight: bold;
-    }
+
+        .cases-section h2 {
+            color: #00d1ff;
+            margin-bottom: 25px;
+        }
+
     .cases-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
     }
+
     .case-card {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
         padding: 15px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .case-card img {
-        width: 100%;
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-    .case-card:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
-    }
-    .case-card h3 {
-        color: #00d1ff;
-        margin: 10px 0;
-        font-size: 1.2rem;
-    }
+
+        .case-card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .case-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+        }
+
+        .case-card h3 {
+            color: #00d1ff;
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
     .case-details {
         display: none;
-        text-align: left; /* ✅ Forces bullets to align to the left */
-        padding-left: 20px; /* ✅ Adds proper indentation */
-        margin: 0; /* ✅ Optional: remove extra margin */
-        list-style-position: outside; /* ✅ Ensures bullets are outside text block */
+        text-align: left;
+        padding-left: 20px;
+        list-style-position: outside;
+    }
+
+    /* ✅ Custom Website Build Section */
+    .custom-website-section {
+        background: rgba(0, 0, 0, 0.8);
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+        position: relative;
+    }
+
+
+        .custom-website-section h2 {
+            color: #00d1ff;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .custom-website-section ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+            .custom-website-section ul li {
+                padding: 10px 15px 10px 40px;
+                background: rgba(255,255,255,0.08);
+                margin: 8px 0;
+                border-left: 4px solid #00d1ff;
+                border-radius: 5px;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+
+    /* ✅ Expandable Button */
+    .expand-btn {
+        background: #00d1ff;
+        color: #000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto 10px;
+        transition: background 0.3s;
+    }
+
+        .expand-btn:hover {
+            background: #00a8cc;
+            color: #fff;
+        }
+
+    /* ✅ Expandable Content */
+    .expand-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.6s ease, opacity 0.3s ease;
+    }
+
+        .expand-content.open {
+            max-height: 5000px; /* large enough to cover any content */
+            opacity: 1;
+        }
+
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto; /* ✅ enables horizontal scroll on small screens */
+        -webkit-overflow-scrolling: touch; /* ✅ smooth scrolling on iOS */
+    }
+
+        .table-responsive table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 400px; /* ✅ prevent table from collapsing too much */
+        }
+
+    /* ✅ Comparison Table */
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px;
+            text-align: center;
+            transition: color 0.3s ease, background 0.3s ease;
+        }
+
+        .comparison-table th {
+            background: #00d1ff;
+            color: #000;
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(0, 209, 255, 0.1);
+            transform: scale(1.01);
+        }
+
+            .comparison-table tr:hover td {
+                color: #00d1ff;
+            }
+
+    /* ✅ Hover Effects */
+    .custom-website-section ul li:hover {
+        background: rgba(0, 209, 255, 0.15);
+        transform: scale(1.02);
+        box-shadow: 0 0 10px rgba(0, 209, 255, 0.4);
+        cursor: pointer;
     }
 </style>
+
+
 
 
 <!-- ✅ Carousel Banner -->
@@ -204,7 +263,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/cloud.png" alt="Cloud Engineering">
+            <img src="/images/tech/cloud2.png" alt="Cloud Engineering">
             <div class="carousel-caption d-none d-md-block">
                 <p class="banner-caption">☁️ Scalable and secure cloud solutions.</p>
             </div>
@@ -216,13 +275,13 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/integration.png" alt="Integration">
+            <img src="/images/tech/integration2.png" alt="Integration">
             <div class="carousel-caption d-none d-md-block">
                 <p class="banner-caption">🔗 Advanced API and platform integrations.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="/images/tech/dataanalytics.png" alt="Data Analytics">
+            <img src="/images/tech/dataanalytics2.png" alt="Data Analytics">
             <div class="carousel-caption d-none d-md-block">
                 <p class="banner-caption">📊 Data analytics with insightful dashboards.</p>
             </div>
@@ -250,20 +309,203 @@
     </div>
 </div>
 
+<!-- ✅ Custom Website Build Section -->
+<section class="custom-website-section">
+    <h2>🌐 Want a Fully Custom Website Without Monthly Fees?</h2>
+    <button class="expand-btn" onclick="toggleCustomSection()">➕ Learn More</button>
 
-<!-- ✅ Why Choose Us Section -->
-<div class="solutions-section">
-    <h2>Why Choose Us?</h2>
-    <ul>
-        <li><strong>20+ Years of Expertise</strong> in software development and enterprise solutions.</li>
-        <li><strong>Migration Excellence</strong> – Seamless transitions across SQL Server, PostgreSQL, .NET Core, Linux, and more.</li>
-        <li><strong>Enterprise Integrations</strong> – Connecting Jira, Rally, SSO, Vault, Redis, and other platforms.</li>
-        <li><strong>Full-Stack Development</strong> – Front-end, back-end, APIs, and database solutions.</li>
-        <li><strong>Database Solutions</strong> – Design, development, and management across SQL Server, PostgreSQL, MySQL, Oracle, Firebase, and more.</li>
+    <div class="expand-content" id="customContent">
+        <ul>
+            <li><strong>Handcrafted Websites</strong> – Built page by page, giving you full control of the final design (no rigid templates or monthly fees).</li>
+            <li><strong>Domain & Hosting Setup</strong> – We secure your domain, configure hosting, and publish your site live under your brand.</li>
+            <li><strong>Static & Dynamic Websites</strong> – Whether you need a simple brochure site or a dynamic app with custom logic, we build the exact functionality you want—no unnecessary features, no hidden limitations.</li>
+            <li><strong>Full Customization</strong> – Unlike DIY builders, our developers create exactly what you envision.</li>
+        </ul>
 
-    </ul>
-    <a class="btn-tech" href="/Contact">⬅ Contact Us</a>
-</div>
+        <h3 style="color:#00d1ff;margin-top:20px;">💙 Why Customers Love Us?</h3>
+        <div class="table-responsive">
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>DIY Builders (Wix, Squarespace)</th>
+                    <th>xrm360</th>
+                </tr>
+                <tr>
+                    <td>Cost</td>
+                    <td>$10–$30+/month (recurring)</td>
+                    <td>One-time fee, full ownership</td>
+                </tr>
+                <tr>
+                    <td>Customization</td>
+                    <td>Limited templates</td>
+                    <td>Fully hand-coded, unlimited design</td>
+                </tr>
+                <tr>
+                    <td>Flexibility</td>
+                    <td>Platform constraints</td>
+                    <td>You control every detail</td>
+                </tr>
+                <tr>
+                    <td>Support</td>
+                    <td>Generic support</td>
+                    <td>Personalized consultation</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3 style="color:#00d1ff;margin-top:25px;">🛠 How Our Process Works</h3>
+        <ul>
+            <li><strong>Discovery & Planning:</strong> We start with a consultation to understand your goals.</li>
+            <li><strong>Design Mockups:</strong> We show initial layouts for your approval—adjustments are made until you love it.</li>
+            <li><strong>Development Phase:</strong> Hand‑coded static or dynamic site, fully responsive and optimized.</li>
+            <li><strong>Launch & Go Live:</strong> Domain, hosting, SSL, email setup—we handle the technical work and site publication.</li>
+            <li><strong>Revisions & QA:</strong> We refine and iterate based on your feedback until it matches your expectations perfectly.</li>
+        </ul>
+
+
+
+    </div>
+</section>
+
+<section class="custom-website-section">
+    <h2>🚀 Build Your Custom Application – Fully Tailored to Your Needs</h2>
+    <button class="expand-btn" onclick="toggleCustomAppSection()">➕ Learn More</button>
+
+    <div class="expand-content" id="customAppContent">
+        <ul>
+            <li><strong>Responsive Applications</strong> – We build apps that work flawlessly on both web browsers and mobile devices.</li>
+            <li><strong>Cutting-Edge Technology</strong> – We use the latest frameworks and programming languages to deliver top performance.</li>
+            <li><strong>Your Choice of Tech Stack</strong> – Prefer a specific language or stack? You decide—we implement it.</li>
+            <li><strong>20+ Years of Experience</strong> – With decades in software development, we provide expert suggestions while letting you make final decisions.</li>
+            <li><strong>Complex Logic & Workflow Automation</strong> – We create custom solutions that streamline and automate your business processes.</li>
+            <li><strong>Iterative Development</strong> – Multiple demo rounds with your feedback ensure the final product meets your expectations.</li>
+            <li><strong>Full Hosting & Deployment</strong> – After development, we help you host and publish the app seamlessly.</li>
+            <li><strong>Full-Stack Expertise</strong> – From front-end to back-end, database, and APIs, we handle it all.</li>
+        </ul>
+
+        <h3 style="color:#00d1ff;margin-top:25px;">🛠 How Our App Development Process Works</h3>
+        <ul>
+            <li><strong>Discovery & Planning:</strong> We start with a consultation to understand your business needs and goals.</li>
+            <li><strong>Tech Stack Selection:</strong> You choose the technologies you prefer—we guide you if needed.</li>
+            <li><strong>UI/UX Design & Prototypes:</strong> We create interactive prototypes and refine them based on your feedback.</li>
+            <li><strong>Development Phase:</strong> Full-stack coding using best practices, ensuring scalability and security.</li>
+            <li><strong>Demo & Feedback Rounds:</strong> We integrate multiple demo sessions to refine the app until you are fully satisfied.</li>
+            <li><strong>Deployment & Hosting:</strong> We handle the deployment, hosting, SSL, and production readiness.</li>
+            <li><strong>Post-Launch Support:</strong> Optional ongoing support, maintenance, and feature enhancements.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="custom-website-section">
+    <h2>🔄 Seamless Database Migration – Move Your Data Without Downtime</h2>
+    <button class="expand-btn" onclick="toggleDatabaseMigrationSection()">➕ Learn More</button>
+
+    <div class="expand-content" id="databaseMigrationContent">
+        <ul>
+            <li><strong>Why Database Matters</strong> – Without a reliable database, your application can't store or manage data effectively.</li>
+            <li><strong>Decades of Expertise</strong> – We've been working with databases for decades and understand their inner workings.</li>
+            <li><strong>Supported Databases</strong> – SQL Server, Oracle, MySQL, PostgreSQL, cloud databases, and more.</li>
+            <li><strong>Technology Evolves, Data Remains</strong> – Even as database technology changes, your data stays critical—we ensure its integrity.</li>
+            <li><strong>Seamless Migration</strong> – Whether moving from SQL Server to Oracle, PostgreSQL, or cloud, we ensure zero data loss.</li>
+            <li><strong>Enterprise-Level Migrations</strong> – We've migrated hundreds of tables, views, stored procedures, functions, and indexes successfully.</li>
+            <li><strong>Zero Application Disruption</strong> – Our process ensures your application continues running smoothly, as if nothing changed.</li>
+        </ul>
+
+        <h3 style="color:#00d1ff;margin-top:25px;">🛠 Our Database Migration Process</h3>
+        <ul>
+            <li><strong>Assessment:</strong> We analyze your current database structure, dependencies, and application integration.</li>
+            <li><strong>Planning:</strong> We create a detailed, step-by-step migration plan tailored to your database characteristics.</li>
+            <li><strong>Environment Setup:</strong> Prepare target databases, configure schemas, and align compatibility settings.</li>
+            <li><strong>Data Migration:</strong> Move tables, views, functions, and procedures with strict data integrity checks.</li>
+            <li><strong>Validation:</strong> Perform verification to ensure every record matches and no data is lost.</li>
+            <li><strong>Performance Optimization:</strong> Apply indexing and tuning to match or improve original performance.</li>
+            <li><strong>Cutover:</strong> Execute a smooth final transition with minimal downtime.</li>
+            <li><strong>Post-Migration Testing:</strong> Confirm the application runs seamlessly with the new database.</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="custom-website-section">
+    <h2>🔗 Enterprise Application Integration – Connect Everything Seamlessly</h2>
+    <button class="expand-btn" onclick="toggleIntegrationSection()">➕ Learn More</button>
+
+    <div class="expand-content" id="integrationContent">
+        <ul>
+            <li><strong>Why Integration Matters</strong> – Modern applications rarely work in isolation; seamless integration drives efficiency and scalability.</li>
+            <li><strong>Reuse Instead of Rebuild</strong> – We integrate existing apps (authentication, storage, analytics, etc.) so you don’t have to reinvent the wheel.</li>
+            <li><strong>Enterprise Integration Experience</strong> – We've successfully integrated Jira, Broadcom Rally, HashiCorp Vault, Redis, LDAP, and many more.</li>
+            <li><strong>API Expertise</strong> – We understand REST, SOAP, GraphQL, and custom APIs to bridge different platforms.</li>
+            <li><strong>Security First</strong> – Authentication, authorization, and secure token handling are at the core of our integration process.</li>
+        </ul>
+
+        <h3 style="color:#00d1ff;margin-top:25px;">🛠 Our Integration Process</h3>
+        <ul>
+            <li><strong>Discovery & Requirements:</strong> Identify systems to connect, data flows, and integration goals.</li>
+            <li><strong>API Analysis:</strong> Study target platform APIs, authentication methods, and data structures.</li>
+            <li><strong>Proof of Concept:</strong> Build a demo showing data read/write operations to validate feasibility.</li>
+            <li><strong>Bridge Development:</strong> Implement secure, reliable connectors between your app and target systems.</li>
+            <li><strong>Testing:</strong> Validate data consistency, performance, and security across integrated systems.</li>
+            <li><strong>Deployment:</strong> Deploy the integration in production with monitoring and logging in place.</li>
+            <li><strong>Knowledge Transfer:</strong> Provide documentation and training so your team can maintain the integration.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="custom-website-section">
+    <h2>📊 Data Visualization – Transform Raw Data into Actionable Insights</h2>
+    <button class="expand-btn" onclick="toggleDataVisualizationSection()">➕ Learn More</button>
+
+    <div class="expand-content" id="dataVisualizationContent">
+        <ul>
+            <li><strong>Why Data Visualization Matters</strong> – Data is only valuable when it can be understood. Clear dashboards reveal patterns, trends, and insights for smarter decisions.</li>
+            <li><strong>Big Data Expertise</strong> – We work with large, complex datasets, ensuring they are cleaned, structured, and ready for analysis.</li>
+            <li><strong>Advanced Tools</strong> – Using Python (Pandas, Matplotlib, Plotly), Tableau, Power BI, Apache Superset, and other modern tools, we build custom dashboards that fit your needs.</li>
+            <li><strong>Customized Insights</strong> – Every business has unique KPIs. We design dashboards tailored to your specific metrics and goals.</li>
+            <li><strong>Data Cleaning & Transformation</strong> – Our experts remove noise, normalize data, and prepare it for accurate visualization.</li>
+            <li><strong>Comparative Analysis</strong> – We help you compare historical and current data, highlighting critical insights.</li>
+            <li><strong>Real-Time Dashboards</strong> – For businesses that need live monitoring, we integrate dynamic data sources to keep dashboards updated.</li>
+        </ul>
+
+        <h3 style="color:#00d1ff;margin-top:25px;">🛠 Our Data Visualization Process</h3>
+        <ul>
+            <li><strong>Data Discovery:</strong> Identify data sources and define the KPIs you want to monitor.</li>
+            <li><strong>Data Cleaning:</strong> Remove duplicates, correct inconsistencies, and prepare raw data for analysis.</li>
+            <li><strong>Data Processing:</strong> Apply calculations, transformations, and aggregations to extract meaningful information.</li>
+            <li><strong>Dashboard Design:</strong> Create interactive dashboards with clear visual storytelling.</li>
+            <li><strong>Tool Integration:</strong> Choose the right tools (Python, Tableau, Power BI, etc.) and integrate them into your system.</li>
+            <li><strong>Delivery & Training:</strong> Deploy dashboards and train your team to use them effectively.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="custom-website-section">
+    <h2>💡 Expert Consulting – Get the Right Solution Without Writing Any Code</h2>
+    <button class="expand-btn" onclick="toggleConsultingSection()">➕ Learn More</button>
+
+    <div class="expand-content" id="consultingContent">
+        <ul>
+            <li><strong>No Code? No Problem!</strong> – You may not need us to build the app—sometimes the right advice is all you need.</li>
+            <li><strong>Technology Guidance</strong> – We provide expert recommendations on web design, workflow automation, and database solutions without pushing unnecessary development.</li>
+            <li><strong>Solution Comparison</strong> – We evaluate multiple options and present the pros, cons, and costs, so you can make an informed decision.</li>
+            <li><strong>Workflow Optimization</strong> – Our consulting helps streamline processes, eliminating inefficiencies and improving productivity.</li>
+            <li><strong>Database Design & Migration</strong> – Whether designing from scratch or migrating, we outline the best strategy for your data.</li>
+            <li><strong>Automation & Scaling</strong> – We suggest automation solutions to save time and resources, tailored to your business scale.</li>
+            <li><strong>Vendor-Agnostic Advice</strong> – We recommend what's best for you, not tied to any vendor or platform.</li>
+        </ul>
+
+        <h3 style="color:#00d1ff;margin-top:25px;">🛠 Our Consulting Approach</h3>
+        <ul>
+            <li><strong>Initial Consultation:</strong> Understand your business needs and current pain points.</li>
+            <li><strong>Research & Analysis:</strong> Explore all possible solutions, tools, and architectures.</li>
+            <li><strong>Solution Proposal:</strong> Present clear comparisons with cost, effort, and expected outcomes.</li>
+            <li><strong>Strategy Roadmap:</strong> Provide a step-by-step plan for implementation (if needed).</li>
+            <li><strong>Knowledge Transfer:</strong> Deliver documentation, diagrams, and recommendations for your team.</li>
+        </ul>
+    </div>
+</section>
+
+
 <!-- ✅ Successful Cases Section -->
 <section class="cases-section">
     <h2>Successful Cases</h2>
@@ -307,7 +549,7 @@
 
             <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">Read More</button>
         </div>
-       
+
 
 
 
@@ -349,11 +591,6 @@
 
             <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">Read More</button>
         </div>
-
-
-
-
-    </div>
     </div>
 </section>
 
@@ -367,5 +604,47 @@
             details.style.display = "none";
             button.textContent = "Read More";
         }
+    }
+
+    function toggleCustomSection() {
+        const content = document.getElementById("customContent");
+        const btn = document.querySelector(".expand-btn");
+        content.classList.toggle("open");
+        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
+    }
+
+    function toggleCustomAppSection() {
+        const content = document.getElementById("customAppContent");
+        const btn = content.previousElementSibling; // button right above
+        content.classList.toggle("open");
+        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
+    }
+
+    function toggleDatabaseMigrationSection() {
+        const content = document.getElementById("databaseMigrationContent");
+        const btn = content.previousElementSibling;
+        content.classList.toggle("open");
+        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
+    }
+
+    function toggleIntegrationSection() {
+        const content = document.getElementById("integrationContent");
+        const btn = content.previousElementSibling;
+        content.classList.toggle("open");
+        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
+    }
+
+    function toggleDataVisualizationSection() {
+        const content = document.getElementById("dataVisualizationContent");
+        const btn = content.previousElementSibling;
+        content.classList.toggle("open");
+        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
+    }
+
+    function toggleConsultingSection() {
+        const content = document.getElementById("consultingContent");
+        const btn = content.previousElementSibling;
+        content.classList.toggle("open");
+        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
     }
 </script>
