@@ -178,6 +178,7 @@
 
     /* ✅ Expandable Content */
     .expand-content {
+
         max-height: 0;
         overflow: hidden;
         opacity: 0;
@@ -312,9 +313,7 @@
 <!-- ✅ Custom Website Build Section -->
 <section class="custom-website-section">
     <h2>🌐 Want a Fully Custom Website Without Monthly Fees?</h2>
-    <button class="expand-btn" onclick="toggleCustomSection()">➕ Learn More</button>
-
-    <div class="expand-content" id="customContent">
+    <div class="expand-content" id="websiteContent">
         <ul>
             <li><strong>Handcrafted Websites</strong> – Built page by page, giving you full control of the final design (no rigid templates or monthly fees).</li>
             <li><strong>Domain & Hosting Setup</strong> – We secure your domain, configure hosting, and publish your site live under your brand.</li>
@@ -365,13 +364,12 @@
 
 
     </div>
+    <button class="expand-btn" onclick="toggleWhatWeDoSection(this)">➕ Learn More</button>
 </section>
 
 <section class="custom-website-section">
     <h2>🚀 Build Your Custom Application – Fully Tailored to Your Needs</h2>
-    <button class="expand-btn" onclick="toggleCustomAppSection()">➕ Learn More</button>
-
-    <div class="expand-content" id="customAppContent">
+    <div class="expand-content">
         <ul>
             <li><strong>Responsive Applications</strong> – We build apps that work flawlessly on both web browsers and mobile devices.</li>
             <li><strong>Cutting-Edge Technology</strong> – We use the latest frameworks and programming languages to deliver top performance.</li>
@@ -394,13 +392,12 @@
             <li><strong>Post-Launch Support:</strong> Optional ongoing support, maintenance, and feature enhancements.</li>
         </ul>
     </div>
+    <button class="expand-btn" onclick="toggleWhatWeDoSection(this)">➕ Learn More</button>
 </section>
 
 <section class="custom-website-section">
     <h2>🔄 Seamless Database Migration – Move Your Data Without Downtime</h2>
-    <button class="expand-btn" onclick="toggleDatabaseMigrationSection()">➕ Learn More</button>
-
-    <div class="expand-content" id="databaseMigrationContent">
+    <div class="expand-content">
         <ul>
             <li><strong>Why Database Matters</strong> – Without a reliable database, your application can't store or manage data effectively.</li>
             <li><strong>Decades of Expertise</strong> – We've been working with databases for decades and understand their inner workings.</li>
@@ -423,14 +420,13 @@
             <li><strong>Post-Migration Testing:</strong> Confirm the application runs seamlessly with the new database.</li>
         </ul>
     </div>
+    <button class="expand-btn" onclick="toggleWhatWeDoSection(this)">➕ Learn More</button>
 </section>
 
 
 <section class="custom-website-section">
     <h2>🔗 Enterprise Application Integration – Connect Everything Seamlessly</h2>
-    <button class="expand-btn" onclick="toggleIntegrationSection()">➕ Learn More</button>
-
-    <div class="expand-content" id="integrationContent">
+    <div class="expand-content">
         <ul>
             <li><strong>Why Integration Matters</strong> – Modern applications rarely work in isolation; seamless integration drives efficiency and scalability.</li>
             <li><strong>Reuse Instead of Rebuild</strong> – We integrate existing apps (authentication, storage, analytics, etc.) so you don’t have to reinvent the wheel.</li>
@@ -450,13 +446,12 @@
             <li><strong>Knowledge Transfer:</strong> Provide documentation and training so your team can maintain the integration.</li>
         </ul>
     </div>
+    <button class="expand-btn" onclick="toggleWhatWeDoSection(this)">➕ Learn More</button>
 </section>
 
 <section class="custom-website-section">
     <h2>📊 Data Visualization – Transform Raw Data into Actionable Insights</h2>
-    <button class="expand-btn" onclick="toggleDataVisualizationSection()">➕ Learn More</button>
-
-    <div class="expand-content" id="dataVisualizationContent">
+    <div class="expand-content">
         <ul>
             <li><strong>Why Data Visualization Matters</strong> – Data is only valuable when it can be understood. Clear dashboards reveal patterns, trends, and insights for smarter decisions.</li>
             <li><strong>Big Data Expertise</strong> – We work with large, complex datasets, ensuring they are cleaned, structured, and ready for analysis.</li>
@@ -477,13 +472,12 @@
             <li><strong>Delivery & Training:</strong> Deploy dashboards and train your team to use them effectively.</li>
         </ul>
     </div>
+    <button class="expand-btn" onclick="toggleWhatWeDoSection(this)">➕ Learn More</button>
 </section>
 
 <section class="custom-website-section">
     <h2>💡 Expert Consulting – Get the Right Solution Without Writing Any Code</h2>
-    <button class="expand-btn" onclick="toggleConsultingSection()">➕ Learn More</button>
-
-    <div class="expand-content" id="consultingContent">
+    <div class="expand-content">
         <ul>
             <li><strong>No Code? No Problem!</strong> – You may not need us to build the app—sometimes the right advice is all you need.</li>
             <li><strong>Technology Guidance</strong> – We provide expert recommendations on web design, workflow automation, and database solutions without pushing unnecessary development.</li>
@@ -503,6 +497,7 @@
             <li><strong>Knowledge Transfer:</strong> Deliver documentation, diagrams, and recommendations for your team.</li>
         </ul>
     </div>
+    <button class="expand-btn" onclick="toggleWhatWeDoSection(this)">➕ Learn More</button>
 </section>
 
 
@@ -510,15 +505,33 @@
 <section class="cases-section">
     <h2>Successful Cases</h2>
     <div class="cases-grid">
+
+        <div class="case-card">
+            <img src="/images/tech/buildwebsite-bg.png" alt="Database Migration">
+            <h3>Build Custom Website</h3>
+            <p>We built our own website with full freedom – no hidden fees, no annual subscription limits.</p>
+            <div class="case-details">
+                <ul>
+                    <li>Unlike DIY website builders, our custom sites have <strong>no limitation</strong> on how many pages you can create.</li>
+                    <li>We don’t use <strong>predefined, fixed sections</strong> – every part of your site can be fully customized.</li>
+                    <li>Full design flexibility – while many providers allow only basic changes (font, colors), <strong>we can adjust anything</strong>.</li>
+                    <li>No layout restrictions – <strong>any layout you envision</strong> can be implemented.</li>
+                    <li>You only pay for the <strong>domain</strong> and <strong>hosting</strong>. No ongoing subscription fees like DIY builders.</li>
+                </ul>
+
+            </div>
+          
+            <button class="btn-tech btn-readmore" onclick="toggleCaseDetails(this)">Read More</button>
+        </div>
         <div class="case-card">
             <img src="/images/tech/case-dbmigration.png" alt="Database Migration">
             <h3>Database Migration</h3>
-            <p>Migrated a financial platform from SQL Server to PostgreSQL, delivering a seamless transition with zero data loss.</p>
+            <p>Migrated a financial database from SQL Server to PostgreSQL, delivering a seamless transition with zero data loss.</p>
             <div class="case-details">
                 <ul>
-                    <li>Analyzed the existing SQL Server 2018 schema and dependencies.</li>
+                    <li>Analyzed the existing SQL Server schema and dependencies.</li>
                     <li>Designed a detailed step-by-step migration plan.</li>
-                    <li>Migrated tables, views, functions, and stored procedures.</li>
+                    <li>Migrated tables, views, functions, and stored procedures, etc.</li>
                     <li>Transferred and validated data integrity with no loss.</li>
                     <li>Applied indexing and performance optimizations post-migration.</li>
                     <li>Executed a smooth cutover with minimal downtime.</li>
@@ -538,12 +551,8 @@
             <div class="case-details">
                 <ul>
                     <li>Designed a responsive app running seamlessly on both desktop (PC) and mobile devices.</li>
-                    <li>Integrated a secure database with real-time verification of organization status.</li>
                     <li>Implemented authentication and authorization to protect sensitive data.</li>
-                    <li>Leveraged APIs to connect with government and third-party charity registries.</li>
-                    <li>Added offline mode with data synchronization for field workers.</li>
-                    <li>Provided analytics and reporting features for administrative oversight.</li>
-                    <li>Optimized UX for quick lookup, scanning documents, and verifying credentials on the go.</li>
+                    <li>Leveraged APIs to connect with Google Map.</li>
                 </ul>
             </div>
 
@@ -559,9 +568,9 @@
             <p>Upgraded an enterprise app from .NET Framework to .NET Core, enabling cross-platform support.</p>
             <div class="case-details">
                 <ul>
-                    <li>Used .NET Portability Analyzer and Upgrade Assistant to assess compatibility and automate migration :contentReference[oaicite:1]{index=1}</li>
+                    <li>Used .NET Portability Analyzer and Upgrade Assistant to assess compatibility and automate migration</li>
                     <li>Identified Windows-only dependencies; refactored code to run on Linux environments</li>
-                    <li>Updated project files to SDK-style .NET 9 format and migrated NuGet packages</li>
+                    <li>Updated project files to SDK-style .NET Core format and migrated NuGet packages</li>
                     <li>Reviewed APIs and replaced unsupported ones using Windows Compatibility Pack</li>
                     <li>Tested extensively on both Windows and Linux, refactored platform-specific logic</li>
                     <li>Streamlined dependency injection, logging, and configuration pipelines for modern architecture</li>
@@ -583,7 +592,6 @@
                     <li>Implemented Jenkins and Helm for Kubernetes-native build and deployment orchestration.</li>
                     <li>Created reusable Helm charts for consistent environment provisioning.</li>
                     <li>Integrated secrets management, image scanning, and security compliance checks.</li>
-                    <li>Adopted GitOps practices for version-controlled deployments.</li>
                     <li>Enabled rolling updates and zero-downtime deployments across environments.</li>
                     <li>Improved monitoring and observability using Prometheus, Grafana, and Kubernetes logs.</li>
                 </ul>
@@ -606,45 +614,13 @@
         }
     }
 
-    function toggleCustomSection() {
-        const content = document.getElementById("customContent");
-        const btn = document.querySelector(".expand-btn");
-        content.classList.toggle("open");
-        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
+    function toggleWhatWeDoSection(button) {
+        const section = button.closest('.custom-website-section');
+        const content = section.querySelector('.expand-content');
+        content.classList.toggle('open');
+        button.textContent = content.classList.contains('open')
+            ? "➖ Close Details"
+            : "➕ Learn More";
     }
-
-    function toggleCustomAppSection() {
-        const content = document.getElementById("customAppContent");
-        const btn = content.previousElementSibling; // button right above
-        content.classList.toggle("open");
-        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
-    }
-
-    function toggleDatabaseMigrationSection() {
-        const content = document.getElementById("databaseMigrationContent");
-        const btn = content.previousElementSibling;
-        content.classList.toggle("open");
-        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
-    }
-
-    function toggleIntegrationSection() {
-        const content = document.getElementById("integrationContent");
-        const btn = content.previousElementSibling;
-        content.classList.toggle("open");
-        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
-    }
-
-    function toggleDataVisualizationSection() {
-        const content = document.getElementById("dataVisualizationContent");
-        const btn = content.previousElementSibling;
-        content.classList.toggle("open");
-        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
-    }
-
-    function toggleConsultingSection() {
-        const content = document.getElementById("consultingContent");
-        const btn = content.previousElementSibling;
-        content.classList.toggle("open");
-        btn.textContent = content.classList.contains("open") ? "➖ Close Details" : "➕ Learn More";
-    }
+    
 </script>
