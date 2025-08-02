@@ -70,6 +70,8 @@
         position: relative;
         z-index: 1;
         font-size: 1.1rem;
+        text-align: left; /* ✅ Force left alignment */
+        display: inline-block; /* ✅ Keeps list compact while left-aligned */
     }
 
         .contact-info li {
@@ -84,15 +86,18 @@
 <div class="contact-container">
     <h2>Contact XRM360 Technologies</h2>
     <p>
-        Whether you're interested in our <strong>Software Solutions</strong>,
+        Whether you're interested in our <strong> Software Solutions</strong>,
         exploring <strong>XRM360 Health</strong> devices, or seeking guidance through
         <strong>XRM360 Education</strong> – we’d love to connect with you!
     </p>
 
-    <a href="mailto:yuan.li@xrm-360.com?subject=Inquiry from Website" class="btn">📧 Email Us</a>
+
 
     <ul class="contact-info">
-        <li>📧 <strong>Email:</strong> yuan.li@xrm-360.com</li>
+        <li>📧 <strong>Software Email:</strong> software@xrm-360.com</li>
+        <li>📧 <strong>Health Email:</strong> health@xrm-360.com</li>
+        <li>📧 <strong>Education Email:</strong> education@xrm-360.com</li>
+        <li>📧 <strong>General Email:</strong> info@xrm-360.com</li>
         <li>📞 <strong>Phone:</strong> +1 (480) 828-6987</li>
     </ul>
 </div>
