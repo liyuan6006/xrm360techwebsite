@@ -302,6 +302,94 @@
 </div>
 
 <section class="custom-website-section">
+    <h2>🌐 想要一个完全定制的网站且无月费吗？</h2>
+    <div class="expand-content" id="websiteContent">
+        <ul>
+            <li><strong>手工打造的网站</strong> – 逐页精心开发，完全掌控最终设计（无死板模板，无月费）。</li>
+            <li><strong>域名与主机设置</strong> – 我们为您注册域名、配置主机，并将您的网站上线至您的品牌名下。</li>
+            <li><strong>静态与动态网站</strong> – 无论是简单的展示型网站还是带有自定义逻辑的动态应用，我们都能精准实现您需要的功能——没有多余功能，也没有隐藏限制。</li>
+            <li><strong>完全自定义</strong> – 不同于自助建站工具，我们的开发人员能实现您脑海中所有的想法。</li>
+        </ul>
+
+        <h3 style="color:#00d1ff;margin-top:20px;">💙 为什么客户选择我们？</h3>
+        <div class="table-responsive">
+            <table class="comparison-table">
+                <tr>
+                    <th>功能</th>
+                    <th>自助建站平台 (Wix, Squarespace, WordPress.com)</th>
+                    <th>XRM360 定制网站</th>
+                </tr>
+                <tr>
+                    <td>月费</td>
+                    <td>
+                        Wix: $17–$159/月<br>
+                        Squarespace: $16–$99/月<br>
+                        WordPress.com: $4–$45/月<br>
+                        费用每月重复收取
+                    </td>
+                    <td><strong>一次性开发费用</strong><br>无月度订阅费用</td>
+                </tr>
+                <tr>
+                    <td>域名费用</td>
+                    <td>第一年免费，之后 $15–$25/年</td>
+                    <td>仅需支付标准域名续费</td>
+                </tr>
+                <tr>
+                    <td>广告</td>
+                    <td>低级套餐会显示平台广告，去除广告需升级套餐。</td>
+                    <td><strong>无广告</strong>，网站完全归您所有且无任何广告。</td>
+                </tr>
+                <tr>
+                    <td>所有权</td>
+                    <td>您只是租用平台，取消订阅 → 网站被关闭。</td>
+                    <td><strong>完全所有权</strong>，网站和主机完全由您掌控。</td>
+                </tr>
+                <tr>
+                    <td>页面与版块</td>
+                    <td>页面数量无限制，但高级版块通常需要升级到更高套餐。</td>
+                    <td><strong>页面与版块无限制</strong>，无需额外费用。</td>
+                </tr>
+                <tr>
+                    <td>设计定制</td>
+                    <td>基于模板。仅能修改字体、颜色和少量布局。深度定制仅限高价套餐。</td>
+                    <td><strong>完全手工编码</strong>，每个设计细节均可无限制定制。</td>
+                </tr>
+                <tr>
+                    <td>平台灵活性</td>
+                    <td>受平台规则限制。高级功能需要插件或付费升级。</td>
+                    <td><strong>无任何限制</strong> — 可实现任意功能与集成。</td>
+                </tr>
+                <tr>
+                    <td>可扩展性</td>
+                    <td>增长受限，复杂需求可能需要迁移到其他系统。</td>
+                    <td>为您的业务<strong>轻松扩展</strong>而打造。</td>
+                </tr>
+                <tr>
+                    <td>支持服务</td>
+                    <td>常见问题和工单的通用支持，高级支持仅限昂贵套餐。</td>
+                    <td><strong>个性化支持</strong>与直接咨询。</td>
+                </tr>
+                <tr>
+                    <td>订阅费用</td>
+                    <td>网站生命周期内持续支付月费/年费。</td>
+                    <td><strong>无持续订阅费用</strong> — 仅需域名续费。</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3 style="color:#00d1ff;margin-top:25px;">🛠 我们的流程如何运作</h3>
+        <ul>
+            <li><strong>需求调研与规划：</strong> 通过咨询了解您的目标和需求。</li>
+            <li><strong>设计原型：</strong> 提供初步布局供您确认，根据反馈不断调整直到您满意。</li>
+            <li><strong>开发阶段：</strong> 手工编码静态或动态网站，完全响应式并优化性能。</li>
+            <li><strong>上线与发布：</strong> 处理域名、主机、SSL、安全邮箱等技术细节，并将网站正式上线。</li>
+            <li><strong>修改与质量保证：</strong> 根据您的反馈进行完善和迭代，确保完全符合您的期望。</li>
+        </ul>
+    </div>
+    <button class="expand-btn" onclick="toggleWhatWeDoSection(this)">➕ 了解更多</button>
+</section>
+
+<section class="custom-website-section">
     <h2>🚀 开发您的定制应用 – 完全满足您的需求</h2>
     <div class="expand-content">
         <ul>
@@ -524,10 +612,10 @@
         const details = button.closest('.case-card').querySelector('.case-details');
         if (details.style.display === "" || details.style.display === "none") {
             details.style.display = "block";
-            button.textContent = "Read Less";
+            button.textContent = "收起";
         } else {
             details.style.display = "none";
-            button.textContent = "Read More";
+            button.textContent = "阅读更多";
         }
     }
 
@@ -536,7 +624,8 @@
         const content = section.querySelector('.expand-content');
         content.classList.toggle('open');
         button.textContent = content.classList.contains('open')
-            ? "➖ Close Details"
-            : "➕ Learn More";
+            ? "➖ 关闭详情"
+            : "➕ 了解更多";
     }
 </script>
+
