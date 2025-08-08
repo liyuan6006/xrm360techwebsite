@@ -3,101 +3,213 @@
 }
 
 <style>
-    .contact-container {
-        max-width: 750px;
-        margin: 50px auto;
-        padding: 50px 40px;
-        background: rgba(0, 0, 0, 0.65);
-        border-radius: 16px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        text-align: center;
-        color: #fff;
-        position: relative;
-        overflow: hidden;
-    }
+/* ===== Layout / Hero ===== */
+.contact-hero {
+    max-width: 980px;
+    margin: 40px auto 0;
+    padding: 36px 28px;
+    border-radius: 18px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    background: rgba(0,0,0,.65);
+    box-shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+.contact-hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background: url('/images/contactus/contacus_background.png') center/cover no-repeat;
+    opacity:.35;
+}
+.contact-hero .inner{ position:relative; z-index:1; }
+.contact-hero h1{ font-size:2.2rem; margin:0 0 .35rem; color:#00d1ff; }
+.contact-hero p.lead{ margin:0 0 18px; font-size:1.05rem; }
 
-        /* ✅ Nature background */
-        .contact-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('/images/contactus/contacus_background.png') center / cover no-repeat;
-            opacity: 0.35;
-            z-index: 0;
-        }
+/* CTA buttons */
+.cta-row{ display:flex; gap:10px; flex-wrap:wrap; }
+.cta-row .btn{
+    padding:10px 16px; border-radius:10px; font-weight:600; border:none;
+    transition:transform .06s ease, filter .2s;
+}
+.cta-primary{ background:#00d1ff; color:#001018; }
+.cta-primary:hover{ filter:brightness(.95); color:#fff; }
+.cta-outline{ background:transparent; border:1px solid #00d1ff; color:#fff; }
+.cta-outline:hover{ background:#00a8cc; border-color:#00a8cc; }
 
-        .contact-container h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #00d1ff;
-            position: relative;
-            z-index: 1;
-        }
+/* ===== Contact content ===== */
+.contact-wrap{
+    max-width: 980px; margin: 18px auto 60px;
+    display:grid; grid-template-columns: 1.2fr .8fr; gap:22px;
+}
+@@media (max-width: 992px){ .contact-wrap{ grid-template-columns: 1fr; } }
 
-        .contact-container p {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            position: relative;
-            z-index: 1;
-        }
+/* Card base */
+.card-glass{
+    background: rgba(255,255,255,.92);
+    border-radius:14px;
+    box-shadow: 0 10px 26px rgba(0,0,0,.12);
+    border: 1px solid rgba(0,0,0,.06);
+}
+.card-glass .card-header{
+    padding:14px 18px; border-bottom:1px solid rgba(0,0,0,.06);
+    font-weight:700;
+}
+.card-glass .card-body{ padding:18px; }
 
-        .contact-container .btn {
-            font-size: 1.1rem;
-            padding: 12px 24px;
-            border-radius: 8px;
-            background: #00d1ff;
-            border: none;
-            color: #000;
-            text-decoration: none;
-            position: relative;
-            z-index: 1;
-            transition: background 0.3s ease;
-        }
+/* Dept list */
+.dept-list{ list-style:none; padding:0; margin:0; }
+.dept-list li{ display:flex; align-items:flex-start; gap:10px; margin:12px 0; }
+.dept-list .tag{ font-size:.78rem; padding:.15rem .5rem; border-radius:999px; background:#eef8ff; color:#0b5c7a; }
 
-            .contact-container .btn:hover {
-                background: #00a8cc;
-                color: #fff;
-            }
+/* Info list */
+.info-list{ list-style:none; padding:0; margin:0; }
+.info-list li{ margin:10px 0; }
+.info-list strong{ color:#0ea5e9; }
 
-    /* ✅ Contact Info */
-    .contact-info {
-        list-style: none;
-        padding: 0;
-        margin: 25px 0 0;
-        position: relative;
-        z-index: 1;
-        font-size: 1.1rem;
-        text-align: left; /* ✅ Force left alignment */
-        display: inline-block; /* ✅ Keeps list compact while left-aligned */
-    }
+/* Small helper text */
+.muted{ color:#6b7280; font-size:.9rem; }
 
-        .contact-info li {
-            margin: 10px 0;
-        }
+/* Form */
+.form-control, .form-select{
+    border-radius:10px; padding:.7rem .9rem; border:1px solid #e5e7eb;
+}
+.form-control:focus, .form-select:focus{
+    border-color:#00d1ff; box-shadow:0 0 0 .2rem rgba(0,209,255,.15);
+}
+.btn-submit{
+    background:#00d1ff; border:none; color:#001018; font-weight:700;
+    padding:.7rem 1rem; border-radius:10px;
+}
+.btn-submit:hover{ filter:brightness(.95); color:#fff; }
 
-            .contact-info li strong {
-                color: #00d1ff;
-            }
+/* Footer note */
+.note{
+    max-width:980px; margin:16px auto 0; color:#6b7280; font-size:.9rem;
+}
 </style>
 
-<div class="contact-container">
-    <h2>Contact XRM360 Technologies</h2>
-    <p>
-        Whether you're interested in our <strong> Software Solutions</strong>,
-        exploring <strong>XRM360 Health</strong> devices, or seeking guidance through
-        <strong>XRM360 Education</strong> – we’d love to connect with you!
+<!-- ===== HERO ===== -->
+<section class="contact-hero">
+  <div class="inner">
+    <h1>Contact XRM360 Technologies</h1>
+    <p class="lead">
+      Whether you’re exploring <strong>Software Solutions</strong>, evaluating <strong>XRM360 Health</strong> devices,
+      or seeking guidance through <strong>XRM360 Education</strong>, we’re here and ready to help.
     </p>
+    <div class="cta-row">
+      <a href="mailto:info@xrm-360.com" class="btn cta-primary">Email Us</a>
+      <a href="tel:+14808286987" class="btn cta-outline">Call +1 (480) 828-6987</a>
+      <a href="/Contact/Consultation" class="btn cta-outline">Book a Free Consultation</a>
+    </div>
+    <p class=" mt-2">Average response time: <strong>within 1 business day</strong>.</p>
+  </div>
+</section>
 
+<!-- ===== CONTENT ===== -->
+<section class="contact-wrap">
 
+  <!-- Left: Form -->
+  <div class="card-glass">
+    <div class="card-header">Send Us a Message</div>
+    <div class="card-body">
+      <!-- Replace action with your endpoint -->
+      <form method="post" action="/Contact/Send">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Your Name</label>
+            <input name="name" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Phone (optional)</label>
+            <input name="phone" class="form-control" />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Topic</label>
+            <select name="topic" class="form-select">
+              <option>Software Solutions</option>
+              <option>XRM360 Health</option>
+              <option>XRM360 Education</option>
+              <option>General</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="form-label">How can we help?</label>
+            <textarea name="message" rows="5" class="form-control" required></textarea>
+          </div>
 
-    <ul class="contact-info">
-        <li>📧 <strong>Software Email:</strong> software@xrm-360.com</li>
-        <li>📧 <strong>Health Email:</strong> health@xrm-360.com</li>
-        <li>📧 <strong>Education Email:</strong> education@xrm-360.com</li>
-        <li>📧 <strong>General Email:</strong> info@xrm-360.com</li>
-        <li>📞 <strong>Phone:</strong> +1 (480) 828-6987</li>
-    </ul>
-</div>
+          <!-- Honeypot (basic spam trap) -->
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="col-12 d-flex align-items-center justify-content-between">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="yes" id="consent" required>
+              <label class="form-check-label" for="consent">
+                I agree to be contacted about my inquiry.
+              </label>
+            </div>
+            <button type="submit" class="btn btn-submit">Send Message</button>
+          </div>
+        </div>
+      </form>
+      <p class="muted mt-2">We’ll never share your info. See our <a href="/Privacy">Privacy Policy</a>.</p>
+    </div>
+  </div>
+
+  <!-- Right: Quick info & departments -->
+  <div class="card-glass">
+    <div class="card-header">Contact Details</div>
+    <div class="card-body">
+      <ul class="info-list">
+        <li>📧 <strong>General:</strong> <a href="mailto:info@xrm-360.com">info@xrm-360.com</a></li>
+        <li>📞 <strong>Phone:</strong> <a href="tel:+14808286987">+1 (480) 828-6987</a></li>
+        <li>⏰ <strong>Hours:</strong> Mon–Fri, 9:00–17:00 (Arizona)</li>
+        <li>📍 <strong>Location:</strong> Chandler, AZ, USA</li>
+      </ul>
+
+      <hr class="my-3" />
+
+      <h6 class="mb-2">Departments</h6>
+      <ul class="dept-list">
+        <li>
+          <span class="tag">Software</span>
+          <div>
+            Engineering, web/app builds, integrations<br/>
+            <a href="mailto:software@xrm-360.com">software@xrm-360.com</a>
+          </div>
+        </li>
+        <li>
+          <span class="tag">Health</span>
+          <div>
+            Devices & fulfillment<br/>
+            <a href="mailto:health@xrm-360.com">health@xrm-360.com</a>
+          </div>
+        </li>
+        <li>
+          <span class="tag">Education</span>
+          <div>
+            Admissions guidance & support<br/>
+            <a href="mailto:education@xrm-360.com">education@xrm-360.com</a>
+          </div>
+        </li>
+      </ul>
+
+      <hr class="my-3" />
+
+      <!-- Optional map embed (replace src or remove) -->
+      <div class="ratio ratio-16x9 rounded" style="overflow:hidden;">
+        <iframe
+          src="https://www.google.com/maps?q=Chandler,AZ&output=embed"
+          style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="muted mt-2">In-person meetings by appointment only.</p>
+    </div>
+  </div>
+</section>
+
+<p class="note">
+  Prefer WeChat or WhatsApp? Tell us in your message and we’ll follow up there.
+</p>
