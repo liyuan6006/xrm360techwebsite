@@ -17,7 +17,7 @@ namespace XRM360website.Controllers
         public IActionResult Education()
         {
             ViewData["Title"] = "Pricing - Education";
-            return View("Education");
+            return LangView("Education");
         }
     }
 }

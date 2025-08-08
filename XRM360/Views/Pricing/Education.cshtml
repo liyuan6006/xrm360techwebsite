@@ -1,20 +1,115 @@
 ﻿@{
-    ViewData["Title"] = ViewData["Title"] ?? "Pricing - Education";
+    ViewData["Title"] = "Education Pricing";
 }
-<h1>Education Pricing</h1>
-<p>Service packages for international student support.</p>
 
-<div class="list-group">
-    <div class="list-group-item">
-        <h5 class="mb-1">Application Guidance</h5>
-        <p class="mb-1">Document review, school selection, and timeline planning.</p>
-        <small>Starting at $XXX</small>
+<div class="container my-4">
+    <h1 class="mb-3">Education Pricing</h1>
+    <p class="text-muted mb-4">
+        Two clear packages. We can customize either one based on your goals and timeline.
+    </p>
+
+    <div class="row g-3">
+        <!-- Basic Package -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header fw-bold">Basic — Docs & Best-Fit Schools</div>
+                <div class="card-body">
+                    <h3 class="card-title mb-3">$499 <small class="text-muted fw-normal">(one-time)</small></h3>
+                    <ul class="mb-3">
+                        <li>Checklist & templates for all required documents</li>
+                        <li>1:1 guidance for transcripts, test scores, essays, recommendations</li>
+                        <li><strong>Best-fit school list</strong> (reach / target / safety)</li>
+                        <li>Application timeline & roadmap</li>
+                        <li>Email support during preparation</li>
+                    </ul>
+                    <p class="small text-muted mb-3">
+                        You submit the applications; we make sure you’re fully prepared.
+                    </p>
+
+                    <!-- Actions -->
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-primary" href="/Contact">Start Talking With Us</a>
+
+                        <!-- Option A: STRIPE PAYMENT LINK (simplest) -->
+                        <!-- Replace the href with your Stripe Payment Link URL -->
+                        <a class="btn btn-primary"
+                           href="https://buy.stripe.com/aFadR98WO3UI4th0wB9k400"
+                           target="_blank" rel="noopener">
+                            Buy Now (Test $1)
+                        </a>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Full Service Package -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-success">
+                <div class="card-header fw-bold bg-success text-white">Full Service — End-to-End</div>
+                <div class="card-body">
+                    <h3 class="card-title mb-3">$1,499 <small class="text-muted fw-normal">(per admissions cycle)</small></h3>
+                    <ul class="mb-3">
+                        <li><strong>We handle everything:</strong> account setup, forms, uploads, submission</li>
+                        <li>Continuous follow-ups with universities & status checks</li>
+                        <li><strong>Online progress tracking</strong> for students & parents</li>
+                        <li><strong>Up to 5 universities included</strong> (reach/target/safety mix)</li>
+                        <li>If one university declines, we pivot and prepare alternates</li>
+                    </ul>
+                    <p class="small text-muted mb-2">
+                        Add-ons: extra universities (+$150 each), expedited review, visa interview prep, housing search.
+                    </p>
+
+                    <!-- Actions -->
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-success" href="/Contact">Let’s Get Started</a>
+
+                        <!-- Option A: STRIPE PAYMENT LINK (simplest) -->
+                        <!-- Replace the href with your Stripe Payment Link URL -->
+                        <a class="btn btn-outline-success"
+                           href="https://buy.stripe.com/aFadR98WO3UI4th0wB9k400"
+                           target="_blank" rel="noopener">
+                            Buy Now (Test $1)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="list-group-item">
-        <h5 class="mb-1">Full Service Package</h5>
-        <p class="mb-1">End-to-end support through admission.</p>
-        <small>Custom quote</small>
+
+    <!-- Optional: Quick FAQ -->
+    <div class="mt-4">
+        <h4 class="mb-2">FAQs</h4>
+        <div class="accordion" id="eduPricingFaq">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                        What’s included in “best-fit school list”?
+                    </button>
+                </h2>
+                <div id="a1" class="accordion-collapse collapse" data-bs-parent="#eduPricingFaq">
+                    <div class="accordion-body">
+                        A balanced list tailored to your profile (reach/target/safety), with application notes and key deadlines.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                        Can I add more than 5 universities to Full Service?
+                    </button>
+                </h2>
+                <div id="a2" class="accordion-collapse collapse" data-bs-parent="#eduPricingFaq">
+                    <div class="accordion-body">
+                        Yes—add additional schools for $150 each. We’ll keep your progress tracker updated.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <p class="small text-muted mt-4">
+        Prices are in USD. University application fees are paid directly to each institution by the applicant and are not included in our packages.
+    </p>
 </div>
-
-<a class="btn btn-primary mt-3" href="/Contact">Get a Custom Plan</a>

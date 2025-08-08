@@ -1,0 +1,111 @@
+﻿@{
+    Layout = ViewBag.Layout;
+    ViewData["Title"] = "教育服务定价";
+}
+
+<div class="container my-4">
+    <h1 class="mb-3">教育服务定价</h1>
+    <p class="text-muted mb-4">
+        两个清晰的套餐方案，我们可根据您的目标和时间表进行定制。
+    </p>
+
+    <div class="row g-3">
+        <!-- 基础套餐 -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header fw-bold">基础套餐 — 材料准备 & 最佳院校推荐</div>
+                <div class="card-body">
+                    <h3 class="card-title mb-3">$499 <small class="text-muted fw-normal">（一次性）</small></h3>
+                    <ul class="mb-3">
+                        <li>所有必需申请材料的清单与模板</li>
+                        <li>一对一指导：成绩单、考试成绩、文书、推荐信</li>
+                        <li><strong>最佳院校名单</strong>（冲刺 / 目标 / 保底）</li>
+                        <li>申请时间表与路线图</li>
+                        <li>材料准备阶段的邮件支持</li>
+                    </ul>
+                    <p class="small text-muted mb-3">
+                        您自行提交申请，我们确保您已做好充分准备。
+                    </p>
+
+                    <!-- 操作按钮 -->
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-primary" href="/Contact">开始与我们沟通</a>
+
+                        <a class="btn btn-primary"
+                           href="https://buy.stripe.com/aFadR98WO3UI4th0wB9k400"
+                           target="_blank" rel="noopener">
+                            立即购买（测试 $1）
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 全程服务套餐 -->
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-success">
+                <div class="card-header fw-bold bg-success text-white">全程服务 — 从头到尾</div>
+                <div class="card-body">
+                    <h3 class="card-title mb-3">$1,499 <small class="text-muted fw-normal">（每个申请周期）</small></h3>
+                    <ul class="mb-3">
+                        <li><strong>我们全程代办：</strong>账户注册、表格填写、材料上传、申请提交</li>
+                        <li>持续与大学跟进沟通 & 状态检查</li>
+                        <li><strong>在线进度追踪</strong>，学生与家长可随时查看</li>
+                        <li><strong>最多包含 5 所大学</strong>（冲刺/目标/保底组合）</li>
+                        <li>若一所大学拒绝，我们将立即准备备用方案</li>
+                    </ul>
+                    <p class="small text-muted mb-2">
+                        额外服务：增加院校（每所 +$150）、加急审核、签证面试辅导、住宿搜索。
+                    </p>
+
+                    <!-- 操作按钮 -->
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-success" href="/Contact">立即开始</a>
+
+                        <a class="btn btn-outline-success"
+                           href="https://buy.stripe.com/aFadR98WO3UI4th0wB9k400"
+                           target="_blank" rel="noopener">
+                            立即购买（测试 $1）
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 常见问题 -->
+    <div class="mt-4">
+        <h4 class="mb-2">常见问题</h4>
+        <div class="accordion" id="eduPricingFaq">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                        “最佳院校名单”包含哪些内容？
+                    </button>
+                </h2>
+                <div id="a1" class="accordion-collapse collapse" data-bs-parent="#eduPricingFaq">
+                    <div class="accordion-body">
+                        根据您的个人情况量身定制的平衡名单（冲刺/目标/保底），并附有申请建议与重要截止日期。
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                        全程服务可以添加超过 5 所大学吗？
+                    </button>
+                </h2>
+                <div id="a2" class="accordion-collapse collapse" data-bs-parent="#eduPricingFaq">
+                    <div class="accordion-body">
+                        可以——每增加一所学校需额外支付 $150，我们会将其纳入进度追踪系统。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="small text-muted mt-4">
+        价格以美元计算。大学的申请费需由申请人直接支付给院校，不包含在我们的套餐费用中。
+    </p>
+</div>
