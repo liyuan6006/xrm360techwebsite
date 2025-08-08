@@ -21,12 +21,6 @@ namespace WebApplication1.Controllers
             return LangView("Index");
         }
 
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -1,0 +1,268 @@
+﻿@{
+    ViewData["Title"] = "Software Solutions Pricing";
+}
+
+<style>
+    /* === Section Styling === */
+    .pricing-section {
+        border-radius: 16px;
+        padding: 1.25rem;
+        margin: 2rem 0 1.5rem;
+        position: relative;
+        border: 1px solid rgba(0,0,0,.06);
+    }
+
+        .pricing-section .section-badge {
+            position: absolute;
+            top: -12px;
+            left: 16px;
+            padding: .25rem .6rem;
+            border-radius: 999px;
+            font-size: .8rem;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0,0,0,.08);
+        }
+
+    .section-title {
+        margin-top: .25rem;
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+    }
+
+        .section-title .emoji {
+            font-size: 1.4rem;
+        }
+
+    /* Distinct themes per section */
+    .section-website {
+        background: linear-gradient(180deg,#f0fbff, #ffffff);
+        border-left: 6px solid #0ea5e9;
+    }
+
+        .section-website .section-badge {
+            background: #0ea5e9;
+            color: #fff;
+        }
+
+    .section-apps {
+        background: linear-gradient(180deg,#f6fff4,#ffffff);
+        border-left: 6px solid #22c55e;
+    }
+
+        .section-apps .section-badge {
+            background: #22c55e;
+            color: #fff;
+        }
+
+    .section-data {
+        background: linear-gradient(180deg,#f9f6ff,#ffffff);
+        border-left: 6px solid #8b5cf6;
+    }
+
+        .section-data .section-badge {
+            background: #8b5cf6;
+            color: #fff;
+        }
+
+    .section-support {
+        background: linear-gradient(180deg,#fff8f0,#ffffff);
+        border-left: 6px solid #f59e0b;
+    }
+
+        .section-support .section-badge {
+            background: #f59e0b;
+            color: #fff;
+        }
+</style>
+
+<div class="container px-0">
+
+    <!-- SECTION: Website Build -->
+    <section id="section-website" class="pricing-section section-website">
+        <span class="section-badge">Website</span>
+        <h2 class="section-title"><span class="emoji">🌐</span> Website Build</h2>
+        <p class="mb-3">
+            Two simple options—choose what fits. We can handle everything end-to-end so you don’t worry about a thing.
+        </p>
+
+        <div class="row g-3">
+            <!-- One-Time Custom Website -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">Website Build (Pay Once)</div>
+                    <div class="card-body">
+                        <h3 class="card-title">$499 one-time</h3>
+                        <ul class="mb-3">
+                            <li>We custom-build your pages</li>
+                            <li><strong>You pay for your annual hosting and domain</strong> directly to the provider</li>
+                            <li>We recommend the best hosting and domain options and handle the full setup</li>
+                        </ul>
+                        <p class="mb-1"><strong>Typical annual hosting (you pay provider):</strong></p>
+                        <ul class="small">
+                            <li>Bluehost (shared): ~<strong>$60–$120/yr</strong></li>
+                            <li>SiteGround (shared): ~<strong>$120–$180/yr</strong></li>
+                            <li>DigitalOcean (VPS): ~<strong>$60–$120/yr</strong></li>
+                        </ul>
+                        <p class="small mb-2"><em>Domain registrars (e.g., Google Domains, Namecheap): typically ~<strong>$12–$20/yr</strong> depending on TLD.</em></p>
+                        <a class="btn btn-outline-primary" href="/Contact">Start Talking With Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Together Managed -->
+            <div class="col-md-6">
+                <div class="card h-100 border-success">
+                    <div class="card-header bg-success text-white">All-Together (Managed)</div>
+                    <div class="card-body">
+                        <h3 class="card-title">$199/yr</h3>
+                        <ul class="mb-3">
+                            <li>We build the site <strong>and</strong> manage hosting & domain</li>
+                            <li>One simple annual invoice from us—predictable & hands-off</li>
+                            <li>Still cheaper than average DIY builder costs</li>
+                        </ul>
+                        <p class="small mb-2">
+                            <strong>DIY builders (avg):</strong> ~<strong>$20–$30/mo</strong> ⇒ ~<strong>$240–$360/yr</strong> (platform only; add-ons extra)
+                        </p>
+                        <a class="btn btn-success" href="/Contact">Let’s Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Software App Build -->
+    <section id="section-apps" class="pricing-section section-apps">
+        <span class="section-badge">Apps</span>
+        <h2 class="section-title"><span class="emoji">🧩</span> Software Application Build</h2>
+        <p class="mb-3">From MVPs to enterprise apps (web, API, integrations). Transparent phases and fixed or time-boxed pricing.</p>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">Discovery & Design</div>
+                    <div class="card-body">
+                        <h3 class="card-title">$1,500–$3,000</h3>
+                        <ul>
+                            <li>Requirements & UX wireframes</li>
+                            <li>Architecture & tech stack</li>
+                            <li>Delivery roadmap</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">MVP Build</div>
+                    <div class="card-body">
+                        <h3 class="card-title">$8,000–$20,000</h3>
+                        <ul>
+                            <li>Core features, auth, basic analytics</li>
+                            <li>Staging + production deploy</li>
+                            <li>2–4 sprints (2 weeks each)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">Scale & Integrations</div>
+                    <div class="card-body">
+                        <h3 class="card-title">Custom</h3>
+                        <ul>
+                            <li>Payments, 3rd-party APIs, reporting</li>
+                            <li>CI/CD, Kubernetes, observability</li>
+                            <li>Security & compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Data Migration -->
+    <section id="section-data" class="pricing-section section-data">
+        <span class="section-badge">Data</span>
+        <h2 class="section-title"><span class="emoji">🗄️</span> Data Migration</h2>
+        <p class="mb-3">Zero-loss, verified migrations (SQL Server ⇄ PostgreSQL, MySQL, cloud RDBMS). Performance tuning included.</p>
+
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">Assessment</div>
+                    <div class="card-body">
+                        <h3 class="card-title">$1,000–$2,500</h3>
+                        <ul>
+                            <li>Schema & dependency analysis</li>
+                            <li>Cutover plan & rollback strategy</li>
+                            <li>Risk & timeline estimates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">Migration & Cutover</div>
+                    <div class="card-body">
+                        <h3 class="card-title">Custom</h3>
+                        <ul>
+                            <li>Tables, views, functions, procedures</li>
+                            <li>Data validation & integrity checks</li>
+                            <li>Post-migration performance tuning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Ongoing Support -->
+    <section id="section-support" class="pricing-section section-support">
+        <span class="section-badge">Support</span>
+        <h2 class="section-title"><span class="emoji">🛠️</span> Ongoing Support</h2>
+        <p class="mb-3">Keep things humming with a monthly retainer—bug fixes, small features, updates, and monitoring.</p>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">Starter Care</div>
+                    <div class="card-body">
+                        <h3 class="card-title">$199/mo</h3>
+                        <ul>
+                            <li>Up to 4 hours / month</li>
+                            <li>Security updates & backups</li>
+                            <li>Email support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">Pro Care</div>
+                    <div class="card-body">
+                        <h3 class="card-title">$499/mo</h3>
+                        <ul>
+                            <li>Up to 12 hours / month</li>
+                            <li>Monitoring + performance tweaks</li>
+                            <li>Priority support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">Custom SLA</div>
+                    <div class="card-body">
+                        <h3 class="card-title">Custom</h3>
+                        <ul>
+                            <li>On-call & response targets</li>
+                            <li>Roadmap development</li>
+                            <li>Dedicated team</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
