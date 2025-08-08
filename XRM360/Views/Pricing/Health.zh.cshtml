@@ -1,0 +1,272 @@
+﻿@{
+    Layout = ViewBag.Layout;
+    ViewData["Title"] = "XRM360 健康 — 价格即将公布";
+}
+<style>
+    /* ===== Layout / Hero ===== */
+    .health-hero {
+        max-width: 980px;
+        margin: 48px auto 0;
+        padding: 40px 28px;
+        border-radius: 18px;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        background: rgba(0,0,0,.68);
+        box-shadow: 0 10px 28px rgba(0,0,0,.35);
+    }
+
+        .health-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('/images/health/coming-soon-bg.jpg') center/cover no-repeat;
+            opacity: .35;
+        }
+
+        .health-hero .inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .health-hero h1 {
+            font-size: 2.2rem;
+            margin: 0 0 .35rem;
+            color: #00d1ff;
+        }
+
+        .health-hero p.lead {
+            margin: 0 0 16px;
+            font-size: 1.04rem;
+        }
+
+    /* CTA row */
+    .cta-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+        .cta-row .btn {
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+            transition: transform .06s ease, filter .2s;
+        }
+
+    .btn-primary-ghost {
+        background: transparent;
+        border: 1px solid #00d1ff;
+        color: #fff;
+    }
+
+        .btn-primary-ghost:hover {
+            background: #00a8cc;
+            border-color: #00a8cc;
+        }
+
+    .btn-primary-solid {
+        background: #00d1ff;
+        color: #001018;
+    }
+
+        .btn-primary-solid:hover {
+            filter: brightness(.95);
+            color: #fff;
+        }
+
+    /* Countdown */
+    .count-wrap {
+        display: flex;
+        gap: 10px;
+        margin-top: 14px;
+        flex-wrap: wrap;
+    }
+
+    .count-box {
+        min-width: 96px;
+        text-align: center;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: rgba(255,255,255,.12);
+        border: 1px solid rgba(255,255,255,.18);
+    }
+
+        .count-box .num {
+            font-size: 1.4rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .count-box .lbl {
+            font-size: .8rem;
+            opacity: .9;
+        }
+
+    /* Content cards */
+    .section-wrap {
+        max-width: 980px;
+        margin: 20px auto 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+    }
+
+    @@media (max-width: 992px) {
+        .section-wrap {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .card-glass {
+        background: rgba(255,255,255,.92);
+        border-radius: 14px;
+        box-shadow: 0 10px 26px rgba(0,0,0,.12);
+        border: 1px solid rgba(0,0,0,.06);
+    }
+
+        .card-glass .card-header {
+            padding: 14px 18px;
+            border-bottom: 1px solid rgba(0,0,0,.06);
+            font-weight: 700;
+        }
+
+        .card-glass .card-body {
+            padding: 18px;
+        }
+
+    /* Notify form */
+    .notify-form .form-control {
+        border-radius: 10px;
+        padding: .7rem .9rem;
+        border: 1px solid #e5e7eb;
+    }
+
+        .notify-form .form-control:focus {
+            border-color: #00d1ff;
+            box-shadow: 0 0 0 .2rem rgba(0,209,255,.15);
+        }
+
+    .notify-form .btn-submit {
+        background: #00d1ff;
+        border: none;
+        color: #001018;
+        font-weight: 700;
+        padding: .7rem 1rem;
+        border-radius: 10px;
+    }
+
+        .notify-form .btn-submit:hover {
+            filter: brightness(.95);
+            color: #fff;
+        }
+
+    /* Fine print */
+    .muted {
+        color: #6b7280;
+        font-size: .9rem;
+    }
+</style>
+
+<!-- ===== HERO ===== -->
+<section class="health-hero" aria-labelledby="healthComingSoonTitle">
+    <div class="inner">
+        <h1 id="healthComingSoonTitle">XRM360 健康价格 — 即将公布</h1>
+        <p class="lead">
+            我们正在最终确定健康设备和服务的透明价格。
+            立即加入等待名单，第一时间获取上线通知。
+        </p>
+
+        <div class="cta-row">
+            <a href="/Contact" class="btn btn-primary-ghost">联系我们</a>
+            <a href="mailto:health@xrm-360.com" class="btn btn-primary-solid">发送邮件至 health@xrm-360.com</a>
+        </div>
+
+        <!-- 倒计时 -->
+        <div class="count-wrap" role="status" aria-live="polite">
+            <div class="count-box">
+                <div class="num" id="cd-days">--</div>
+                <div class="lbl">天</div>
+            </div>
+            <div class="count-box">
+                <div class="num" id="cd-hours">--</div>
+                <div class="lbl">小时</div>
+            </div>
+            <div class="count-box">
+                <div class="num" id="cd-mins">--</div>
+                <div class="lbl">分钟</div>
+            </div>
+            <div class="count-box">
+                <div class="num" id="cd-secs">--</div>
+                <div class="lbl">秒</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 内容部分 ===== -->
+<section class="section-wrap">
+
+    <!-- 预期内容 -->
+    <div class="card-glass">
+        <div class="card-header">您可以期待</div>
+        <div class="card-body">
+            <ul class="mb-2">
+                <li>清晰透明的设备定价，无任何隐藏费用</li>
+                <li>提供批量或诊所采购选项</li>
+                <li>快速发货与专属支持</li>
+                <li>来自工程师和医疗专家的指导</li>
+            </ul>
+            <p class="muted mb-0">有特殊需求？我们会根据您的情况量身推荐。</p>
+        </div>
+    </div>
+
+    <!-- 通知我 -->
+    <div class="card-glass">
+        <div class="card-header">获取通知</div>
+        <div class="card-body">
+            <form method="post" action="/Notify/Subscribe" class="notify-form">
+                <input type="hidden" name="topic" value="health-pricing" />
+                <div class="row g-2">
+                    <div class="col-md-8">
+                        <label class="form-label visually-hidden" for="notifyEmail">邮箱</label>
+                        <input id="notifyEmail" name="email" type="email" class="form-control" placeholder="you@example.com" required />
+                    </div>
+                    <div class="col-md-4 d-grid">
+                        <button type="submit" class="btn btn-submit">通知我</button>
+                    </div>
+                </div>
+                <p class="muted mt-2">价格公布后我们会第一时间邮件通知您。可随时取消订阅。</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 常见问题 -->
+    <div class="card-glass">
+        <div class="card-header">常见问题</div>
+        <div class="card-body">
+            <p class="mb-1"><strong>价格何时公布？</strong></p>
+            <p class="muted">很快——我们正在确定包装和物流。加入名单即可第一时间获取。</p>
+
+            <p class="mb-1"><strong>我现在可以下单吗？</strong></p>
+            <p class="muted">可以。在公开价格公布前，请联系我们获取定制报价。</p>
+
+            <p class="mb-1"><strong>购买后是否提供支持？</strong></p>
+            <p class="muted">当然。您将获得设备安装指导以及我们团队的快速响应支持。</p>
+        </div>
+    </div>
+
+    <!-- 联系框 -->
+    <div class="card-glass">
+        <div class="card-header">有特殊需求？</div>
+        <div class="card-body">
+            <p class="mb-2">告诉我们您的计划（设备类型、数量、时间表），我们将为您推荐最佳方案。</p>
+            <div class="d-flex gap-2 flex-wrap">
+                <a class="btn btn-primary-solid" href="/Contact">联系表单</a>
+                <a class="btn btn-primary-solid" href="mailto:health@xrm-360.com">发送邮件</a>
+            </div>
+        </div>
+    </div>
+
+</section>

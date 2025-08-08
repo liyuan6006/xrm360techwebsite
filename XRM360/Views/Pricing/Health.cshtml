@@ -1,29 +1,206 @@
 ﻿@{
-    ViewData["Title"] = ViewData["Title"] ?? "Pricing - Health";
+    ViewData["Title"] = "XRM360 Health — Pricing Coming Soon";
 }
-<h1>Health Pricing</h1>
-<p>For devices and services under XRM360 Health.</p>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Item/Service</th>
-            <th>Price</th>
-            <th>Notes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Finger Pulse Oximeter</td>
-            <td>$XX.XX</td>
-            <td>Bulk discounts available</td>
-        </tr>
-        <tr>
-            <td>Shipping & Handling</td>
-            <td>$X.XX</td>
-            <td>Calculated at checkout</td>
-        </tr>
-    </tbody>
-</table>
+<style>
+/* ===== Layout / Hero ===== */
+.health-hero {
+    max-width: 980px;
+    margin: 48px auto 0;
+    padding: 40px 28px;
+    border-radius: 18px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    background: rgba(0,0,0,.68);
+    box-shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+.health-hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background: url('/images/health/coming-soon-bg.jpg') center/cover no-repeat;
+    opacity:.35;
+}
+.health-hero .inner{ position:relative; z-index:1; }
+.health-hero h1{ font-size:2.2rem; margin:0 0 .35rem; color:#00d1ff; }
+.health-hero p.lead{ margin:0 0 16px; font-size:1.04rem; }
 
-<a class="btn btn-primary" href="/Contact">Contact for Quote</a>
+/* CTA row */
+.cta-row{ display:flex; gap:10px; flex-wrap:wrap; }
+.cta-row .btn{
+    padding:10px 16px; border-radius:10px; font-weight:600; border:none;
+    transition:transform .06s ease, filter .2s;
+}
+.btn-primary-ghost{ background:transparent; border:1px solid #00d1ff; color:#fff; }
+.btn-primary-ghost:hover{ background:#00a8cc; border-color:#00a8cc; }
+.btn-primary-solid{ background:#00d1ff; color:#001018; }
+.btn-primary-solid:hover{ filter:brightness(.95); color:#fff; }
+
+/* Countdown */
+.count-wrap{
+    display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;
+}
+.count-box{
+    min-width:96px; text-align:center; padding:10px 12px;
+    border-radius:12px; background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.18);
+}
+.count-box .num{ font-size:1.4rem; font-weight:800; line-height:1; }
+.count-box .lbl{ font-size:.8rem; opacity:.9; }
+
+/* Content cards */
+.section-wrap{
+    max-width: 980px; margin: 20px auto 60px;
+    display:grid; grid-template-columns: 1fr 1fr; gap:22px;
+}
+@@media (max-width: 992px){ .section-wrap{ grid-template-columns: 1fr; } }
+
+.card-glass{
+    background: rgba(255,255,255,.92);
+    border-radius:14px;
+    box-shadow: 0 10px 26px rgba(0,0,0,.12);
+    border: 1px solid rgba(0,0,0,.06);
+}
+.card-glass .card-header{
+    padding:14px 18px; border-bottom:1px solid rgba(0,0,0,.06);
+    font-weight:700;
+}
+.card-glass .card-body{ padding:18px; }
+
+/* Notify form */
+.notify-form .form-control{
+    border-radius:10px; padding:.7rem .9rem; border:1px solid #e5e7eb;
+}
+.notify-form .form-control:focus{
+    border-color:#00d1ff; box-shadow:0 0 0 .2rem rgba(0,209,255,.15);
+}
+.notify-form .btn-submit{
+    background:#00d1ff; border:none; color:#001018; font-weight:700;
+    padding:.7rem 1rem; border-radius:10px;
+}
+.notify-form .btn-submit:hover{ filter:brightness(.95); color:#fff; }
+
+/* Fine print */
+.muted{ color:#6b7280; font-size:.9rem; }
+</style>
+
+<!-- ===== HERO ===== -->
+<section class="health-hero" aria-labelledby="healthComingSoonTitle">
+  <div class="inner">
+    <h1 id="healthComingSoonTitle">XRM360 Health Pricing — Coming Soon</h1>
+    <p class="lead">
+      We’re finalizing transparent pricing for our health devices and services. 
+      Join the waitlist and be the first to know when it goes live.
+    </p>
+
+    <div class="cta-row">
+      <a href="/Contact" class="btn btn-primary-ghost">Talk to Us</a>
+      <a href="mailto:health@xrm-360.com" class="btn btn-primary-solid">Email health@xrm-360.com</a>
+    </div>
+
+    <!-- Optional countdown: set a target date below -->
+    <div class="count-wrap" role="status" aria-live="polite">
+      <div class="count-box">
+        <div class="num" id="cd-days">--</div>
+        <div class="lbl">Days</div>
+      </div>
+      <div class="count-box">
+        <div class="num" id="cd-hours">--</div>
+        <div class="lbl">Hours</div>
+      </div>
+      <div class="count-box">
+        <div class="num" id="cd-mins">--</div>
+        <div class="lbl">Minutes</div>
+      </div>
+      <div class="count-box">
+        <div class="num" id="cd-secs">--</div>
+        <div class="lbl">Seconds</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTENT ===== -->
+<section class="section-wrap">
+
+  <!-- What to expect -->
+  <div class="card-glass">
+    <div class="card-header">What to Expect</div>
+    <div class="card-body">
+      <ul class="mb-2">
+        <li>Clear device pricing with no surprises</li>
+        <li>Options for bulk or clinic orders</li>
+        <li>Fast shipping and dedicated support</li>
+        <li>Guidance from engineers and healthcare specialists</li>
+      </ul>
+      <p class="muted mb-0">Have specific requirements? We’ll tailor recommendations to your needs.</p>
+    </div>
+  </div>
+
+  <!-- Notify me -->
+  <div class="card-glass">
+    <div class="card-header">Get Notified</div>
+    <div class="card-body">
+      <!-- Replace action with your endpoint -->
+      <form method="post" action="/Notify/Subscribe" class="notify-form">
+        <input type="hidden" name="topic" value="health-pricing" />
+        <div class="row g-2">
+          <div class="col-md-8">
+            <label class="form-label visually-hidden" for="notifyEmail">Email</label>
+            <input id="notifyEmail" name="email" type="email" class="form-control" placeholder="you@example.com" required />
+          </div>
+          <div class="col-md-4 d-grid">
+            <button type="submit" class="btn btn-submit">Notify Me</button>
+          </div>
+        </div>
+        <p class="muted mt-2">We’ll email you as soon as pricing is published. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Optional: FAQ stub -->
+  <div class="card-glass">
+    <div class="card-header">FAQ</div>
+    <div class="card-body">
+      <p class="mb-1"><strong>When will pricing be available?</strong></p>
+      <p class="muted">Very soon—we’re finalizing packaging and logistics. Join the list for first access.</p>
+
+      <p class="mb-1"><strong>Can I order now?</strong></p>
+      <p class="muted">Yes. Contact us for a custom quote while public pricing is being finalized.</p>
+
+      <p class="mb-1"><strong>Do you offer support after purchase?</strong></p>
+      <p class="muted">Absolutely. You’ll get device setup guidance and responsive support from our team.</p>
+    </div>
+  </div>
+
+  <!-- Contact box -->
+  <div class="card-glass">
+    <div class="card-header">Need Something Specific?</div>
+    <div class="card-body">
+      <p class="mb-2">Tell us what you’re planning (devices, quantities, timelines), and we’ll recommend the best path.</p>
+      <div class="d-flex gap-2 flex-wrap">
+        <a class="btn btn-primary-solid" href="/Contact">Contact Form</a>
+                <a class="btn btn-primary-solid" href="mailto:health@xrm-360.com">Email Us</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+// ===== Countdown (optional) =====
+// Set your launch target date here (YYYY-MM-DD)
+const target = new Date('2025-09-15T00:00:00Z'); // <-- change or remove this script entirely
+function tick(){
+  const now = new Date();
+  let diff = Math.max(0, target - now);
+  const d = Math.floor(diff / (1000*60*60*24)); diff -= d*(1000*60*60*24);
+  const h = Math.floor(diff / (1000*60*60)); diff -= h*(1000*60*60);
+  const m = Math.floor(diff / (1000*60)); diff -= m*(1000*60);
+  const s = Math.floor(diff / 1000);
+  const pad = n => n.toString().padStart(2,'0');
+  const set = (id,val) => { const el = document.getElementById(id); if(el) el.textContent = pad(val); };
+  set('cd-days', d); set('cd-hours', h); set('cd-mins', m); set('cd-secs', s);
+}
+tick(); setInterval(tick, 1000);
+</script>

@@ -12,7 +12,7 @@ namespace XRM360website.Controllers
         public IActionResult Health()
         {
             ViewData["Title"] = "Pricing - Health";
-            return View("Health");
+            return LangView("Health");
         }
         public IActionResult Education()
         {
