@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+@{
+    Layout = "_LayoutMain";
+}
+<div class="container py-5">
+    <!-- Page Header -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">@ViewData["Title"]</h1>
+        <p class="lead text-muted">We’d love to hear from you! Please fill out the form below and we’ll get back to you shortly.</p>
+    </div>
+
+    <div class="row g-5">
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+            <form asp-action="Contact" method="post" class="card p-4 shadow-sm border-0 rounded-4">
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" name="Name" id="Name" class="form-control" placeholder="Your full name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="email" name="Email" id="Email" class="form-control" placeholder="you@example.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Subject" class="form-label">Subject</label>
+                    <input type="text" name="Subject" id="Subject" class="form-control" placeholder="Topic of your message" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Message" class="form-label">Message</label>
+                    <textarea name="Message" id="Message" rows="5" class="form-control" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <div class="text-end">
+                    <button type="submit" class="btn btn-brand px-4">Send Message</button>
+                </div>
+            </form>
+
+            @if (TempData["ContactSuccess"] != null && (bool)TempData["ContactSuccess"])
+            {
+                <div class="alert alert-success mt-3">
+                    ✅ Your message has been sent successfully. We'll get back to you soon.
+                </div>
+            }
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+            <div class="card p-4 shadow-sm border-0 rounded-4">
+                <h5 class="fw-bold mb-3">Our Contact Details</h5>
+                <p class="mb-1"><i class="bi bi-geo-alt-fill text-primary me-2"></i>1234 Main Street, Phoenix, AZ</p>
+                <p class="mb-1"><i class="bi bi-telephone-fill text-primary me-2"></i>(123) 456-7890</p>
+                <p class="mb-4"><i class="bi bi-envelope-fill text-primary me-2"></i>contact@xrm-360.com</p>
+
+                <h5 class="fw-bold mb-3">Business Hours</h5>
+                <ul class="list-unstyled">
+                    <li>Mon - Fri: 9:00 AM – 6:00 PM</li>
+                    <li>Sat: 10:00 AM – 2:00 PM</li>
+                    <li>Sun: Closed</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
