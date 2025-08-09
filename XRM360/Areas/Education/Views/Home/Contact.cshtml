@@ -1,0 +1,50 @@
+﻿<!-- =========================================
+  Areas/Education/Views/Home/Contact.cshtml (Contact)
+========================================= -->
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<div class="container py-5">
+    <h1 class="section-title">Contact</h1>
+    <p class="lead-muted mb-4">Ask about packages, timelines, or special situations. We’re here for students and parents.</p>
+
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="card card-soft p-4">
+                <form method="post" asp-action="Contact">
+                    @Html.AntiForgeryToken()
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input name="Name" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="Email" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Subject</label>
+                        <input name="Subject" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea name="Message" rows="6" class="form-control" required></textarea>
+                    </div>
+                    <button class="btn btn-brand w-100" type="submit"><i class="bi bi-send me-2"></i>Send</button>
+                </form>
+            </div>
+            <p class="small text-muted mt-2">We typically reply within 1–2 business days.</p>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card card-soft p-3 h-100">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps?q=Chandler,AZ&output=embed" style="border:0" loading="lazy" allowfullscreen></iframe>
+                </div>
+                <div class="mt-3 small text-muted">
+                    <i class="bi bi-geo-alt me-1"></i> Chandler, AZ · <i class="bi bi-envelope-at ms-2 me-1"></i> edu@xrm-360.com
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

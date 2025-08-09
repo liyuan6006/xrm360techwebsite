@@ -1,0 +1,48 @@
+﻿<!-- =========================================
+  Areas/Education/Views/Home/Index.cshtml (Home)
+========================================= -->
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero">
+    <div class="container">
+        <p class="eyebrow mb-2">XRM360 Education</p>
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7 text-white-90">
+                <h1 class="display-5 mb-3">Your U.S. Study Journey <span style="color:var(--brand)">Starts Here</span></h1>
+                <p class="lead lead-muted">From applications to arrival and beyond—support tailored for Chinese students and families.</p>
+                <div class="d-flex gap-2 mt-3">
+                    <a asp-action="Services" class="btn btn-brand"><i class="bi bi-rocket-takeoff me-2"></i>Our Services</a>
+                    <a asp-action="Pricing" class="btn btn-ghost"><i class="bi bi-cash-coin me-2"></i>Pricing</a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card card-soft p-4">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="/images/edu/xrm360-edu-logo.png" alt="Edu Logo" style="height:42px" class="me-2" />
+                        <span class="badge-soft">Application • Visa • Arrival</span>
+                    </div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="bi bi-list-check me-2" style="color:var(--brand)"></i>Document prep & timelines</li>
+                        <li class="mb-2"><i class="bi bi-building me-2" style="color:var(--brand)"></i>Best‑fit university list</li>
+                        <li class="mb-2"><i class="bi bi-airplane me-2" style="color:var(--brand)"></i>Pre‑departure & housing</li>
+                        <li><i class="bi bi-people me-2" style="color:var(--brand)"></i>On‑campus support & mentorship</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">How we help</h2>
+        <p class="lead-muted mb-4">Clear steps for students and peace of mind for parents.</p>
+        <div class="row g-4">
+            <div class="col-md-4"><div class="card card-soft p-4 h-100"><h5 class="fw-bold"><i class="bi bi-journal-text me-2" style="color:var(--brand)"></i>Application</h5><p class="mb-0">Documents, essays, recommendations, and portals handled with a detailed roadmap.</p></div></div>
+            <div class="col-md-4"><div class="card card-soft p-4 h-100"><h5 class="fw-bold"><i class="bi bi-shield-check me-2" style="color:var(--brand)"></i>Visa & Travel</h5><p class="mb-0">I‑20 review, DS‑160 checklist, interview practice, and pre‑departure packing.</p></div></div>
+            <div class="col-md-4"><div class="card card-soft p-4 h-100"><h5 class="fw-bold"><i class="bi bi-house-door me-2" style="color:var(--brand)"></i>Arrival & Life</h5><p class="mb-0">Airport pickup guidance, housing tips, banking/phone setup, and orientation support.</p></div></div>
+        </div>
+    </div>
+</section>

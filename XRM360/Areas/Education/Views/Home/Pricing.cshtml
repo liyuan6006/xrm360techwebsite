@@ -1,0 +1,79 @@
+﻿<!-- =========================================
+  Areas/Education/Views/Home/Pricing.cshtml (Pricing)
+  - Based on your old pricing, styled to match
+========================================= -->
+@{
+    ViewData["Title"] = "Pricing";
+}
+
+<div class="container py-5">
+    <h1 class="section-title">Education Pricing</h1>
+    <p class="lead-muted mb-4">Two clear packages. Customize either based on your goals and timeline.</p>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card card-soft h-100">
+                <div class="card-header fw-bold bg-white">Basic — Docs & Best‑Fit Schools</div>
+                <div class="card-body">
+                    <h3 class="fw-bold mb-3">$499 <small class="text-muted fw-normal">one‑time</small></h3>
+                    <ul class="mb-3">
+                        <li>Checklist & templates for all required documents</li>
+                        <li>1:1 guidance for transcripts, test scores, essays, recommendations</li>
+                        <li><strong>Best‑fit school list</strong> (reach / target / safety)</li>
+                        <li>Application timeline & roadmap</li>
+                        <li>Email support during preparation</li>
+                    </ul>
+                    <p class="small text-muted mb-3">You submit the applications; we make sure you’re fully prepared.</p>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-ghost" asp-action="Contact">Start Talking With Us</a>
+                        <a class="btn btn-brand" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" target="_blank" rel="noopener">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card card-soft h-100 border border-primary">
+                <div class="card-header fw-bold text-white" style="background:var(--brand)">Full Service — End‑to‑End</div>
+                <div class="card-body">
+                    <h3 class="fw-bold mb-3">$1,499 <small class="text-muted fw-normal">per cycle</small></h3>
+                    <ul class="mb-3">
+                        <li><strong>We handle everything:</strong> account setup, forms, uploads, submission</li>
+                        <li>Continuous follow‑ups with universities & status checks</li>
+                        <li><strong>Online progress tracking</strong> for students & parents</li>
+                        <li><strong>Up to 5 universities included</strong> (reach/target/safety mix)</li>
+                        <li>If one is declined, we pivot to alternates</li>
+                    </ul>
+                    <p class="small text-muted mb-2">Add‑ons: extra universities (+$150 each), expedited review, visa interview prep, housing search.</p>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-brand" asp-action="Contact">Let’s Get Started</a>
+                        <a class="btn btn-ghost" href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK" target="_blank" rel="noopener">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h4 class="mb-2">FAQs</h4>
+        <div class="accordion" id="eduPricingFaq">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1">What’s included in “best‑fit school list”?</button>
+                </h2>
+                <div id="a1" class="accordion-collapse collapse" data-bs-parent="#eduPricingFaq">
+                    <div class="accordion-body">A balanced list tailored to your profile (reach/target/safety), with application notes and key deadlines.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">Can I add more than 5 universities to Full Service?</button>
+                </h2>
+                <div id="a2" class="accordion-collapse collapse" data-bs-parent="#eduPricingFaq">
+                    <div class="accordion-body">Yes—add additional schools for $150 each. We’ll keep your progress tracker updated.</div>
+                </div>
+            </div>
+        </div>
+        <p class="small text-muted mt-3">Prices in USD. University application fees are paid to the institutions and not included.</p>
+    </div>
+</div>

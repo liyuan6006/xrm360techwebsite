@@ -1,0 +1,31 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    string? act = (string)ViewContext.RouteData.Values["action"]!;
+    string active(string a) => act?.Equals(a, StringComparison.OrdinalIgnoreCase) == true ? "active" : "";
+}
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+        <!-- Logo + brand -->
+        <a class="navbar-brand d-flex align-items-center fw-bold" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Index">
+            <img src="~/images/logo/logo7.png" alt="XRM360 Logo" style="height: 40px;" class="me-2" />
+           <span class="text-primary">Software</span>
+        </a>
+
+        <!-- Mobile toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#softNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu items -->
+        <div class="collapse navbar-collapse" id="softNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link @active("Index")" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li class="nav-item"><a class="nav-link @active("Services")" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Services">What We Do</a></li>
+                <li class="nav-item"><a class="nav-link @active("Cases")" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Cases">Cases</a></li>
+                <li class="nav-item"><a class="nav-link @active("Pricing")" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link @active("About")" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="About">Who We Are</a></li>
+                <li class="nav-item"><a class="nav-link @active("Contact")" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

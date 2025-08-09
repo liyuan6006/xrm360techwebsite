@@ -1,0 +1,150 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] · XRM360 Software</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (for subtle icons in lists/buttons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand: #2563eb; /* primary */
+            --brand-2: #0ea5e9; /* accent */
+            --ink: #0f172a; /* headings */
+            --muted: #64748b; /* body text */
+            --bg-soft: #f8fafc; /* page bg */
+        }
+
+        body {
+            background: var(--bg-soft);
+            color: var(--ink);
+        }
+
+        .navbar {
+            backdrop-filter: saturate(120%) blur(6px);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .btn-brand {
+            background: var(--brand);
+            color: #fff;
+        }
+
+            .btn-brand:hover {
+                background: #1d4ed8;
+                color: #fff;
+            }
+
+        .btn-ghost {
+            border: 1px solid rgba(37,99,235,.25);
+            color: var(--brand);
+        }
+
+            .btn-ghost:hover {
+                background: rgba(37,99,235,.08);
+            }
+
+        .hero {
+            background: radial-gradient(1200px 600px at 10% -10%, rgba(37,99,235,.15), transparent), radial-gradient(900px 500px at 90% -20%, rgba(14,165,233,.15), transparent);
+            padding: 56px 0 36px;
+        }
+
+            .hero h1 {
+                font-weight: 800;
+                letter-spacing: .2px;
+            }
+
+        .eyebrow {
+            color: var(--brand-2);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: .8rem;
+            letter-spacing: .12rem;
+        }
+
+        .card-soft {
+            border: 0;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(2,6,23,.06), 0 2px 10px rgba(2,6,23,.04);
+            border-radius: 18px;
+        }
+
+        .section-title {
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .lead-muted {
+            color: var(--muted);
+        }
+
+        .badge-soft {
+            background: rgba(37,99,235,.1);
+            color: var(--brand);
+            border-radius: 999px;
+            padding: .35rem .65rem;
+            font-weight: 600;
+        }
+
+        footer {
+            color: #64748b;
+        }
+    </style>
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Index">
+                <img src="~/images/logo/logo7.png" alt="XRM360 Logo" class="me-2" />
+                <span class="fw-bold">XRM360 <span class="text-primary">Software</span></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#softNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="softNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Services">What We Do</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Cases">Cases</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="About">Who We Are</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>@RenderBody()</main>
+
+    <footer class="border-top mt-5">
+        <div class="container py-4 small">
+            <div class="row g-3 align-items-center">
+                <div class="col-md">
+                    © @DateTime.UtcNow.Year XRM360 Technologies LLC · Software Solutions
+                </div>
+                <div class="col-md text-md-end">
+                    <span class="me-3"><i class="bi bi-shield-check me-1"></i>Secure by design</span>
+                    <span><i class="bi bi-cloud-arrow-up me-1"></i>Enterprise-ready</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
