@@ -3,7 +3,7 @@
 namespace XRM360website.Areas.SoftwareSolutions.Controllers
 {
     [Area("SoftwareSolutions")]// Tells MVC what area the controller belongs to.
-    [Route("software")]//To make the URL different from the Area name
+    [Route("Software")]//To make the URL different from the Area name
     public class HomeController : Controller
     {
         [HttpGet("")] public IActionResult Index() => View(); // /Software
