@@ -6,4 +6,43 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Areas\SoftwareSolutions\Views\Shared\_Nav.Software.cshtml-old" />
+    <None Remove="Controllers\BaseController.cs-old" />
+    <None Remove="Controllers\ContactController.cs-old" />
+    <None Remove="Controllers\EducationController.cs-old" />
+    <None Remove="Controllers\HealthController.cs-old" />
+    <None Remove="Controllers\HomeController.cs-old" />
+    <None Remove="Controllers\LanguageController.cs-old" />
+    <None Remove="Controllers\PricingController.cs--old" />
+    <None Remove="Controllers\PrivacyController.cs--old" />
+    <None Remove="Controllers\SoftwareSolutionsController.cs--old" />
+    <None Remove="Views\Home\Contact.cshtml-old" />
+    <None Remove="Views\Home\Index.cshtml-old" />
+    <None Remove="Views\Home\Index.zh.cshtml-old" />
+    <None Remove="Views\Shared\_Layout.cshtml-old" />
+    <None Remove="Views\Shared\_Layout.zh.cshtml-old" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Controllers\BaseController.cs-old" />
+    <Compile Include="Controllers\ContactController.cs-old" />
+    <Compile Include="Controllers\EducationController.cs-old" />
+    <Compile Include="Controllers\HealthController.cs-old" />
+    <Compile Include="Controllers\HomeController.cs-old" />
+    <Compile Include="Controllers\LanguageController.cs-old" />
+    <Compile Include="Controllers\PricingController.cs--old" />
+    <Compile Include="Controllers\PrivacyController.cs--old" />
+    <Compile Include="Controllers\SoftwareSolutionsController.cs--old" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Areas\SoftwareSolutions\Views\Shared\_Nav.Software.cshtml-old" />
+    <Content Include="Views\Home\Contact.cshtml-old" />
+    <Content Include="Views\Home\Index.cshtml-old" />
+    <Content Include="Views\Home\Index.zh.cshtml-old" />
+    <Content Include="Views\Shared\_Layout.cshtml-old" />
+    <Content Include="Views\Shared\_Layout.zh.cshtml-old" />
+  </ItemGroup>
+
 </Project>

@@ -38,15 +38,17 @@ app.UseRouting();
 app.UseAuthorization();
 
 
+
+
+// Area route FIRST
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
+// Root default route LAST
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
 
 
 app.Run();

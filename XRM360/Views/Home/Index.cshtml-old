@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Welcome to XRM360 Technologies";
+}
+
+<style>
+
+    body {
+        color: #fff;
+    }
+    .homepage-container {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        background-image: url('/images/contactus/contacus_background.png');
+        padding: 10% 5% 20% 5%; /* top, right, bottom, left */
+    }
+
+    .card {
+        background: rgba(0, 0, 0, 0.45); /* darker translucent background */
+        border: none;
+        border-radius: 12px;
+        color: #ffffff;
+        backdrop-filter: blur(8px); /* adds blur behind card */
+        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+    .btn-primary, .btn-success, .btn-info {
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+
+    h1.display-4 {
+        font-weight: bold;
+    }
+
+    @@media (max-width: 767px) {
+    .card {
+        margin-bottom: 20px; /* add space between stacked cards */
+    }
+}
+</style>
+
+<div class="text-center homepage-container">
+    <h1 class="display-4">Welcome to XRM360</h1>
+    <p class="lead">Empowering global health, education, and technology innovation.</p>
+
+    <div class="row mt-5">
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h2>XRM360 Software</h2>
+                <p>We build custom apps and websites, handle database migrations, and deliver enterprise solutions. Our technologies help boost your productivity.</p>
+
+                <a class="btn btn-info" href="/SoftwareSolutions">Learn More</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h2>XRM360 Health</h2>
+                <p>Explore our advanced health devices designed to improve well-being, track vital signs, and provide accurate health monitoring for individuals and families.</p>
+
+                <a class="btn btn-primary" href="/Health">Learn More</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h2>XRM360 Education</h2>
+                <p>Helping international students prepare, adapt, and succeed at U.S. universities by providing guidance, resources, and support throughout their academic journey.</p>
+
+                <a class="btn btn-success" href="/Education">Learn More</a>
+            </div>
+        </div>
+
+   
+     
+    </div>
+</div>

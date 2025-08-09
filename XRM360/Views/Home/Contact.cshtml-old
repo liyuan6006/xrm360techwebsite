@@ -1,0 +1,44 @@
+﻿@model XRM360website.Models.ContactForm
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "_LayoutMain";   // or "~/Views/Shared/_Layout.Main.cshtml"
+}
+
+<div class="container py-5">
+    <h1 class="mb-3">Contact</h1>
+
+    @if (TempData["ContactSuccess"] != null)
+    {
+        <div class="alert alert-success">Thanks! We received your message and will reply soon.</div>
+    }
+
+    <form asp-action="Contact" method="post" class="row g-3">
+        @Html.AntiForgeryToken()
+        <div class="col-md-6">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <label asp-for="Subject" class="form-label"></label>
+            <input asp-for="Subject" class="form-control" />
+        </div>
+        <div class="col-12">
+            <label asp-for="Message" class="form-label"></label>
+            <textarea asp-for="Message" rows="6" class="form-control"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Send Message</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

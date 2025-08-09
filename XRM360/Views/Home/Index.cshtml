@@ -1,91 +1,156 @@
 ﻿@{
-    ViewData["Title"] = "Welcome to XRM360 Technologies";
+    ViewData["Title"] = "Innovating Life Through Software, Education, and Health";
+
 }
 
-<style>
-
-    body {
-        color: #fff;
-    }
-    .homepage-container {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-
-        background-image: url('/images/contactus/contacus_background.png');
-        padding: 10% 5% 20% 5%; /* top, right, bottom, left */
-    }
-
-    .card {
-        background: rgba(0, 0, 0, 0.45); /* darker translucent background */
-        border: none;
-        border-radius: 12px;
-        color: #ffffff;
-        backdrop-filter: blur(8px); /* adds blur behind card */
-        -webkit-backdrop-filter: blur(8px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
-        min-height: 240px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-    .btn-primary, .btn-success, .btn-info {
-        border: none;
-        padding: 10px 20px;
-        font-size: 1.1rem;
-    }
-
-    h1.display-4 {
-        font-weight: bold;
-    }
-
-    @@media (max-width: 767px) {
-    .card {
-        margin-bottom: 20px; /* add space between stacked cards */
-    }
+@{
+    Layout = "_LayoutMain";
 }
-</style>
 
-<div class="text-center homepage-container">
-    <h1 class="display-4">Welcome to XRM360</h1>
-    <p class="lead">Empowering global health, education, and technology innovation.</p>
-
-    <div class="row mt-5">
-
-        <div class="col-md-4">
-            <div class="card p-4 shadow">
-                <h2>XRM360 Software</h2>
-                <p>We build custom apps and websites, handle database migrations, and deliver enterprise solutions. Our technologies help boost your productivity.</p>
-
-                <a class="btn btn-info" href="/SoftwareSolutions">Learn More</a>
+<section class="hero">
+    <div class="container">
+        <p class="eyebrow mb-2">XRM360</p>
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+                <h1 class="display-5 mb-3">One company. Three domains. <br />A single standard: <span class="text-dark fw-bold">excellence</span>.</h1>
+                <p class="lead lead-muted">
+                    We build reliable software, support international students, and provide trusted health devices.
+                    Different disciplines, same craftsmanship—clear process, honest pricing, and long-term support.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <a asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Index" class="pill">Explore Software</a>
+                    <a asp-area="Education" asp-controller="Home" asp-action="Index" class="pill">Explore Education</a>
+                    <a asp-area="Health" asp-controller="Home" asp-action="Index" class="pill">Explore Health</a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="card card-soft p-4">
+                    <div class="d-flex align-items-center flex-wrap gap-2 mb-2">
+                        <span class="tag tag-sw">Software</span>
+                        <span class="tag tag-edu">Education</span>
+                        <span class="tag tag-health">Health</span>
+                    </div>
+                    <ul class="mb-0 lead-muted">
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Proven process across domains</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Transparent pricing & ownership</li>
+                        <li><i class="bi bi-check-circle text-primary me-2"></i>Responsive support (bilingual)</li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <div class="col-md-4">
-            <div class="card p-4 shadow">
-                <h2>XRM360 Health</h2>
-                <p>Explore our advanced health devices designed to improve well-being, track vital signs, and provide accurate health monitoring for individuals and families.</p>
-
-                <a class="btn btn-primary" href="/Health">Learn More</a>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card p-4 shadow">
-                <h2>XRM360 Education</h2>
-                <p>Helping international students prepare, adapt, and succeed at U.S. universities by providing guidance, resources, and support throughout their academic journey.</p>
-
-                <a class="btn btn-success" href="/Education">Learn More</a>
-            </div>
-        </div>
-
-   
-     
     </div>
-</div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="fw-bold mb-1">What we do</h2>
+        <p class="lead-muted mb-4">Three divisions—each with dedicated teams and track records.</p>
+
+        <div class="row g-4">
+            <!-- Software -->
+            <div class="col-md-4">
+                <div class="card card-soft h-100">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-code-slash me-2" style="color:var(--sw-soft)"></i>
+                            <h5 class="fw-bold mb-0">Software Solutions</h5>
+                        </div>
+                        <p class="lead-muted mb-3">Custom websites & apps, database migrations, enterprise integrations, and dashboards.</p>
+                        <a asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Services" class="btn btn-sm btn-outline-primary">See services</a>
+                        <a asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Cases" class="btn btn-sm btn-link">See cases</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="col-md-4">
+                <div class="card card-soft h-100">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-mortarboard me-2" style="color:var(--sw-edu)"></i>
+                            <h5 class="fw-bold mb-0">Education</h5>
+                        </div>
+                        <p class="lead-muted mb-3">Admissions strategy, visa prep, pre-departure, and on-campus mentorship for Chinese students.</p>
+                        <a asp-area="Education" asp-controller="Home" asp-action="Services" class="btn btn-sm btn-outline-primary">How we help</a>
+                        <a asp-area="Education" asp-controller="Home" asp-action="Pricing" class="btn btn-sm btn-link">Pricing</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health -->
+            <div class="col-md-4">
+                <div class="card card-soft h-100">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-heart-pulse me-2" style="color:var(--sw-health)"></i>
+                            <h5 class="fw-bold mb-0">Health</h5>
+                        </div>
+                        <p class="lead-muted mb-3">Authorized reseller of ChoiceMMed pulse oximeters and practical health devices.</p>
+                        <a asp-area="Health" asp-controller="Home" asp-action="Products" class="btn btn-sm btn-outline-primary">View products</a>
+                        <a asp-area="Health" asp-controller="Home" asp-action="Specs" class="btn btn-sm btn-link">Specs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="fw-bold mb-1">Why XRM360</h2>
+        <p class="lead-muted mb-4">Different domains, same DNA.</p>
+
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card card-soft p-4 h-100">
+                    <h6 class="fw-bold">Expert Teams</h6>
+                    <p class="mb-0 lead-muted">Each division has dedicated specialists with years of hands-on experience.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-soft p-4 h-100">
+                    <h6 class="fw-bold">Clear Process</h6>
+                    <p class="mb-0 lead-muted">Plan → Build/Prepare → Review → Launch/Arrival → Support.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-soft p-4 h-100">
+                    <h6 class="fw-bold">Ownership</h6>
+                    <p class="mb-0 lead-muted">You own deliverables—code, documents, or devices purchased.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-soft p-4 h-100">
+                    <h6 class="fw-bold">Bilingual Support</h6>
+                    <p class="mb-0 lead-muted">English/中文—clear communication for students, parents, and stakeholders.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-7">
+                <h2 class="fw-bold mb-2">Recent highlights</h2>
+                <ul class="lead-muted mb-0">
+                    <li class="mb-2"><span class="tag tag-sw me-2">Software</span> Zero-downtime SQL→PostgreSQL migration for finance app.</li>
+                    <li class="mb-2"><span class="tag tag-edu me-2">Education</span> Scholarship win after essay strategy workshop.</li>
+                    <li><span class="tag tag-health me-2">Health</span> Authorized ChoiceMMed reseller with U.S. fulfillment.</li>
+                </ul>
+            </div>
+            <div class="col-lg-5">
+                <div class="card card-soft p-4">
+                    <h5 class="fw-bold mb-2">Ready to talk?</h5>
+                    <p class="lead-muted mb-3">Tell us what you need—we’ll route you to the right team.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Contact" class="btn btn-outline-primary">Software</a>
+                        <a asp-area="Education" asp-controller="Home" asp-action="Contact" class="btn btn-outline-primary">Education</a>
+                        <a asp-area="Health" asp-controller="Home" asp-action="Contact" class="btn btn-outline-primary">Health</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

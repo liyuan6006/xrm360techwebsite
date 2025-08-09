@@ -1,30 +1,30 @@
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using WebApplication1.Models;
-using XRM360website.Controllers;
+﻿using Microsoft.AspNetCore.Mvc;
+using XRM360website.Models;
 
-namespace WebApplication1.Controllers
+namespace XRM360website.Controllers
 {
-    public class HomeController : BaseController
+    public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        public IActionResult Index() => View();
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        // GET /Home/Contact  and pretty alias /Contact
+        [HttpGet]
+        [Route("Home/Contact")]
+        [Route("Contact")]
+        public IActionResult Contact() => View(new ContactForm());
 
-        [Route("")]
-        [Route("Home")]
-        public IActionResult Index()
+        // POST /Home/Contact and /Contact
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Route("Home/Contact")]
+        [Route("Contact")]
+        public IActionResult Contact(ContactForm form)
         {
-            return LangView("Index");
-        }
+            if (!ModelState.IsValid) return View(form);
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            // TODO: send email (SMTP/MailKit) or store to DB
+            TempData["ContactSuccess"] = true;
+            return RedirectToAction(nameof(Contact));
         }
     }
 }
