@@ -1,22 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Cases";
 }
-
-<div class="container py-5">
+<style>
+    .cases-section .card-img-top {
+        height: 410px;
+        object-fit:contain;
+    }
+</style>
+<div class="container py-5 cases-section">
     <h1 class="section-title">Successful Cases</h1>
     <p class="lead-muted mb-4">A few highlights from recent work.</p>
 
     <div class="row g-4">
         <div class="col-md-6 col-lg-4">
             <div class="card card-soft h-100">
-                <img src="/images/tech/buildwebsite-bg.png" class="card-img-top" alt="Custom Website">
+                <img src="/images/tech/churchcase.png" class="card-img-top" alt="Non-profit Verification Portal">
                 <div class="card-body">
-                    <h5 class="card-title">Custom Company Website</h5>
-                    <p class="card-text">Multi-language, custom slider, SMTP forms, Google Maps embed, and full design control.</p>
-                    <span class="badge-soft">Web</span>
+                    <h5 class="card-title">Non-profit Verification Portal</h5>
+                    <p class="card-text">
+                        Responsive site that looks great on laptop, tablet, and mobile. Organizations upload staff and documents, and the system connects to a verification provider to confirm legitimate non-profit status—trusted by churches and charities.
+                    </p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <span class="badge-soft">Web</span>
+                        <span class="badge-soft">Responsive</span>
+                        <span class="badge-soft">Verification</span>
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <div class="col-md-6 col-lg-4">
             <div class="card card-soft h-100">
