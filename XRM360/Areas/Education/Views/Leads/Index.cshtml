@@ -1,0 +1,34 @@
+﻿@model IEnumerable<XRM360website.Models.StudentLead>
+@{
+    ViewData["Title"] = "Leads";
+}
+<h2>Recent Leads</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>When (UTC)</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Level</th>
+            <th>Major</th>
+            <th>Term</th>
+            <th>Source</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var l in Model)
+        {
+            <tr>
+                <td>@l.CreatedUtc</td>
+                <td>@l.FullName</td>
+                <td>@l.Email</td>
+                <td>@l.PreferredContact</td>
+                <td>@l.StudyLevel</td>
+                <td>@l.IntendedMajor</td>
+                <td>@l.TargetStartTerm</td>
+                <td>@l.Source</td>
+            </tr>
+        }
+    </tbody>
+</table>

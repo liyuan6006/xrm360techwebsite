@@ -1,7 +1,17 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Microsoft.EntityFrameworkCore;
+using XRM360website.Data;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var cs = builder.Configuration.GetConnectionString("DefaultConnection")
+    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+builder.Services.AddDbContext<AppDbContext>(opt =>
+    opt.UseSqlServer(cs, sql => sql.EnableRetryOnFailure()));
+
 
 builder.Services.Configure<XRM360website.Models.SmtpOptions>(
     builder.Configuration.GetSection("Smtp"));
