@@ -3,6 +3,9 @@
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.Configure<XRM360website.Models.SmtpOptions>(
+    builder.Configuration.GetSection("Smtp"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
