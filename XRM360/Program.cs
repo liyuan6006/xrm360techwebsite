@@ -41,7 +41,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 
-
+app.MapControllers(); // enables attribute routing
 
 // Area route FIRST
 app.MapControllerRoute(

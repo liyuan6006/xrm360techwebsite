@@ -49,4 +49,11 @@
     <PackageReference Include="MailKit" Version="4.13.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Areas\Health\Views\_ViewStart.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
