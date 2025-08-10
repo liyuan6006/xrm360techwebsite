@@ -30,6 +30,11 @@
         .navbar-brand img {
             height: 40px;
         }
+        .navbar .nav-link {
+    font-weight: 500;
+    position: relative;
+    padding: .5rem .75rem;
+}
 
         .hero {
             background: radial-gradient(1200px 600px at 10% -10%, rgba(37,99,235,.20), transparent), radial-gradient(1000px 500px at 90% -20%, rgba(16,185,129,.10), transparent), radial-gradient(800px 400px at 50% -30%, rgba(124,58,237,.10), transparent);
@@ -111,7 +116,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
                 <img src="~/images/logo/logo2.png" alt="XRM360 Logo" class="me-2" />
@@ -120,12 +125,17 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="rootNav" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <!-- Link to areas via Tag Helpers -->
                     <li class="nav-item"><a class="nav-link" asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Index">Software</a></li>
                     <li class="nav-item"><a class="nav-link" asp-area="Education" asp-controller="Home" asp-action="Index">Education</a></li>
                     <li class="nav-item"><a class="nav-link" asp-area="Health" asp-controller="Home" asp-action="Index">Health</a></li>
                     <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a asp-controller="Home" asp-action="Contact" class="btn btn-sm btn-dark rounded-pill px-3">
+                            Get a Quote
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
