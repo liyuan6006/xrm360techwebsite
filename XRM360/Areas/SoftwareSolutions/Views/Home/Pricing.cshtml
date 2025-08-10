@@ -7,50 +7,79 @@
     <p class="lead-muted mb-4">You own the code, domain, and assets. Optional support plans available.</p>
 
     <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card card-soft h-100">
-                <div class="card-body">
-                    <h5 class="fw-bold mb-1">Starter Website</h5>
-                    <p class="text-muted">Perfect for individuals or small businesses</p>
-                    <ul class="mt-3 mb-0">
-                        <li>Responsive design</li>
-                        <li>Contact form (SMTP)</li>
-                        <li>Basic SEO</li>
-                        <li>Fast turnaround</li>
-                    </ul>
-                    <p class="mt-3 mb-0"><strong>Honest, fast, professional & reliable – at prices you’ll love.</strong></p>
-                    <a asp-action="Contact" class="btn btn-brand mt-3 w-100">Get a Free Quote</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
+        <!-- Tier 1: Starter Website -->
+        <div class="col-md-3">
             <div class="card card-soft h-100 border border-primary">
                 <div class="card-body">
-                    <h5 class="fw-bold mb-1">Business Site</h5>
-                    <p class="text-muted">Custom solutions for growing companies</p>
+                    <h5 class="fw-bold mb-1">Starter Website</h5>
+                    <p class="text-muted">Best for individuals and small teams</p>
                     <ul class="mt-3 mb-0">
-                        <li>Custom components</li>
-                        <li>CMS or admin panel</li>
+                        <li>Custom design, hand-crafted to your needs</li>
+                        <li>Responsive pages for desktop, tablet, and mobile</li>
+                        <li>Email service integration</li>
+                        <li>Google Maps integration</li>
                         <li>Multi-language support</li>
-                        <li>Analytics & SEO setup</li>
+                        <li>SEO-friendly structure</li>
                     </ul>
-                    <p class="mt-3 mb-0"><strong>Affordable, high-quality work – done right and on time.</strong></p>
+                    <p class="mt-3 mb-0"><strong>Honest, fast, professional, and reliable.</strong></p>
                     <a asp-action="Contact" class="btn btn-brand mt-3 w-100">Get a Free Quote</a>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4">
+        <!-- Tier 2: Business Website -->
+        <div class="col-md-3">
             <div class="card card-soft h-100">
                 <div class="card-body">
-                    <h5 class="fw-bold mb-1">Apps / Migrations</h5>
+                    <h5 class="fw-bold mb-1">Business Website</h5>
+                    <p class="text-muted">For growing companies</p>
+                    <ul class="mt-3 mb-0">
+                        <li>Everything in Starter Website, plus:</li>
+                        <li>Database design and development</li>
+                        <li>Separate administrator login and public-facing site</li>
+                        <li>Backend admin panel to manage website content</li>
+                        <li>Role-based access</li>
+                        <li>Analytics and reporting</li>
+                    </ul>
+                    <p class="mt-3 mb-0"><strong>Affordable, high-quality work — done right and on time.</strong></p>
+                    <a asp-action="Contact" class="btn btn-brand mt-3 w-100">Get a Free Quote</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tier 3: Data & Dashboards -->
+        <div class="col-md-3">
+            <div class="card card-soft h-100">
+                <div class="card-body">
+                    <h5 class="fw-bold mb-1">Data & Dashboards</h5>
+                    <p class="text-muted">Turn your data into insights</p>
+                    <ul class="mt-3 mb-0">
+                        <li>Data collection, cleaning, and analysis</li>
+                        <li>Power BI, Tableau, and Python stacks</li>
+                        <li>Custom KPI dashboards</li>
+                        <li>Real-time performance tracking</li>
+                        <li>Interactive charts and drill-down reports</li>
+                        <li>Exportable reports (PDF, Excel)</li>
+                        <li>Unified dashboard views</li>
+                    </ul>
+                    <p class="mt-3 mb-0"><strong>Make better decisions with actionable data.</strong></p>
+                    <a asp-action="Contact" class="btn btn-brand mt-3 w-100">Get a Free Quote</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tier 4: Enterprise Apps, Integrations & Migrations -->
+        <div class="col-md-3">
+            <div class="card card-soft h-100">
+                <div class="card-body">
+                    <h5 class="fw-bold mb-1">Enterprise Apps, Integrations & Migrations</h5>
                     <p class="text-muted">Tailored to your needs</p>
                     <ul class="mt-3 mb-0">
-                        <li>Full-stack apps</li>
-                        <li>DB migrations & upgrades</li>
-                        <li>Integrations & automation</li>
-                        <li>Performance & security</li>
+                        <li>Full-stack applications with complex business logic</li>
+                        <li>Robust database design and performance tuning</li>
+                        <li>Database migrations (SQL ⇄ PostgreSQL; Oracle, MySQL, MongoDB; relational ⇄ non-relational)</li>
+                        <li>Advanced integrations, SSO, and security hardening</li>
+                        <li>Automation, monitoring, and scalability</li>
                     </ul>
                     <p class="mt-3 mb-0"><strong>We deliver fast, reliable, and cost-effective solutions.</strong></p>
                     <a asp-action="Contact" class="btn btn-brand mt-3 w-100">Talk to Us</a>
@@ -59,6 +88,9 @@
         </div>
     </div>
 
-
-    <p class="lead-muted mt-4"><i class="bi bi-life-preserver me-1"></i> Ongoing support from $150/mo: updates, monitoring, backups.</p>
+    <p class="lead-muted mt-4">
+        <i class="bi bi-life-preserver me-1"></i>
+        Ongoing support from $150/mo: updates, monitoring, and backups.
+    </p>
 </div>
+
