@@ -1,17 +1,17 @@
 ﻿@model XRM360website.Models.StudentLead
 @{
-    ViewData["Title"] = "Student Intake (Initial)";
+    ViewData["Title"] = "Edit Lead";
 }
-
-
 
 <section class="hero">
     <div class="container">
-        <h2 class="mb-3">Tell us about you</h2>
-        <p class="text-muted">This is a short form so we can understand your goals and follow up.</p>
-        <p class="eyebrow mb-2">XRM360 Education</p>
-        <form asp-action="Create" method="post" class="row g-3">
+        <h2>Edit Lead</h2>
+
+
+        <form asp-action="Edit" method="post" class="row g-3">
             @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="col-md-6">
@@ -52,19 +52,19 @@
 
             <div class="col-md-6">
                 <label asp-for="IntendedMajor" class="form-label"></label>
-                <input asp-for="IntendedMajor" class="form-control" placeholder="e.g., Computer Science" />
+                <input asp-for="IntendedMajor" class="form-control" />
                 <span asp-validation-for="IntendedMajor" class="text-danger"></span>
             </div>
 
             <div class="col-md-6">
                 <label asp-for="TargetStartTerm" class="form-label"></label>
-                <input asp-for="TargetStartTerm" class="form-control" placeholder="e.g., 2026 Fall" />
+                <input asp-for="TargetStartTerm" class="form-control" />
                 <span asp-validation-for="TargetStartTerm" class="text-danger"></span>
             </div>
 
             <div class="col-md-6">
                 <label asp-for="CurrentCity" class="form-label"></label>
-                <input asp-for="CurrentCity" class="form-control" placeholder="City where you live now" />
+                <input asp-for="CurrentCity" class="form-control" />
                 <span asp-validation-for="CurrentCity" class="text-danger"></span>
             </div>
 
@@ -82,7 +82,7 @@
 
             <div class="col-md-6">
                 <label asp-for="BudgetRangeUsd" class="form-label"></label>
-                <input asp-for="BudgetRangeUsd" class="form-control" placeholder="e.g., 20k–40k / year" />
+                <input asp-for="BudgetRangeUsd" class="form-control" />
                 <span asp-validation-for="BudgetRangeUsd" class="text-danger"></span>
             </div>
 
@@ -94,20 +94,17 @@
 
             <div class="col-12">
                 <label asp-for="Notes" class="form-label"></label>
-                <textarea asp-for="Notes" rows="4" class="form-control" placeholder="Anything else we should know?"></textarea>
+                <textarea asp-for="Notes" rows="4" class="form-control"></textarea>
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
 
-            <input type="hidden" asp-for="UtmSource" />
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a asp-area="Education" asp-controller="Leads" asp-action="Index" class="btn btn-link ms-2">Back</a>
+            <div class="col-12 mt-2">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a asp-area="Education" asp-controller="Leads" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-link">Cancel</a>
             </div>
         </form>
     </div>
 </section>
-
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

@@ -12,49 +12,64 @@
         public int Id { get; set; }
 
         [Required, MaxLength(150)]
+        [Display(Name = "Full Name")]
         public string FullName { get; set; } = default!;
 
-        [Required, EmailAddress, MaxLength(200)]
+        [EmailAddress, MaxLength(200)]
+        [Display(Name = "Email Address")]
         public string Email { get; set; } = default!;
 
-        [Phone, MaxLength(40)]
+        [Required,Phone, MaxLength(40)]
+        [Display(Name = "Phone Number")]
         public string? Phone { get; set; }
 
-        [MaxLength(100)]
+        [Required,MaxLength(100)]
+        [Display(Name = "WeChat ID")]
         public string? WeChatId { get; set; }
 
         [Required]
+        [Display(Name = "Preferred Contact Method")]
         public ContactMethod PreferredContact { get; set; } = ContactMethod.Email;
 
         [Required]
+        [Display(Name = "Intended Study Level")]
         public StudyLevel StudyLevel { get; set; } = StudyLevel.Undergraduate;
 
         [MaxLength(150)]
+        [Display(Name = "Intended Major")]
         public string? IntendedMajor { get; set; }
 
-        // Store as text initially; can normalize later (e.g., 2026-Fall)
         [MaxLength(40)]
+        [Display(Name = "Target Start Term")]
         public string? TargetStartTerm { get; set; }
 
         [MaxLength(100)]
+        [Display(Name = "Current City")]
         public string? CurrentCity { get; set; }
 
         [MaxLength(100)]
+        [Display(Name = "Country of Citizenship")]
         public string? CountryOfCitizenship { get; set; }
 
+        [Display(Name = "English Test Status")]
         public EnglishTestStatus EnglishStatus { get; set; } = EnglishTestStatus.NotTaken;
 
         [MaxLength(60)]
-        public string? BudgetRangeUsd { get; set; } // e.g., "Under 20k", "20k–40k"
+        [Display(Name = "Budget Range (USD/year)")]
+        public string? BudgetRangeUsd { get; set; }
 
+        [Display(Name = "Lead Source")]
         public LeadSource Source { get; set; } = LeadSource.Website;
 
         [MaxLength(2000)]
+        [Display(Name = "Additional Notes")]
         public string? Notes { get; set; }
 
         [MaxLength(64)]
-        public string? UtmSource { get; set; } // optional tracking
+        [Display(Name = "UTM Source")]
+        public string? UtmSource { get; set; }
 
+        [Display(Name = "Created (UTC)")]
         public DateTime CreatedUtc { get; set; } = DateTime.UtcNow;
     }
 

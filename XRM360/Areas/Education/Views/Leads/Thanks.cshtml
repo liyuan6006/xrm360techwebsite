@@ -2,6 +2,11 @@
 @{
     ViewData["Title"] = "Thanks";
 }
-<h2>Thank you!</h2>
-<p>We received your info, @Model.FullName. We’ll reach out via @Model.PreferredContact.ToString().</p>
-<p><a asp-area="Education" asp-controller="Leads" asp-action="Create" class="btn btn-link">Submit another</a></p>
+
+<section class="hero">
+    <div class="container">
+        <h2>Thank you!</h2>
+        <p>We received your info, @Model.FullName. We’ll reach out via @Model.PreferredContact.ToString().</p>
+        <p><a asp-area="Education" asp-controller="Leads" asp-action="Create" class="btn btn-link">Submit another</a></p>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+﻿@model XRM360website.Models.StudentLead
+@{
+    ViewData["Title"] = "Delete Lead";
+}
+
+<section class="hero">
+    <div class="container">
+        <h2>Delete Lead</h2>
+        <p>Are you sure you want to delete this lead?</p>
+
+        <dl class="row">
+            <dt class="col-sm-3">Full Name</dt>
+            <dd class="col-sm-9">@Model.FullName</dd>
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Model.Email</dd>
+            <dt class="col-sm-3">Phone</dt>
+            <dd class="col-sm-9">@Model.Phone</dd>
+            <dt class="col-sm-3">WeChat ID</dt>
+            <dd class="col-sm-9">@Model.WeChatId</dd>
+        </dl>
+
+        <form asp-action="Delete" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a asp-area="Education" asp-controller="Leads" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-link ms-2">Cancel</a>
+        </form>
+    </div>
+</section>
