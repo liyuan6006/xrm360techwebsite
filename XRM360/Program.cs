@@ -10,7 +10,9 @@ var cs = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlServer(cs, sql => sql.EnableRetryOnFailure()));
+    opt.UseNpgsql(cs, npgsql =>
+        npgsql.EnableRetryOnFailure() // good for cloud later
+    ));
 
 
 builder.Services.Configure<XRM360website.Models.SmtpOptions>(
