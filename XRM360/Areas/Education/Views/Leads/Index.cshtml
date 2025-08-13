@@ -8,7 +8,8 @@
     <div class="container">
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h2>Student Leads</h2>
-    <a asp-area="Education" asp-controller="Leads" asp-action="Create" class="btn btn-primary">+ Create</a>
+            <a asp-area="Education" asp-controller="Leads" asp-action="Create" class="btn btn-brand me-2">+ Create</a>
+        
 </div>
 
 <table class="table table-striped">
@@ -34,7 +35,7 @@
                 <td>@l.WeChatId</td>
                 <td>@l.StudyLevel</td>
                 <td class="text-end">
-                    <a asp-area="Education" asp-controller="Leads" asp-action="Details" asp-route-id="@l.Id" class="btn btn-sm btn-outline-primary">Details</a>
+                    <a asp-area="Education" asp-controller="Leads" asp-action="Details" asp-route-id="@l.Id" class="btn btn-sm btn-brand-outline">Details</a>
                 </td>
             </tr>
         }
