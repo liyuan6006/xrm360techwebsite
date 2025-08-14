@@ -1,21 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "Innovating Life Through Software, Education, and Health";
-
-}
-
-@{
+    ViewData["Title"] = "XRM360 — Software at the Core. Education & Health under one standard.";
     Layout = "_LayoutMain";
 }
 
+<!-- HERO -->
 <section class="hero">
     <div class="container">
         <p class="eyebrow mb-2">XRM360</p>
         <div class="row align-items-center g-4">
             <div class="col-lg-7">
-                <h1 class="display-5 mb-3">One company. <br />Three domains. <br />A single standard: <span class="text-dark fw-bold">excellence</span>.</h1>
+                <h1 class="display-5 mb-3">
+                    One company. One craft.<br />
+                    Software at the core — <span class="text-dark fw-bold">excellence</span> across Education & Health.
+                </h1>
                 <p class="lead lead-muted">
-                    We build reliable software, support international students, and provide trusted health devices.
-                    Different disciplines, same craftsmanship—clear process, honest pricing, and long-term support.
+                    We build reliable software and apply the same disciplined process to support international students
+                    and offer trusted health devices. Different domains, one engineering mindset—clear process, honest
+                    pricing, and long-term support.
                 </p>
                 <div class="d-flex flex-wrap gap-2 mt-3">
                     <a asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Index" class="pill">Explore Software</a>
@@ -23,6 +24,7 @@
                     <a asp-area="Health" asp-controller="Home" asp-action="Index" class="pill">Explore Health</a>
                 </div>
             </div>
+
             <div class="col-lg-5">
                 <div class="card card-soft p-4">
                     <div class="d-flex align-items-center flex-wrap gap-2 mb-2">
@@ -31,9 +33,9 @@
                         <span class="tag tag-health">Health</span>
                     </div>
                     <ul class="mb-0 lead-muted">
-                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Proven process across domains</li>
-                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Transparent pricing & ownership</li>
-                        <li><i class="bi bi-check-circle text-primary me-2"></i>Responsive support (bilingual)</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Unified process & standards</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Transparent pricing & real ownership</li>
+                        <li><i class="bi bi-check-circle text-primary me-2"></i>Bilingual, responsive support</li>
                     </ul>
                 </div>
             </div>
@@ -41,53 +43,86 @@
     </div>
 </section>
 
+<!-- OUR FOCUS (weighted layout: Software first, Education second, Health third) -->
 <section class="py-5">
     <div class="container">
-        <h2 class="fw-bold mb-1">What we do</h2>
-        <p class="lead-muted mb-4">Three divisions—each with dedicated teams and track records.</p>
+        <h2 class="fw-bold mb-1">What we do — under one umbrella</h2>
+        <p class="lead-muted mb-4">Three offerings, one engineering DNA.</p>
 
         <div class="row g-4">
-            <!-- Software -->
-            <div class="col-md-4">
+            <!-- Software (featured, larger column on lg) -->
+            <div class="col-lg-6">
                 <div class="card card-soft h-100">
                     <div class="p-4">
                         <div class="d-flex align-items-center mb-2">
                             <i class="bi bi-code-slash me-2" style="color:var(--sw-soft)"></i>
                             <h5 class="fw-bold mb-0">Software Solutions</h5>
                         </div>
-                        <p class="lead-muted mb-3">Custom websites & apps, database migrations, enterprise integrations, and dashboards.</p>
-                        <a asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Services" class="btn btn-sm btn-outline-primary">See services</a>
-                        <a asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Cases" class="btn btn-sm btn-link">See cases</a>
+                        <p class="lead-muted mb-3">
+                            Custom websites & apps, complex business logic, secure APIs, data & dashboards, and cloud migrations.
+                        </p>
+                        <ul class="lead-muted mb-3">
+                            <li class="mb-1"><i class="bi bi-window-sidebar me-2 text-primary"></i>Fully custom websites (no builder fees)</li>
+                            <li class="mb-1"><i class="bi bi-hdd-network me-2 text-primary"></i>Enterprise-grade integrations & APIs</li>
+                            <li class="mb-1"><i class="bi bi-database-check me-2 text-primary"></i>SQL → PostgreSQL migrations with zero data loss</li>
+                            <li class="mb-1"><i class="bi bi-bar-chart-line me-2 text-primary"></i>Actionable dashboards & data visualization</li>
+                        </ul>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Services" class="btn btn-sm btn-brand">
+                                <i class="bi bi-rocket-takeoff me-2"></i>What We Do
+                            </a>
+                            <a asp-area="SoftwareSolutions" asp-controller="Home" asp-action="Cases" class="btn btn-sm btn-ghost">
+                                <i class="bi bi-collection me-2"></i>See Cases
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Education -->
-            <div class="col-md-4">
+            <div class="col-lg-3 col-md-6">
                 <div class="card card-soft h-100">
                     <div class="p-4">
                         <div class="d-flex align-items-center mb-2">
                             <i class="bi bi-mortarboard me-2" style="color:var(--sw-edu)"></i>
                             <h5 class="fw-bold mb-0">Education</h5>
                         </div>
-                        <p class="lead-muted mb-3">Admissions strategy, visa prep, pre-departure, and on-campus mentorship for Chinese students.</p>
-                        <a asp-area="Education" asp-controller="Home" asp-action="Services" class="btn btn-sm btn-outline-primary">How we help</a>
-                        <a asp-area="Education" asp-controller="Home" asp-action="Pricing" class="btn btn-sm btn-link">Pricing</a>
+                        <p class="lead-muted mb-3">
+                            U.S. study support for Chinese students—applications, visa prep, arrival, and mentorship.
+                        </p>
+                        <ul class="lead-muted mb-3">
+                            <li class="mb-1"><i class="bi bi-journal-text me-2" style="color:var(--sw-edu)"></i>Document & essay guidance</li>
+                            <li class="mb-1"><i class="bi bi-shield-check me-2" style="color:var(--sw-edu)"></i>Visa interview practice</li>
+                            <li class="mb-1"><i class="bi bi-house-door me-2" style="color:var(--sw-edu)"></i>Arrival & housing tips</li>
+                        </ul>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a asp-area="Education" asp-controller="Home" asp-action="Services" class="btn btn-sm btn-outline-primary">How we help</a>
+                            <a asp-area="Education" asp-controller="Home" asp-action="Pricing" class="btn btn-sm btn-link">Pricing</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Health -->
-            <div class="col-md-4">
+            <div class="col-lg-3 col-md-6">
                 <div class="card card-soft h-100">
                     <div class="p-4">
                         <div class="d-flex align-items-center mb-2">
                             <i class="bi bi-heart-pulse me-2" style="color:var(--sw-health)"></i>
                             <h5 class="fw-bold mb-0">Health</h5>
                         </div>
-                        <p class="lead-muted mb-3">Authorized reseller of ChoiceMMed pulse oximeters and practical health devices.</p>
-                        <a asp-area="Health" asp-controller="Home" asp-action="Products" class="btn btn-sm btn-outline-primary">View products</a>
-                        <a asp-area="Health" asp-controller="Home" asp-action="Specs" class="btn btn-sm btn-link">Specs</a>
+                        <p class="lead-muted mb-3">
+                            Authorized reseller of ChoiceMMed pulse oximeters—reliable, easy-to-use devices.
+                        </p>
+                        <ul class="lead-muted mb-3">
+                            <li class="mb-1"><i class="bi bi-droplet-half me-2 text-success"></i>SpO₂, PR, PI, RR readings</li>
+                            <li class="mb-1"><i class="bi bi-display me-2 text-success"></i>Bright OLED, multiple modes</li>
+                            <li class="mb-1"><i class="bi bi-battery-half me-2 text-success"></i>Low power (AAA)</li>
+                        </ul>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a asp-area="Health" asp-controller="Home" asp-action="Products" class="btn btn-sm btn-outline-primary">View products</a>
+                            <a asp-area="Health" asp-controller="Home" asp-action="Specs" class="btn btn-sm btn-link">Specs</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,16 +130,17 @@
     </div>
 </section>
 
+<!-- WHY XRM360 (unified traits) -->
 <section class="py-5">
     <div class="container">
         <h2 class="fw-bold mb-1">Why XRM360</h2>
-        <p class="lead-muted mb-4">Different domains, same DNA.</p>
+        <p class="lead-muted mb-4">Different offerings, same engineering DNA.</p>
 
         <div class="row g-4">
             <div class="col-md-3">
                 <div class="card card-soft p-4 h-100">
                     <h6 class="fw-bold">Expert Teams</h6>
-                    <p class="mb-0 lead-muted">Each division has dedicated specialists with years of hands-on experience.</p>
+                    <p class="mb-0 lead-muted">Specialists in software, education, and health—aligned to shared standards.</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -122,20 +158,21 @@
             <div class="col-md-3">
                 <div class="card card-soft p-4 h-100">
                     <h6 class="fw-bold">Bilingual Support</h6>
-                    <p class="mb-0 lead-muted">English/中文—clear communication for students, parents, and stakeholders.</p>
+                    <p class="mb-0 lead-muted">English/中文 for clear, timely communication.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- RECENT HIGHLIGHTS (order and copy emphasize software first) -->
 <section class="py-5">
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-lg-7">
                 <h2 class="fw-bold mb-2">Recent highlights</h2>
                 <ul class="lead-muted mb-0">
-                    <li class="mb-2"><span class="tag tag-sw me-2">Software</span> Zero-downtime SQL→PostgreSQL migration for finance app.</li>
+                    <li class="mb-2"><span class="tag tag-sw me-2">Software</span> Zero-downtime SQL → PostgreSQL migration for a finance app.</li>
                     <li class="mb-2"><span class="tag tag-edu me-2">Education</span> Scholarship win after essay strategy workshop.</li>
                     <li><span class="tag tag-health me-2">Health</span> Authorized ChoiceMMed reseller with U.S. fulfillment.</li>
                 </ul>
