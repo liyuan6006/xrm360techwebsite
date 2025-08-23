@@ -5,30 +5,110 @@
     ViewData["Title"] = "Home";
 }
 
+<style>
+  /* Keep a nice aspect ratio; swap to fixed height if you prefer */
+  .carousel-img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  /* Soft readable caption on any background */
+  .bg-blur {
+    backdrop-filter: blur(6px);
+    background: rgba(0,0,0,.35);
+  }
+
+  /* Optional: compact height on small screens */
+  @@media (max-width: 575.98px) {
+    .carousel-img { aspect-ratio: 4/3; }
+  }
+</style>
+
 <section class="hero">
     <div class="container">
-        <p class="eyebrow mb-2">XRM360 Education</p>
-        <div class="row align-items-center g-4">
-            <div class="col-lg-7 text-white-90">
-                <h1 class="display-5 mb-3">Your U.S. Study Journey <span style="color:var(--brand)">Starts Here</span></h1>
-                <p class="lead lead-muted">From applications to arrival and beyond—support tailored for Chinese students and families.</p>
+       @*  <p class="eyebrow mb-2">XRM360 Education</p> *@
+        <div class="row align-items-stretch g-4">
+            <!-- LEFT -->
+            <div class="col-lg-6 text-white-90">
+                <img src="/images/edu/xrm360-edu-logo.png" alt="Edu Logo" class="img-fluid" />
+                @*  <h1 class="display-5 mb-3">Your U.S. Study Journey <span style="color:var(--brand)">Starts Here</span></h1> *@
+                <p class="lead lead-muted">
+                    My360 International Education provides tailored support for Chinese students seeking university
+                    opportunities in the US. We provide services from application support, arrival assistance,
+                    maintaining your immigration status, and navigating academic policies. Founded by Chinese
+                    and American international higher education professionals with more than 20 years experience,
+                    we are well-equipped to help you succeed. Together, we can ensure 360-degree support that
+                    surrounds you at every stage of your academic and professional journey..
+                </p>
                 <div class="d-flex gap-2 mt-3">
                     <a asp-action="Services" class="btn btn-brand"><i class="bi bi-rocket-takeoff me-2"></i>Our Services</a>
                     <a asp-action="Pricing" class="btn btn-ghost"><i class="bi bi-cash-coin me-2"></i>Pricing</a>
                 </div>
             </div>
-            <div class="col-lg-5">
-                <div class="card card-soft p-4">
-                    <div class="d-flex align-items-center mb-2">
-                        <img src="/images/edu/xrm360-edu-logo.png" alt="Edu Logo" style="height:50px" class="me-2" />
-                        <span class="badge-soft">Application • Visa • Arrival</span>
+
+            <!-- RIGHT -->
+            <div class="col-lg-6 d-flex">
+                <div class="card card-soft p-0 overflow-hidden w-100 h-100">
+                    <div id="eduCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="4500">
+                        <!-- Dots -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#eduCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Applications"></button>
+                            <button type="button" data-bs-target="#eduCarousel" data-bs-slide-to="1" aria-label="Visa & Arrival"></button>
+                            <button type="button" data-bs-target="#eduCarousel" data-bs-slide-to="2" aria-label="Campus Life"></button>
+                        </div>
+
+                        <!-- Slides -->
+                        <div class="carousel-inner h-100">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active h-100">
+                                <img src="/images/edu/xrm360-edu-logo.png" class="d-block w-100 carousel-img" alt="Applications">
+                                <div class="bg-light bg-opacity-75 rounded shadow p-3 m-3">
+                                    <h5 class="mb-1"><i class="bi bi-journal-text me-2" style="color:var(--brand)"></i>Applications</h5>
+                                    <p>
+                                        From documents, essays, and recommendation letters to scholarship applications,
+                                        we guide you through each step of the process. Whether you need support for
+                                        undergraduate, graduate, or transfer programs, we ensure your application
+                                        highlights your strengths and meets all deadlines.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item h-100">
+                                <img src="/images/edu/xrm360-edu-logo.png" class="d-block w-100 carousel-img" alt="Visa & Arrival">
+                                <div class="bg-light bg-opacity-75 rounded shadow p-3 m-3">
+                                    <h5 class="mb-1"><i class="bi bi-airplane me-2" style="color:var(--brand)"></i>Visa & Arrival</h5>
+                                    <p>
+                                        We help you prepare for your F-1 visa with DS-160 checklists, interview practice,
+                                        and guidance on I-20 review. Before departure, you’ll get packing tips and
+                                        travel guidance, plus support with housing, banking, and setting up your phone
+                                        after arrival in the U.S.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item h-100">
+                                <img src="/images/edu/xrm360-edu-logo.png" class="d-block w-100 carousel-img" alt="Campus Life">
+                                <div class="bg-light bg-opacity-75 rounded shadow p-3 m-3">
+                                    <h5 class="mb-1"><i class="bi bi-people me-2" style="color:var(--brand)"></i>Campus Life</h5>
+                                    <p>
+                                        Transition smoothly into U.S. academic life with ongoing mentorship and support.
+                                        We provide guidance on CPT, OPT, and STEM extensions, as well as on-campus
+                                        resources to help you stay compliant with F-1 requirements and succeed both
+                                        academically and personally.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Arrows -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#eduCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#eduCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><i class="bi bi-list-check me-2" style="color:var(--brand)"></i>Document prep & timelines</li>
-                        <li class="mb-2"><i class="bi bi-building me-2" style="color:var(--brand)"></i>Best‑fit university list</li>
-                        <li class="mb-2"><i class="bi bi-airplane me-2" style="color:var(--brand)"></i>Pre‑departure & housing</li>
-                        <li><i class="bi bi-people me-2" style="color:var(--brand)"></i>On‑campus support & mentorship</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -40,9 +120,76 @@
         <h2 class="section-title">How we help</h2>
         <p class="lead-muted mb-4">Clear steps for students and peace of mind for parents.</p>
         <div class="row g-4">
-            <div class="col-md-4"><div class="card card-soft p-4 h-100"><h5 class="fw-bold"><i class="bi bi-journal-text me-2" style="color:var(--brand)"></i>Application</h5><p class="mb-0">Documents, essays, recommendations, and portals handled with a detailed roadmap.</p></div></div>
-            <div class="col-md-4"><div class="card card-soft p-4 h-100"><h5 class="fw-bold"><i class="bi bi-shield-check me-2" style="color:var(--brand)"></i>Visa & Travel</h5><p class="mb-0">I‑20 review, DS‑160 checklist, interview practice, and pre‑departure packing.</p></div></div>
-            <div class="col-md-4"><div class="card card-soft p-4 h-100"><h5 class="fw-bold"><i class="bi bi-house-door me-2" style="color:var(--brand)"></i>Arrival & Life</h5><p class="mb-0">Airport pickup guidance, housing tips, banking/phone setup, and orientation support.</p></div></div>
+            <!-- Applications -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-soft p-4 h-100">
+                    <h5 class="fw-bold">
+                        <i class="bi bi-journal-text me-2" style="color:var(--brand)"></i>
+                        Applications
+                    </h5>
+                    <p class="mb-0">
+                        Whether you need just one piece (DIY) or want it all (VIP), we can assist with
+                        applications for undergraduate, graduate, transfers and scholarships.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Arrivals -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-soft p-4 h-100">
+                    <h5 class="fw-bold">
+                        <i class="bi bi-airplane me-2" style="color:var(--brand)"></i>
+                        Arrivals
+                    </h5>
+                    <p class="mb-0">
+                        Visa application assistance, pre-departure prep, arrival support.
+                    </p>
+                </div>
+            </div>
+
+            <!-- F-1 Student Status -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-soft p-4 h-100">
+                    <h5 class="fw-bold">
+                        <i class="bi bi-passport me-2" style="color:var(--brand)"></i>
+                        F-1 Student Status
+                    </h5>
+                    <p class="mb-0">
+                        Tips and support to maintain your status (SEVIS terminations/reinstatement, full
+                        time enrollment, etc) and take advantage of your status benefits (like CPT/OPT,
+                        STEM extension, etc).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Academic Policy Issues -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-soft p-4 h-100">
+                    <h5 class="fw-bold">
+                        <i class="bi bi-shield-exclamation me-2" style="color:var(--brand)"></i>
+                        Academic Policy Issues
+                    </h5>
+                    <p class="mb-0">
+                        Academic Integrity and Dismissals.
+                    </p>
+                </div>
+            </div>
+
+            <!-- About Us -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-soft p-4 h-100">
+                    <h5 class="fw-bold">
+                        <i class="bi bi-people me-2" style="color:var(--brand)"></i>
+                        About Us
+                    </h5>
+                    <p class="mb-0">
+                        Meet the team of U.S. higher-ed professionals behind your 360° support. 
+                   
+                        <a asp-action="About" class="btn btn-ghost">  <i class="bi bi-info-circle me-2"></i>Learn more →</a>
+                    </p>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>
