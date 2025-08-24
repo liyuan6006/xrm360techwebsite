@@ -32,7 +32,7 @@
 
         [EmailAddress, MaxLength(200)]
         [Display(Name = "Email Address")]
-        public string Email { get; set; } = default!;
+        public string? Email { get; set; } = default!;
 
         [Required,Phone, MaxLength(40)]
         [Display(Name = "Phone Number")]

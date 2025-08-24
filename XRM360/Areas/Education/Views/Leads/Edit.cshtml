@@ -3,17 +3,31 @@
     ViewData["Title"] = "Edit Lead";
 }
 
+<style>
+    /* Chrome, Safari, Edge */
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
 <section class="hero">
     <div class="container">
-        <h2>Edit Lead</h2>
-
+        <h2 class="mb-3">Edit Lead</h2>
+        <p class="text-muted">Update this student’s information and preferences.</p>
+        <p class="eyebrow mb-2">XRM360 Education</p>
 
         <form asp-action="Edit" method="post" class="row g-3">
             @Html.AntiForgeryToken()
             <input type="hidden" asp-for="Id" />
-
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+            <!-- Existing fields -->
             <div class="col-md-6">
                 <label asp-for="FullName" class="form-label"></label>
                 <input asp-for="FullName" class="form-control" />
@@ -74,26 +88,75 @@
                 <span asp-validation-for="CountryOfCitizenship" class="text-danger"></span>
             </div>
 
+            <!-- Target schools textarea (same as Create) -->
+            <div class="col-md-12">
+                <label asp-for="TargetSchools" class="form-label"></label>
+                <textarea asp-for="TargetSchools" class="form-control" rows="3" placeholder="List up to 5 schools, separated by commas or lines"></textarea>
+                <span asp-validation-for="TargetSchools" class="text-danger"></span>
+            </div>
+
+            <!-- New fields -->
+            <div class="col-md-6">
+                <label asp-for="CurrentHighSchool" class="form-label"></label>
+                <input asp-for="CurrentHighSchool" class="form-control" />
+                <span asp-validation-for="CurrentHighSchool" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="TargetRegion" class="form-label"></label>
+                <input asp-for="TargetRegion" class="form-control" />
+                <span asp-validation-for="TargetRegion" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="CurrentGPA" class="form-label"></label>
+                <input asp-for="CurrentGPA" class="form-control" />
+                <span asp-validation-for="CurrentGPA" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="EnglishType" class="form-label"></label>
+                <!-- matches Create view key -->
+                <select asp-for="EnglishType" class="form-select" asp-items="ViewBag.EnglishType"></select>
+                <span asp-validation-for="EnglishType" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="EnglishTestDate" class="form-label"></label>
+                <input asp-for="EnglishTestDate" type="date" class="form-control" />
+                <span asp-validation-for="EnglishTestDate" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="EnglishScore" class="form-label"></label>
+                <input asp-for="EnglishScore" class="form-control" />
+                <span asp-validation-for="EnglishScore" class="text-danger"></span>
+            </div>
+
             <div class="col-md-6">
                 <label asp-for="EnglishStatus" class="form-label"></label>
                 <select asp-for="EnglishStatus" class="form-select" asp-items="ViewBag.EnglishStatuses"></select>
                 <span asp-validation-for="EnglishStatus" class="text-danger"></span>
             </div>
 
-
+            <!-- Notes -->
             <div class="col-12">
                 <label asp-for="Notes" class="form-label"></label>
-                <textarea asp-for="Notes" rows="4" class="form-control"></textarea>
+                <textarea asp-for="Notes" rows="4" class="form-control" placeholder="Anything else we should know?"></textarea>
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
 
+            <!-- (Optional) keep UtmSource visible/hidden depending on your workflow -->
+            <input type="hidden" asp-for="UtmSource" />
+
             <div class="col-12 mt-2">
                 <button type="submit" class="btn btn-primary">Save</button>
-                <a asp-area="Education" asp-controller="Leads" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-link">Cancel</a>
+                <a asp-area="Education" asp-controller="Leads" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-link ms-2">Cancel</a>
             </div>
         </form>
     </div>
 </section>
+
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

@@ -4,43 +4,107 @@
 @{
     ViewData["Title"] = "Cases";
 }
-
+<style>
+    .card-img-top {
+        height: 350px; /* pick the height you want */
+        object-fit: cover; /* crop and keep proportions */
+        object-position: center; /* keep focus centered */
+    }
+</style>
 <div class="container py-5">
     <h1 class="section-title">Admissions Success</h1>
     <p class="lead-muted mb-4">A few anonymized wins that show our approach.</p>
 
     <div class="row g-4">
+        <!-- Case 1 -->
         <div class="col-md-6 col-lg-4">
             <div class="card card-soft h-100">
-                <img src="/images/edu/case-campus-1.jpg" class="card-img-top" alt="Case 1">
+                <img src="/images/edu/case/case1.png" class="card-img-top" alt="Admitted STEM student on a West Coast campus">
                 <div class="card-body">
-                    <h5 class="card-title">STEM Major · West Coast</h5>
-                    <p class="card-text">Balanced list crafted from GPA 3.6 / IELTS 7.0. Offers from 2 reach, 3 target schools.</p>
+                    <h5 class="card-title">STEM · West Coast</h5>
+                    <p class="card-text mb-2">
+                        GPA 3.6 · IELTS 7.0. Curated a balanced list and refined personal statement.
+                        Results: <strong>2 reach + 3 target admits</strong> with one merit award.
+                    </p>
                     <span class="badge-soft">Undergraduate</span>
                 </div>
             </div>
         </div>
 
+        <!-- Case 2 -->
         <div class="col-md-6 col-lg-4">
             <div class="card card-soft h-100">
-                <img src="/images/edu/case-campus-2.jpg" class="card-img-top" alt="Case 2">
+                <img src="/images/edu/case/case2.png" class="card-img-top" alt="Business school building in the Midwest">
                 <div class="card-body">
                     <h5 class="card-title">Business · Midwest</h5>
-                    <p class="card-text">Essay strategy workshop led to scholarship at a target university; two more acceptances.</p>
+                    <p class="card-text mb-2">
+                        Essay workshop + recommender coaching. Outcome: <strong>Target admit with scholarship</strong>;
+                        plus <strong>2 additional offers</strong>.
+                    </p>
                     <span class="badge-soft">Scholarship</span>
                 </div>
             </div>
         </div>
 
+        <!-- Case 3 -->
         <div class="col-md-6 col-lg-4">
             <div class="card card-soft h-100">
-                <img src="/images/edu/case-campus-3.jpg" class="card-img-top" alt="Case 3">
+                <img src="/images/edu/case/case3.png" class="card-img-top" alt="Art & design student portfolio review setting">
                 <div class="card-body">
                     <h5 class="card-title">Art & Design · East Coast</h5>
-                    <p class="card-text">Portfolio curation + timeline discipline → 4/6 admits including a reach program.</p>
+                    <p class="card-text mb-2">
+                        Portfolio curation + timeline discipline. Results: <strong>4 admits out of 6</strong>,
+                        including one reach program.
+                    </p>
                     <span class="badge-soft">Portfolio</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card card-soft h-100">
+                <img src="/images/edu/case/case4.png" class="card-img-top" alt="Engineering building on a U.S. campus">
+                <div class="card-body">
+                    <h5 class="card-title">Electrical Engineering · California</h5>
+                    <p class="card-text mb-2">
+                        Transfer plan aligning credits + essays focused on projects. Results:
+                        <strong>3 target admits</strong> and <strong>1 reach waitlist → admit</strong>.
+                    </p>
+                    <span class="badge-soft">Transfer</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case 5 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card card-soft h-100">
+                <img src="/images/edu/case/case5.png" class="card-img-top" alt="Graduate student on campus lawn">
+                <div class="card-body">
+                    <h5 class="card-title">Computer Science · Northeast</h5>
+                    <p class="card-text mb-2">
+                        Statement of purpose + research fit mapping. Outcome: <strong>2 funded offers</strong>
+                        and <strong>1 industry-aligned program</strong>.
+                    </p>
+                    <span class="badge-soft">Graduate</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case 6 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card card-soft h-100">
+                <img src="/images/edu/case/case6.png" class="card-img-top" alt="International students arriving with luggage">
+                <div class="card-body">
+                    <h5 class="card-title">International Arrival · Multiple</h5>
+                    <p class="card-text mb-2">
+                        Pre-departure checklists + housing shortlist + airport guidance.
+                        <strong>On-time arrivals</strong> with smooth orientation week transitions.
+                    </p>
+                    <span class="badge-soft">Arrival Support</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
+

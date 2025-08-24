@@ -16,11 +16,13 @@
     backdrop-filter: blur(6px);
     background: rgba(0,0,0,.35);
   }
+  @@media (max-width: 767.98px) {  /* Bootstrap "sm" breakpoint */
+    #eduCarousel .carousel-control-prev,
+    #eduCarousel .carousel-control-next {
+        display: none;
+    }
+}
 
-  /* Optional: compact height on small screens */
-  @@media (max-width: 575.98px) {
-    .carousel-img { aspect-ratio: 4/3; }
-  }
 </style>
 
 <section class="hero">

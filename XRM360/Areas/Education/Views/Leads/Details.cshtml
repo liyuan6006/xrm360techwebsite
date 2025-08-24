@@ -5,39 +5,80 @@
 
 <section class="hero">
     <div class="container">
-        <h2>Lead Details</h2>
+        <h2 class="mb-3">Lead Details</h2>
 
         <dl class="row">
-            <dt class="col-sm-3">Full Name</dt>
-            <dd class="col-sm-9">@Model.FullName</dd>
-            <dt class="col-sm-3">Email</dt>
-            <dd class="col-sm-9">@Model.Email</dd>
-            <dt class="col-sm-3">Phone</dt>
-            <dd class="col-sm-9">@Model.Phone</dd>
-            <dt class="col-sm-3">WeChat ID</dt>
-            <dd class="col-sm-9">@Model.WeChatId</dd>
-            <dt class="col-sm-3">Preferred Contact</dt>
-            <dd class="col-sm-9">@Model.PreferredContact</dd>
-            <dt class="col-sm-3">Study Level</dt>
-            <dd class="col-sm-9">@Model.StudyLevel</dd>
-            <dt class="col-sm-3">Intended Major</dt>
-            <dd class="col-sm-9">@Model.IntendedMajor</dd>
-            <dt class="col-sm-3">Target Start Term</dt>
-            <dd class="col-sm-9">@Model.TargetStartTerm</dd>
-            <dt class="col-sm-3">Current City</dt>
-            <dd class="col-sm-9">@Model.CurrentCity</dd>
-            <dt class="col-sm-3">Citizenship</dt>
-            <dd class="col-sm-9">@Model.CountryOfCitizenship</dd>
-            <dt class="col-sm-3">English Test</dt>
-            <dd class="col-sm-9">@Model.EnglishStatus</dd>
-            <dt class="col-sm-3">Budget Range</dt>
-  
-            <dt class="col-sm-3">Lead Source</dt>
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.FullName)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.FullName) ? Model.FullName : "—")</dd>
 
-            <dt class="col-sm-3">Notes</dt>
-            <dd class="col-sm-9">@Model.Notes</dd>
-            <dt class="col-sm-3">Created (UTC)</dt>
-            <dd class="col-sm-9">@Model.CreatedUtc</dd>
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Email)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.Email) ? Model.Email : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Phone)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.Phone) ? Model.Phone : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.WeChatId)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.WeChatId) ? Model.WeChatId : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.PreferredContact)</dt>
+            <dd class="col-sm-9">@Model.PreferredContact</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.StudyLevel)</dt>
+            <dd class="col-sm-9">@Model.StudyLevel</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.IntendedMajor)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.IntendedMajor) ? Model.IntendedMajor : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.TargetStartTerm)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.TargetStartTerm) ? Model.TargetStartTerm : "—")</dd>
+
+            
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.TargetSchools)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.TargetSchools) ? Model.TargetSchools : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.TargetRegion)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.TargetRegion) ? Model.TargetRegion : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.CurrentCity)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.CurrentCity) ? Model.CurrentCity : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.CountryOfCitizenship)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.CountryOfCitizenship) ? Model.CountryOfCitizenship : "—")</dd>
+
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.CurrentHighSchool)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.CurrentHighSchool) ? Model.CurrentHighSchool : "—")</dd>
+
+        
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.CurrentGPA)</dt>
+            <dd class="col-sm-9">@(Model.CurrentGPA.HasValue ? Model.CurrentGPA.Value.ToString("0.00") : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.EnglishType)</dt>
+            <dd class="col-sm-9">@Model.EnglishType</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.EnglishTestDate)</dt>
+            <dd class="col-sm-9">@(Model.EnglishTestDate.HasValue ? Model.EnglishTestDate.Value.ToString("yyyy-MM-dd") : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.EnglishScore)</dt>
+            <dd class="col-sm-9">@(Model.EnglishScore.HasValue ? Model.EnglishScore.Value.ToString() : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.EnglishStatus)</dt>
+            <dd class="col-sm-9">@Model.EnglishStatus</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.TargetBudget)</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.TargetBudget) ? Model.TargetBudget : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Notes)</dt>
+            <dd class="col-sm-9"> @(!string.IsNullOrWhiteSpace(Model.Notes) ? Model.Notes : "—")</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(m => m.CreatedUtc)</dt>
+            <dd class="col-sm-9">@Model.CreatedUtc.ToLocalTime().ToString("yyyy-MM-dd HH:mm")</dd>
+
+            @* If you added ModifiedUtc:
+            <dt class="col-sm-3">Last Modified</dt>
+            <dd class="col-sm-9">@((Model.ModifiedUtc?.ToLocalTime().ToString("yyyy-MM-dd HH:mm")) ?? "—")</dd>
+            *@
         </dl>
 
         <div class="mt-3">

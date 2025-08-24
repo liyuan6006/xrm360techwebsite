@@ -3,6 +3,19 @@
     ViewData["Title"] = "Student Intake (Initial)";
 }
 
+<style>
+    /* Chrome, Safari, Edge */
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
 <section class="hero">
     <div class="container">
         <h2 class="mb-3">Tell us about you</h2>
@@ -60,7 +73,16 @@
                 <input asp-for="TargetStartTerm" class="form-control" placeholder="e.g., 2026 Fall" />
                 <span asp-validation-for="TargetStartTerm" class="text-danger"></span>
             </div>
-
+            <div class="col-md-6">
+                <label asp-for="TargetSchools" class="form-label"></label>
+                <textarea asp-for="TargetSchools" class="form-control" placeholder="List up to 5 schools, separated by commas or lines"></textarea>
+                <span asp-validation-for="TargetSchools" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="TargetRegion" class="form-label"></label>
+                <textarea asp-for="TargetRegion" class="form-control" placeholder="e.g., East Coast, California" ></textarea>
+                <span asp-validation-for="TargetRegion" class="text-danger"></span>
+            </div>
             <div class="col-md-6">
                 <label asp-for="CurrentCity" class="form-label"></label>
                 <input asp-for="CurrentCity" class="form-control" placeholder="City where you live now" />
@@ -73,30 +95,22 @@
                 <span asp-validation-for="CountryOfCitizenship" class="text-danger"></span>
             </div>
 
+          
             <!-- New fields -->
             <div class="col-md-6">
                 <label asp-for="CurrentHighSchool" class="form-label"></label>
                 <input asp-for="CurrentHighSchool" class="form-control" />
                 <span asp-validation-for="CurrentHighSchool" class="text-danger"></span>
             </div>
-
+         
             <div class="col-md-6">
                 <label asp-for="CurrentGPA" class="form-label"></label>
                 <input asp-for="CurrentGPA" class="form-control" />
                 <span asp-validation-for="CurrentGPA" class="text-danger"></span>
             </div>
 
-            <div class="col-md-12">
-                <label asp-for="TargetSchools" class="form-label"></label>
-                <textarea asp-for="TargetSchools" class="form-control" rows="3" placeholder="List up to 5 schools, separated by commas or lines"></textarea>
-                <span asp-validation-for="TargetSchools" class="text-danger"></span>
-            </div>
 
-            <div class="col-md-6">
-                <label asp-for="TargetRegion" class="form-label"></label>
-                <input asp-for="TargetRegion" class="form-control" placeholder="e.g., East Coast, California" />
-                <span asp-validation-for="TargetRegion" class="text-danger"></span>
-            </div>
+           
 
             <div class="col-md-6">
                 <label asp-for="EnglishType" class="form-label"></label>
