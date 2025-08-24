@@ -17,7 +17,6 @@ namespace XRM360website.Data
             {
                 e.HasIndex(x => x.CreatedUtc);
                 e.HasIndex(x => x.Email);
-                e.Property(x => x.BudgetRangeUsd).HasMaxLength(60);
             });
         }
     }

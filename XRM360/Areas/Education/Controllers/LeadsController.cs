@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using XRM360website.Data;
+using XRM360website.Helpers;
 using XRM360website.Models;
 
 namespace XRM360website.Areas.Education.Controllers
@@ -19,10 +20,21 @@ namespace XRM360website.Areas.Education.Controllers
         {
             ViewBag.ContactMethods = Enum.GetValues(typeof(ContactMethod))
                 .Cast<ContactMethod>().Select(x => new SelectListItem(x.ToString(), x.ToString()));
-            ViewBag.StudyLevels = Enum.GetValues(typeof(StudyLevel))
-                .Cast<StudyLevel>().Select(x => new SelectListItem(x.ToString(), x.ToString()));
+            var levels = Enum.GetValues(typeof(StudyLevel))
+                      .Cast<StudyLevel>()
+                      .Select(e => new SelectListItem
+                      {
+                          Value = e.ToString(),
+                          Text = EnumHelper.GetDescription(e)
+                      })
+                      .ToList();
+
+            ViewBag.StudyLevels = levels;
             ViewBag.EnglishStatuses = Enum.GetValues(typeof(EnglishTestStatus))
                 .Cast<EnglishTestStatus>().Select(x => new SelectListItem(x.ToString(), x.ToString()));
+            ViewBag.EnglishType = Enum.GetValues(typeof(EnglishTestType))
+           .Cast<EnglishTestType>().Select(x => new SelectListItem(x.ToString(), x.ToString()));
+
             ViewBag.LeadSources = Enum.GetValues(typeof(LeadSource))
                 .Cast<LeadSource>().Select(x => new SelectListItem(x.ToString(), x.ToString()));
         }
