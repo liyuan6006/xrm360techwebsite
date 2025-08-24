@@ -3,8 +3,10 @@
 }
 <style>
     .cases-section .card-img-top {
-        height: 410px;
-        object-fit:contain;
+        height: 310px; /* uniform height */
+        width: 100%; /* full width of card */
+        object-fit: contain; /* crop edges, no empty bars */
+        object-position: center; /* keep focus centered */
     }
 </style>
 <div class="container py-5 cases-section">
@@ -59,18 +61,26 @@
                 </div>
             </div>
         </div>
-
         <div class="col-md-6 col-lg-4">
             <div class="card card-soft h-100">
-                <img src="/images/tech/cicd_kubernetes2.png" class="card-img-top" alt="Kubernetes CI/CD">
+                <img src="/images/tech/case/case4.png" class="card-img-top" alt="Education Website & Application System">
                 <div class="card-body">
-                    <h5 class="card-title">CI/CD to Kubernetes</h5>
+                    <h5 class="card-title">Education Website & Application Platform</h5>
                     <p class="card-text">
-                        Beyond software development, our team excels in DevOps. We automated the entire delivery cycle—from code commit to production—using Continuous Integration (CI) and Continuous Deployment (CD) pipelines. Migrated a legacy, manual deployment process to Kubernetes with Jenkins and Helm, enabling reusable charts, zero-downtime releases, and full observability.
+                        We partnered with an education services company to design and build a responsive admissions website and application system.
+                        Students can track their progress, upload documents, and receive guidance on essays and portfolios,
+                        while staff benefit from streamlined tools for managing applications, reviewing profiles, and generating reports.
+                        Deployed with cloud-native infrastructure and Kubernetes CI/CD, the platform ensures scalability,
+                        zero-downtime updates, and strong data security.
                     </p>
-                    <span class="badge-soft">DevOps</span>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <span class="badge-soft">Education</span>
+                        <span class="badge-soft">Web App</span>
+                        <span class="badge-soft">Kubernetes</span>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
